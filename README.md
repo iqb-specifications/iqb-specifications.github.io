@@ -1,1 +1,0 @@
-# iqb-specifications.github.io
