@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5f57f20cf72f6c5fb51c184e9b69dc90.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-28399c0990007fd8475a05532952ac55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -156,12 +156,44 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><img src="banner.jpg" class="img-fluid"></p>
-<section id="spezifikationen-des-iqb" class="level1">
-<h1>Spezifikationen des IQB</h1>
-<p>Das <a href="https://www.iqb.hu-berlin.de">Institut zur Qualitätsentwicklung im Bildungswesen (IQB)</a> ist ein wissenschaftliches Institut, das die Länder in der Bundesrepublik Deutschland bei der Qualitätsentwicklung und Qualitätssicherung im allgemeinbildenden Schulsystem unterstützt. Den Ausgangspunkt und die Grundlage dieser Arbeit bilden Bildungsstandards, die von der Ständigen Konferenz der Kultusminister der Länder in der Bundesrepublik Deutschland (KMK) verabschiedet worden sind. Diese Bildungsstandards definieren, welche Kompetenzen Schülerinnen und Schüler bis zu einem bestimmten Zeitpunkt in ihrer Schullaufbahn entwickelt haben sollen. Das IQB hat den Auftrag, regelmäßig zu überprüfen, inwieweit diese Ziele in deutschen Schulen erreicht werden (Bildungsmonitoring). Ferner unterstützt das IQB die Länder darin, die Bildungsstandards, die als zentraler Orientierungsrahmen für alle Akteure im Bildungssystem dienen sollen, umzusetzen (Implementierung). Darüber hinaus gehört das IQB zu den wichtigsten Instituten in Deutschland, die im Bereich der empirischen Bildungsforschung aktiv sind (Forschung).</p>
-<p>Ein Teil dieser Unterstützungsleistungen besteht aus der Bereitstellung von Software. Die Nutzungslizenz hierfür ist stets <a href="license.qmd">MIT</a>. Sämtliche Spezifikationen für Schnittstellen und Datenformate sind unter der Lizenz <a href="https://open-educational-resources.de/was-die-cc0-freigabe-bedeutet-und-welche-moeglichkeiten-sie-eroeffnen/">CC0</a> veröffentlicht. Die gesamten Software-Entwicklungen sind Open Source.</p>
-<section id="impressum" class="level2">
-<h2 class="anchored" data-anchor-id="impressum">Impressum</h2>
+<p>Auf dieser Seite finden Sie direkte Links zu Spezifikationen des <a href="https://www.iqb.hu-berlin.de">Instituts zur Qualitätsentwicklung im Bildungswesen (IQB)</a> bzw. zu solchen, an denen das IQB maßgeblich mitgearbeitet hat. Die Spezifikationen sind meist in englischer Sprache gehalten. Soweit verfügbar, sind Verweise auf Erläuterungen der Spezifikationen zu finden, dann auch oft in Deutsch.</p>
+<section id="verona-module" class="level1">
+<h1>Verona-Module</h1>
+<ul>
+<li>Player <a href="https://verona-interfaces.github.io/player/">Spec</a>, <a href="https://verona-interfaces.github.io/player-docs/">Docs</a></li>
+<li>Editor <a href="https://verona-interfaces.github.io/editor/">Spec</a>, <a href="https://verona-interfaces.github.io/editor-docs/">Docs</a>; hier findet sich auch die <a href="https://verona-interfaces.github.io/editor-docs/#parameter-variables">Variablenliste</a></li>
+<li>Schemer <a href="https://verona-interfaces.github.io/schemer/">Spec</a>, <a href="https://verona-interfaces.github.io/schemer-docs/">Docs</a></li>
+<li>Metadaten <a href="https://verona-interfaces.github.io/metadata/verona-module-metadata.html">Spec</a>, <a href="https://verona-interfaces.github.io/intro/metadata.html">Docs</a></li>
+</ul>
+</section>
+<section id="iqb-testcenter" class="level1">
+<h1>IQB-Testcenter</h1>
+<ul>
+<li>Input Booklet-Xml: <a href="https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Booklet.xsd">Spec Xsd</a>, <a href="https://pages.cms.hu-berlin.de/iqb/testcenter/pages/booklet-config.html">Docs</a></li>
+<li>Input Testtaker-Xml: <a href="https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Testtakers.xsd">Spec Xsd</a>, <a href="https://pages.cms.hu-berlin.de/iqb/testcenter/pages/test-mode.html">Modi der Testdurchführung</a></li>
+<li>Input Unit-Xml: <a href="https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Unit.xsd">Spec Xsd</a></li>
+<li>Input System-Check-Xml: <a href="https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_SysCheck.xsd">Spec Xsd</a></li>
+<li>Setzen von eigenen Texten – <a href="https://pages.cms.hu-berlin.de/iqb/testcenter/pages/custom-texts.html">CustomTexts</a></li>
+<li><a href="https://pages.cms.hu-berlin.de/iqb/testcenter/dist/api/index.html">API Backend</a></li>
+</ul>
+</section>
+<section id="antwortenkodierung" class="level1">
+<h1>Antworten/Kodierung</h1>
+<ul>
+<li>responses, coding-scheme, missing, state-map: <a href="https://iqb-berlin.github.io/responses">Spec</a>, <a href="https://iqb-berlin.github.io/coding-info/data-structures/">Docs</a></li>
+<li><a href="https://iqb-berlin.github.io/item-table/data-specs-doc/">VERA Item-Tabelle</a></li>
+</ul>
+</section>
+<section id="metadaten" class="level1">
+<h1>Metadaten</h1>
+<ul>
+<li>metadata-profile, profile-store, metadata-values: <a href="https://iqb-vocabs.github.io/metadata/">Spec</a></li>
+<li>Datentypen der Metadata-Values: <a href="https://github.com/iqb-vocabs/metadata/blob/master/docs/value-types.md">Spec</a></li>
+</ul>
+<hr>
+</section>
+<section id="impressum" class="level1">
+<h1>Impressum</h1>
 <section id="postanschrift" class="level3">
 <h3 class="anchored" data-anchor-id="postanschrift">Postanschrift</h3>
 <p>Humboldt-Universität zu Berlin<br> Institut zur Qualitätsentwicklung im Bildungswesen<br> Unter den Linden 6<br> 10099 Berlin</p>
@@ -175,7 +207,6 @@ ul.task-list li input[type="checkbox"] {
 <p>Frau Gesine Hoffmann-Holland<br> Unter den Linden 6<br> 10099 Berlin<br> Tel: +49 (30) 2093-20020<br> E-Mail: <a href="mailto:datenschutz@uv.hu-berlin.de">datenschutz@uv.hu-berlin.de</a><br> <a href="www.hu-berlin.de/de/datenschutz">www.hu-berlin.de/de/datenschutz</a></p>
 
 
-</section>
 </section>
 </section>
 
