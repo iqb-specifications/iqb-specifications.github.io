@@ -1,0 +1,33 @@
+project:
+  type: website
+
+website:
+  page-navigation: false
+  back-to-top-navigation: true
+  site-url: https://iqb-specifications.github.io/
+  favicon: images/favicon.ico
+  repo-url: https://github.com/iqb-specifications/iqb-specifications.github.io/
+  title: "IQB-Spezifikationen"
+  navbar:
+    pinned: true
+    search: true
+    logo: images/IQB-klein.png
+    right:
+      - icon: github
+        href: https://github.com/iqb-specifications
+  page-footer:
+    border: true
+    background: light
+    right:
+      - text: "IQB 2025"
+        href: https://www.iqb.hu-berlin.de
+    left:
+      - href: index.qmd
+        text: "{{< fa house >}}"
+
+format:
+  html:
+    theme: slate
+    anchor-sections: true
+    link-external-newwindow: true
+    
