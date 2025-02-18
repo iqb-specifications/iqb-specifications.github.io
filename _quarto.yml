@@ -5,13 +5,13 @@ website:
   page-navigation: false
   back-to-top-navigation: true
   site-url: https://iqb-specifications.github.io/
-  favicon: images/favicon.ico
+  favicon: favicon.ico
   repo-url: https://github.com/iqb-specifications/iqb-specifications.github.io/
   title: "IQB-Spezifikationen"
   navbar:
     pinned: true
     search: true
-    logo: images/IQB-klein.png
+    logo: IQB-klein.png
     right:
       - icon: github
         href: https://github.com/iqb-specifications
@@ -27,7 +27,7 @@ website:
 
 format:
   html:
-    theme: slate
+    theme: cyborg
     anchor-sections: true
     link-external-newwindow: true
     

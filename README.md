@@ -1,1 +1,1 @@
-# iqb-specifications.github.io
+This repo holds all files to create the static website [iqb-specifications.github.io](https://iqb-specifications.github.io).

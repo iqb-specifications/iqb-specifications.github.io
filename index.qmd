@@ -2,34 +2,62 @@
 lang: de
 format:
     html:
-        toc: false
+        toc: true
         include-in-header: ld.organisation.html
 ---
 
 ![](banner.jpg)
 
-# Spezifikationen des IQB
+Auf dieser Seite finden Sie direkte Links zu Spezifikationen des [Instituts zur Qualitätsentwicklung im Bildungswesen (IQB)](https://www.iqb.hu-berlin.de) bzw. zu solchen, an denen das IQB maßgeblich mitgearbeitet hat. Die Spezifikationen sind meist in englischer Sprache gehalten. Soweit verfügbar, sind Verweise auf Erläuterungen der Spezifikationen zu finden, dann auch oft in Deutsch.
 
-Das [Institut zur Qualitätsentwicklung im Bildungswesen (IQB)](https://www.iqb.hu-berlin.de) ist ein wissenschaftliches Institut, das die Länder in der Bundesrepublik Deutschland bei der Qualitätsentwicklung und Qualitätssicherung im allgemeinbildenden Schulsystem unterstützt. Den Ausgangspunkt und die Grundlage dieser Arbeit bilden Bildungsstandards, die von der Ständigen Konferenz der Kultusminister der Länder in der Bundesrepublik Deutschland (KMK) verabschiedet worden sind. Diese Bildungsstandards definieren, welche Kompetenzen Schülerinnen und Schüler bis zu einem bestimmten Zeitpunkt in ihrer Schullaufbahn entwickelt haben sollen. Das IQB hat den Auftrag, regelmäßig zu überprüfen, inwieweit diese Ziele in deutschen Schulen erreicht werden (Bildungsmonitoring). Ferner unterstützt das IQB die Länder darin, die Bildungsstandards, die als zentraler Orientierungsrahmen für alle Akteure im Bildungssystem dienen sollen, umzusetzen (Implementierung). Darüber hinaus gehört das IQB zu den wichtigsten Instituten in Deutschland, die im Bereich der empirischen Bildungsforschung aktiv sind (Forschung).
+# Verona-Module
 
-Ein Teil dieser Unterstützungsleistungen besteht aus der Bereitstellung von Software. Die Nutzungslizenz hierfür ist stets [MIT](license.qmd). Sämtliche Spezifikationen für Schnittstellen und Datenformate sind unter der Lizenz [CC0](https://open-educational-resources.de/was-die-cc0-freigabe-bedeutet-und-welche-moeglichkeiten-sie-eroeffnen/) veröffentlicht. Die gesamten Software-Entwicklungen sind Open Source.
+* Player [Spec](https://verona-interfaces.github.io/player/), [Docs](https://verona-interfaces.github.io/player-docs/)
+* Editor [Spec](https://verona-interfaces.github.io/editor/), [Docs](https://verona-interfaces.github.io/editor-docs/); hier findet sich auch die [Variablenliste](https://verona-interfaces.github.io/editor-docs/#parameter-variables)
+* Schemer [Spec](https://verona-interfaces.github.io/schemer/), [Docs](https://verona-interfaces.github.io/schemer-docs/)
+* Metadaten [Spec](https://verona-interfaces.github.io/metadata/verona-module-metadata.html), [Docs](https://verona-interfaces.github.io/intro/metadata.html)
 
-## Impressum
 
-### Postanschrift
+# IQB-Testcenter
+
+* Input Booklet-Xml: [Spec Xsd](https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Booklet.xsd), [Docs](https://pages.cms.hu-berlin.de/iqb/testcenter/pages/booklet-config.html)
+* Input Testtaker-Xml: [Spec Xsd](https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Testtakers.xsd), [Modi der Testdurchführung](https://pages.cms.hu-berlin.de/iqb/testcenter/pages/test-mode.html)
+* Input Unit-Xml: [Spec Xsd](https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Unit.xsd)
+* Input System-Check-Xml: [Spec Xsd](https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_SysCheck.xsd)
+* Setzen von eigenen Texten -- [CustomTexts](https://pages.cms.hu-berlin.de/iqb/testcenter/pages/custom-texts.html)
+* [API Backend](https://pages.cms.hu-berlin.de/iqb/testcenter/dist/api/index.html)
+
+# Antworten/Kodierung
+
+* responses, coding-scheme, missing, state-map: [Spec](https://iqb-berlin.github.io/responses), [Docs](https://iqb-berlin.github.io/coding-info/data-structures/)
+* [VERA Item-Tabelle](https://iqb-berlin.github.io/item-table/data-specs-doc/)
+
+# Metadaten
+
+* metadata-profile, profile-store, metadata-values: [Spec](https://iqb-vocabs.github.io/metadata/)
+* Datentypen der Metadata-Values: [Spec](https://github.com/iqb-vocabs/metadata/blob/master/docs/value-types.md)
+
+---
+
+# Impressum
+
+**Postanschrift**
+
 Humboldt-Universität zu Berlin<br/>
 Institut zur Qualitätsentwicklung im Bildungswesen<br/>
 Unter den Linden 6<br/>
 10099 Berlin
 
-### Sitz
+**Sitz**
+
 Luisenstr. 56<br/>
 10117 Berlin<br/>
 Tel: +49 [30] 2093 - 46500 (Zentrale)<br/>
 Fax: +49 [30] 2093 - 46599<br/>
 E-Mail: [iqboffice@iqb.hu-berlin.de](mailto:iqboffice@iqb.hu-berlin.de)
 
-### Name und Anschrift der Datenschutzbeauftragten
+**Name und Anschrift der Datenschutzbeauftragten**
+
 Frau Gesine Hoffmann-Holland<br/>
 Unter den Linden 6<br/>
 10099 Berlin<br/>
