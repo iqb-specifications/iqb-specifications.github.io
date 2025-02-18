@@ -1,0 +1,42 @@
+
+```{=html}
+<div class="list">
+<% for (const [index, item] of items.entries()) { %>
+    <div class="quarto-post body"
+         data-categories="<%= item.categories %>"
+         data-index="<%= index %>"
+         style="display: flex; flex-direction: column; gap: 0;">
+        <h3 class="listing-title" style="margin-top: 0.2rem">
+            <a class="no-external" href="<%= item.link.docs %>">
+                <%= item.name %>
+            </a>
+        </h3>
+        <div style="display: flex; flex-direction: row">
+            <div style="margin: 4px 12px;flex: 2">
+                <div class="listing-description"><%= item.description %></div>
+                <div class="listing-categories">
+                    <% for (const category of item.categories) { %>
+                        <div class="listing-category" onclick="window.quartoListingCategory('<%= category %>'); return false;">
+                            <%= category %>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            <div class="metadata" style="margin: 4px 12px;flex: 1">
+                <div class="listing-date"> 
+                  <a class="no-external" href="<%= item.link.repo %>">
+                      <i class="fa-solid fa-github aria-label="github"></i>
+                  </a>
+                  <a class="no-external" href="<%= item.link.spec %>">
+                    <i class="fa-solid fa-code aria-label="code"></i>
+                  </a>
+                  <a class="no-external" href="<%= item.link.docs %>">
+                    <i class="fa-solid fa-book aria-label="book"></i>
+                  </a>
+              </div>
+            </div>
+        </div>
+    </div>
+<% } %>
+</div>
+```

@@ -1,0 +1,19 @@
+- name: reponse
+  description: "Speichern der Antworten der Testpersonen"
+  link:
+    spec: https://iqb-specifications.github.io/response/
+    docs: https://iqb-berlin.github.io/tba-info/coding/data-structures/response.html
+    repo: https://github.com/iqb-specifications/response
+  categories:
+    - IQB-Testcenter
+    - IQB-Kodierbox
+- name: coding-scheme
+  description: "Regeln und Instruktionen für die Kodierung der Antworten einer Unit"
+  link:
+    spec: https://iqb-specifications.github.io/coding-scheme/
+    docs: https://iqb-berlin.github.io/tba-info/coding/data-structures/coding-scheme.html
+    repo: https://github.com/iqb-specifications/coding-scheme
+  categories:
+    - IQB-Testcenter
+    - IQB-Kodierbox
+    - Unit-Daten
