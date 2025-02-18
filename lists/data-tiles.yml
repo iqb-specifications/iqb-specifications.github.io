@@ -1,4 +1,4 @@
-- name: reponse
+- name: response
   description: "Speichern der Antworten der Testpersonen"
   link:
     spec: https://iqb-specifications.github.io/response/

@@ -12,9 +12,6 @@ website:
     pinned: true
     search: true
     logo: IQB-klein.png
-    right:
-      - icon: github
-        href: https://github.com/iqb-specifications
   page-footer:
     border: true
     background: light

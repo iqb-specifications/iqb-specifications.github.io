@@ -2,15 +2,35 @@
 lang: de
 format:
     html:
-        toc: true
+        toc: false
         include-in-header: ld.organisation.html
+other-links:
+      - text: TBA-Dokumentation
+        href: https://iqb-berlin.github.io/tba-info
+      - icon: github
+        text: Repo
+        href: https://github.com/iqb-specifications
+        
+listing:
+  id: gallery
+  template: lists/data-gallery.ejs
+  contents: lists/data-tiles.yml
+  filter-ui: true
+  type: default
+  categories: true
 ---
 
 ![](banner.jpg)
 
 Auf dieser Seite finden Sie direkte Links zu Spezifikationen des [Instituts zur Qualitätsentwicklung im Bildungswesen (IQB)](https://www.iqb.hu-berlin.de) bzw. zu solchen, an denen das IQB maßgeblich mitgearbeitet hat. Die Spezifikationen sind meist in englischer Sprache gehalten. Soweit verfügbar, sind Verweise auf Erläuterungen der Spezifikationen zu finden, dann auch oft in Deutsch.
 
-# Verona-Module
+
+# Spezifikationen für Datenstrukturen
+
+::: {#gallery}
+:::
+
+# Verona
 
 * Player [Spec](https://verona-interfaces.github.io/player/), [Docs](https://verona-interfaces.github.io/player-docs/)
 * Editor [Spec](https://verona-interfaces.github.io/editor/), [Docs](https://verona-interfaces.github.io/editor-docs/); hier findet sich auch die [Variablenliste](https://verona-interfaces.github.io/editor-docs/#parameter-variables)
@@ -18,7 +38,7 @@ Auf dieser Seite finden Sie direkte Links zu Spezifikationen des [Instituts zur 
 * Metadaten [Spec](https://verona-interfaces.github.io/metadata/verona-module-metadata.html), [Docs](https://verona-interfaces.github.io/intro/metadata.html)
 
 
-# IQB-Testcenter
+# Daten und API des IQB-Testcenter
 
 * Input Booklet-Xml: [Spec Xsd](https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Booklet.xsd), [Docs](https://pages.cms.hu-berlin.de/iqb/testcenter/pages/booklet-config.html)
 * Input Testtaker-Xml: [Spec Xsd](https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Testtakers.xsd), [Modi der Testdurchführung](https://pages.cms.hu-berlin.de/iqb/testcenter/pages/test-mode.html)
@@ -27,17 +47,11 @@ Auf dieser Seite finden Sie direkte Links zu Spezifikationen des [Instituts zur 
 * Setzen von eigenen Texten -- [CustomTexts](https://pages.cms.hu-berlin.de/iqb/testcenter/pages/custom-texts.html)
 * [API Backend](https://pages.cms.hu-berlin.de/iqb/testcenter/dist/api/index.html)
 
-# Antworten/Kodierung
-
-* responses, coding-scheme, missing, state-map: [Spec](https://iqb-berlin.github.io/responses), [Docs](https://iqb-berlin.github.io/coding-info/data-structures/)
-* [VERA Item-Tabelle](https://iqb-berlin.github.io/item-table/data-specs-doc/)
-
-# Metadaten
+# Spezifikationen zu Metadaten
 
 * metadata-profile, profile-store, metadata-values: [Spec](https://iqb-vocabs.github.io/metadata/)
 * Datentypen der Metadata-Values: [Spec](https://github.com/iqb-vocabs/metadata/blob/master/docs/value-types.md)
 
----
 
 # Impressum
 
