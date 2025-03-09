@@ -1,4 +1,3 @@
-
 ```{=html}
 <div class="list">
 <% for (const [index, item] of items.entries()) { %>
@@ -13,7 +12,9 @@
         </h3>
         <div style="display: flex; flex-direction: row">
             <div style="margin: 4px 12px;flex: 6">
-                <div class="listing-description"><%= item.description %></div>
+                <% if (item.description) { %>
+                    <div class="listing-description"><%= item.description %></div>
+                <% } %>
                 <div class="listing-categories">
                     <% for (const category of item.categories) { %>
                         <div class="listing-category" onclick="window.quartoListingCategory('<%= category %>'); return false;">
@@ -24,16 +25,22 @@
             </div>
             <div class="metadata" style="margin: 4px 12px;flex: 1;">
                 <div class="listing-date" style="display: flex; flex-direction: column; align-items: end;">
-                  <a class="no-external" href="<%= item.link.repo %>">
-                      <i class="fa-brands fa-github" aria-label="github"></i> Repo
-                  </a>
-                  <a class="no-external" href="<%= item.link.spec %>">
-                    <i class="fa-solid fa-code" aria-label="code"></i> Spec
-                  </a>
-                  <a class="no-external" href="<%= item.link.docs %>">
-                    <i class="fa-solid fa-book" aria-label="book"></i> Doku
-                  </a>
-              </div>
+                    <% if (item.link.repo) { %>
+                        <a class="no-external" href="<%= item.link.repo %>">
+                            <i class="fa-brands fa-github" aria-label="github"></i> Repo
+                        </a>
+                    <% } %>
+                    <% if (item.link.spec) { %>
+                        <a class="no-external" href="<%= item.link.spec %>">
+                            <i class="fa-solid fa-code" aria-label="code"></i> Spec
+                        </a>
+                    <% } %>
+                    <% if (item.link.docs) { %>
+                        <a class="no-external" href="<%= item.link.docs %>">
+                            <i class="fa-solid fa-book" aria-label="book"></i> Doku
+                        </a>
+                    <% } %>
+                </div>
             </div>
         </div>
     </div>

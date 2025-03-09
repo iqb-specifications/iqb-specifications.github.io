@@ -1,0 +1,34 @@
+---
+lang: de
+title: Über diese Seiten
+---
+
+![](assets/banner.jpg)
+
+Auf diesen Seite finden Sie direkte Links zu Spezifikationen des [Instituts zur Qualitätsentwicklung im Bildungswesen (IQB)](https://www.iqb.hu-berlin.de) bzw. zu solchen, an denen das IQB maßgeblich mitgearbeitet hat. Die Spezifikationen sind meist in englischer Sprache gehalten. Soweit verfügbar, sind Verweise auf Erläuterungen der Spezifikationen zu finden, dann auch oft in Deutsch.
+
+# Impressum
+
+**Postanschrift**
+
+Humboldt-Universität zu Berlin<br/>
+Institut zur Qualitätsentwicklung im Bildungswesen<br/>
+Unter den Linden 6<br/>
+10099 Berlin
+
+**Sitz**
+
+Luisenstr. 56<br/>
+10117 Berlin<br/>
+Tel: +49 [30] 2093 - 46500 (Zentrale)<br/>
+Fax: +49 [30] 2093 - 46599<br/>
+E-Mail: [iqboffice@iqb.hu-berlin.de](mailto:iqboffice@iqb.hu-berlin.de)
+
+**Name und Anschrift der Datenschutzbeauftragten**
+
+Frau Gesine Hoffmann-Holland<br/>
+Unter den Linden 6<br/>
+10099 Berlin<br/>
+Tel: +49 (30) 2093-20020<br/>
+E-Mail: [datenschutz@uv.hu-berlin.de](mailto:datenschutz@uv.hu-berlin.de)<br/>
+[www.hu-berlin.de/de/datenschutz](www.hu-berlin.de/de/datenschutz)

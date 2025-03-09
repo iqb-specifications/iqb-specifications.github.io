@@ -21,7 +21,15 @@ website:
     left:
       - href: index.qmd
         text: "{{< fa house >}}"
-
+  sidebar: 
+    style: "docked"
+    search: true
+    lang: de
+    collapse-level: 1
+    contents:
+      - intro.qmd
+      - license.qmd
+      - api.qmd
 format:
   html:
     theme: cyborg

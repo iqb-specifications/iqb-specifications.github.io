@@ -4,77 +4,16 @@ format:
     html:
         toc: false
         include-in-header: ld.organisation.html
-other-links:
-      - text: TBA-Dokumentation
-        href: https://iqb-berlin.github.io/tba-info
-      - icon: github
-        text: Repo
-        href: https://github.com/iqb-specifications
         
 listing:
   id: gallery
   template: lists/data-gallery.ejs
-  contents: lists/data-tiles.yml
+  contents: lists/*.yml
   filter-ui: true
   type: default
   categories: true
 ---
 
-![](banner.jpg)
-
-Auf dieser Seite finden Sie direkte Links zu Spezifikationen des [Instituts zur Qualitätsentwicklung im Bildungswesen (IQB)](https://www.iqb.hu-berlin.de) bzw. zu solchen, an denen das IQB maßgeblich mitgearbeitet hat. Die Spezifikationen sind meist in englischer Sprache gehalten. Soweit verfügbar, sind Verweise auf Erläuterungen der Spezifikationen zu finden, dann auch oft in Deutsch.
-
-
-# Spezifikationen für Datenstrukturen
 
 ::: {#gallery}
 :::
-
-# Verona
-
-* Player [Spec](https://verona-interfaces.github.io/player/), [Docs](https://verona-interfaces.github.io/player-docs/)
-* Editor [Spec](https://verona-interfaces.github.io/editor/), [Docs](https://verona-interfaces.github.io/editor-docs/); hier findet sich auch die [Variablenliste](https://verona-interfaces.github.io/editor-docs/#parameter-variables)
-* Schemer [Spec](https://verona-interfaces.github.io/schemer/), [Docs](https://verona-interfaces.github.io/schemer-docs/)
-* Metadaten [Spec](https://verona-interfaces.github.io/metadata/verona-module-metadata.html), [Docs](https://verona-interfaces.github.io/intro/metadata.html)
-
-
-# Daten und API des IQB-Testcenter
-
-* Input Booklet-Xml: [Spec Xsd](https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Booklet.xsd), [Docs](https://pages.cms.hu-berlin.de/iqb/testcenter/pages/booklet-config.html)
-* Input Testtaker-Xml: [Spec Xsd](https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Testtakers.xsd), [Modi der Testdurchführung](https://pages.cms.hu-berlin.de/iqb/testcenter/pages/test-mode.html)
-* Input Unit-Xml: [Spec Xsd](https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_Unit.xsd)
-* Input System-Check-Xml: [Spec Xsd](https://github.com/iqb-berlin/testcenter/blob/master/definitions/vo_SysCheck.xsd)
-* Setzen von eigenen Texten -- [CustomTexts](https://pages.cms.hu-berlin.de/iqb/testcenter/pages/custom-texts.html)
-* [API Backend](https://pages.cms.hu-berlin.de/iqb/testcenter/dist/api/index.html)
-
-# Spezifikationen zu Metadaten
-
-* metadata-profile, profile-store, metadata-values: [Spec](https://iqb-vocabs.github.io/metadata/)
-* Datentypen der Metadata-Values: [Spec](https://github.com/iqb-vocabs/metadata/blob/master/docs/value-types.md)
-
-
-# Impressum
-
-**Postanschrift**
-
-Humboldt-Universität zu Berlin<br/>
-Institut zur Qualitätsentwicklung im Bildungswesen<br/>
-Unter den Linden 6<br/>
-10099 Berlin
-
-**Sitz**
-
-Luisenstr. 56<br/>
-10117 Berlin<br/>
-Tel: +49 [30] 2093 - 46500 (Zentrale)<br/>
-Fax: +49 [30] 2093 - 46599<br/>
-E-Mail: [iqboffice@iqb.hu-berlin.de](mailto:iqboffice@iqb.hu-berlin.de)
-
-**Name und Anschrift der Datenschutzbeauftragten**
-
-Frau Gesine Hoffmann-Holland<br/>
-Unter den Linden 6<br/>
-10099 Berlin<br/>
-Tel: +49 (30) 2093-20020<br/>
-E-Mail: [datenschutz@uv.hu-berlin.de](mailto:datenschutz@uv.hu-berlin.de)<br/>
-[www.hu-berlin.de/de/datenschutz](www.hu-berlin.de/de/datenschutz)
