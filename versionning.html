@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>IQB-Spezifikationen</title>
+<title>Versionierung – IQB-Spezifikationen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,109 +68,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Suchen"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-gallery .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-name','listing-description','listing-link','listing-categories',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-name","listing-description","listing-link","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-gallery'] = new List('listing-gallery', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "image": "https://www.iqb.hu-berlin.de/system/img/logo_IQB.png",
-      "url": "https://www.iqb.hu-berlin.de",
-      "sameAs": "https://www.kmk.org/themen/qualitaetssicherung-in-schulen/iqb.html",
-      "logo": "https://www.iqb.hu-berlin.de/system/img/logo_IQB.png",
-      "name": "Institut zur Qualitätsentwicklung im Bildungswesen",
-      "alternateName": "IQB",
-      "description": "Das Institut zur Qualitätsentwicklung im Bildungswesen (IQB) ist eine wissenschaftliche Einrichtung aller 16 Länder der Bundesrepublik Deutschland an der Humboldt-Universität zu Berlin und steht für die gemeinsamen Aktivitäten der Länder im Bereich der Qualitätssicherung und -entwicklung im allgemeinbildenden Schulsystem.",
-      "email": "iqboffice@iqb.hu-berlin.de",
-      "telephone": "+49-30-2093-46500",
-      "address": [{
-        "@type": "PostalAddress",
-        "streetAddress": "Luisenstr. 56",
-        "addressLocality": "Berlin",
-        "addressCountry": "DE",
-        "postalCode": "10117"
-      },{
-        "streetAddress": "Hannoversche Straße 19",
-        "addressLocality": "Berlin",
-        "addressCountry": "DE",
-        "postalCode": "10115"
-      },{
-        "streetAddress": "Schönhauser Allee 10",
-        "addressLocality": "Berlin",
-        "addressCountry": "DE",
-        "postalCode": "10119"
-      }],
-      "numberOfEmployees": {
-        "@type": "QuantitativeValue",
-        "minValue": 100,
-        "maxValue": 150
-      },
-      "keywords": "technology based assessment, tba, digital assessment, computer based assessment, Testing Assisté par Ordinateur",
-      "vatID": "DE296396660",
-      "iso6523Code": "9930:DE296396660"
-    }
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -196,7 +96,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Versionierung</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -239,122 +139,28 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Kategorien</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">alle <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SVFCLUtvZGllcmJveA==">IQB-Kodierbox <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SVFCLVRlc3RjZW50ZXI=">IQB-Testcenter <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VW5pdC1EYXRlbg==">Unit-Daten <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
-
-
-
-<div id="listing-gallery" class="quarto-listing quarto-listing-container-custom">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Versionierung</h1>
 </div>
-<div class="list">
 
-    <div class="quarto-post body" data-categories="IQB-Testcenter,IQB-Kodierbox" data-index="0" style="display: flex; flex-direction: column; gap: 0;">
-        <h3 class="listing-title anchored" style="margin-top: 0.2rem">
-            <a class="no-external" href="https://iqb-berlin.github.io/tba-info/coding/data-structures/response.html">
-                response
-            </a>
-        </h3>
-        <div style="display: flex; flex-direction: row">
-            <div style="margin: 4px 12px;flex: 6">
-                
-                    <div class="listing-description">Speichern der Antworten der Testpersonen</div>
-                
-                <div class="listing-categories">
-                    
-                        <div class="listing-category" onclick="window.quartoListingCategory('IQB-Testcenter'); return false;">
-                            IQB-Testcenter
-                        </div>
-                    
-                        <div class="listing-category" onclick="window.quartoListingCategory('IQB-Kodierbox'); return false;">
-                            IQB-Kodierbox
-                        </div>
-                    
-                </div>
-            </div>
-            <div class="metadata" style="margin: 4px 12px;flex: 1;">
-                <div class="listing-date" style="display: flex; flex-direction: column; align-items: end;">
-                    
-                        <a class="no-external" href="https://github.com/iqb-specifications/response">
-                            <i class="fa-brands fa-github" aria-label="github"></i> Repo
-                        </a>
-                    
-                    
-                        <a class="no-external" href="https://iqb-specifications.github.io/response/">
-                            <i class="fa-solid fa-code" aria-label="code"></i> Spec
-                        </a>
-                    
-                    
-                        <a class="no-external" href="https://iqb-berlin.github.io/tba-info/coding/data-structures/response.html">
-                            <i class="fa-solid fa-book" aria-label="book"></i> Doku
-                        </a>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="quarto-post body" data-categories="IQB-Testcenter,IQB-Kodierbox,Unit-Daten" data-index="1" style="display: flex; flex-direction: column; gap: 0;">
-        <h3 class="listing-title anchored" style="margin-top: 0.2rem">
-            <a class="no-external" href="https://iqb-berlin.github.io/tba-info/coding/data-structures/coding-scheme.html">
-                coding-scheme
-            </a>
-        </h3>
-        <div style="display: flex; flex-direction: row">
-            <div style="margin: 4px 12px;flex: 6">
-                
-                    <div class="listing-description">Regeln und Instruktionen für die Kodierung der Antworten einer Unit</div>
-                
-                <div class="listing-categories">
-                    
-                        <div class="listing-category" onclick="window.quartoListingCategory('IQB-Testcenter'); return false;">
-                            IQB-Testcenter
-                        </div>
-                    
-                        <div class="listing-category" onclick="window.quartoListingCategory('IQB-Kodierbox'); return false;">
-                            IQB-Kodierbox
-                        </div>
-                    
-                        <div class="listing-category" onclick="window.quartoListingCategory('Unit-Daten'); return false;">
-                            Unit-Daten
-                        </div>
-                    
-                </div>
-            </div>
-            <div class="metadata" style="margin: 4px 12px;flex: 1;">
-                <div class="listing-date" style="display: flex; flex-direction: column; align-items: end;">
-                    
-                        <a class="no-external" href="https://github.com/iqb-specifications/coding-scheme">
-                            <i class="fa-brands fa-github" aria-label="github"></i> Repo
-                        </a>
-                    
-                    
-                        <a class="no-external" href="https://iqb-specifications.github.io/coding-scheme/">
-                            <i class="fa-solid fa-code" aria-label="code"></i> Spec
-                        </a>
-                    
-                    
-                        <a class="no-external" href="https://iqb-berlin.github.io/tba-info/coding/data-structures/coding-scheme.html">
-                            <i class="fa-solid fa-book" aria-label="book"></i> Doku
-                        </a>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
 
-</div>
-<div class="listing-no-matching d-none">
-Keine Treffer
-</div>
-</div>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
 
 
 
@@ -788,7 +594,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="./index.html">
 <p><i class="fa-solid fa-house" aria-label="house"></i></p>
 </a>
   </li>  
