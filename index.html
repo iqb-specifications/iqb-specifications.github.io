@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-gallery .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-gallery'] = new List('listing-gallery', options);
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -240,14 +240,18 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Kategorien</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">alle <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SVFCLUtvZGllcmJveA==">IQB-Kodierbox <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SVFCLVRlc3RjZW50ZXI=">IQB-Testcenter <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VW5pdC1EYXRlbg==">Unit-Daten <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Kategorien</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">alle <span class="quarto-category-count">(3)</span></div><div class="category" data-category="SVFCLUtvZGllcmJveA==">IQB-Kodierbox <span class="quarto-category-count">(3)</span></div><div class="category" data-category="SVFCLVRlc3RjZW50ZXI=">IQB-Testcenter <span class="quarto-category-count">(3)</span></div><div class="category" data-category="VW5pdC1EYXRlbg==">Unit-Daten <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<div id="listing-gallery" class="quarto-listing quarto-listing-container-custom">
+
+
+
+
+<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
 <div class="listing-actions-group">
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
@@ -294,6 +298,11 @@ window.Quarto = {
                     
                         <a class="no-external" href="https://iqb-berlin.github.io/tba-info/coding/data-structures/response.html">
                             <i class="fa-solid fa-book" aria-label="book"></i> Doku
+                        </a>
+                    
+                    
+                        <a class="no-external" href="https://www.npmjs.com/package/@iqbspecs/response">
+                            <i class="fa-brands fa-npm" aria-label="npm"></i> npm
                         </a>
                     
                 </div>
@@ -345,6 +354,61 @@ window.Quarto = {
                             <i class="fa-solid fa-book" aria-label="book"></i> Doku
                         </a>
                     
+                    
+                        <a class="no-external" href="https://www.npmjs.com/package/@iqbspecs/coding-scheme">
+                            <i class="fa-brands fa-npm" aria-label="npm"></i> npm
+                        </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quarto-post body" data-categories="IQB-Testcenter,IQB-Kodierbox" data-index="2" style="display: flex; flex-direction: column; gap: 0;">
+        <h3 class="listing-title anchored" style="margin-top: 0.2rem">
+            <a class="no-external" href="https://verona-interfaces.github.io/editor-docs/#parameter-variables">
+                variable-info
+            </a>
+        </h3>
+        <div style="display: flex; flex-direction: row">
+            <div style="margin: 4px 12px;flex: 6">
+                
+                    <div class="listing-description">Info über Variablen in einer Unit-Definition</div>
+                
+                <div class="listing-categories">
+                    
+                        <div class="listing-category" onclick="window.quartoListingCategory('IQB-Testcenter'); return false;">
+                            IQB-Testcenter
+                        </div>
+                    
+                        <div class="listing-category" onclick="window.quartoListingCategory('IQB-Kodierbox'); return false;">
+                            IQB-Kodierbox
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="metadata" style="margin: 4px 12px;flex: 1;">
+                <div class="listing-date" style="display: flex; flex-direction: column; align-items: end;">
+                    
+                        <a class="no-external" href="https://github.com/verona-interfaces/variable-info">
+                            <i class="fa-brands fa-github" aria-label="github"></i> Repo
+                        </a>
+                    
+                    
+                        <a class="no-external" href="https://verona-interfaces.github.io/variable-info/">
+                            <i class="fa-solid fa-code" aria-label="code"></i> Spec
+                        </a>
+                    
+                    
+                        <a class="no-external" href="https://verona-interfaces.github.io/editor-docs/#parameter-variables">
+                            <i class="fa-solid fa-book" aria-label="book"></i> Doku
+                        </a>
+                    
+                    
+                        <a class="no-external" href="https://www.npmjs.com/package/@iqbspecs/variable-info">
+                            <i class="fa-brands fa-npm" aria-label="npm"></i> npm
+                        </a>
+                    
                 </div>
             </div>
         </div>
@@ -354,12 +418,7 @@ window.Quarto = {
 <div class="listing-no-matching d-none">
 Keine Treffer
 </div>
-</div>
-
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
