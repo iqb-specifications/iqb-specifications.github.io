@@ -6,14 +6,9 @@ format:
         include-in-header: ld.organisation.html
         
 listing:
-  id: gallery
   template: lists/data-gallery.ejs
   contents: lists/*.yml
   filter-ui: true
   type: default
   categories: true
 ---
-
-
-::: {#gallery}
-:::

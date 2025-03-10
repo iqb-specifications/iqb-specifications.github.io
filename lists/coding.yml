@@ -4,6 +4,7 @@
     spec: https://iqb-specifications.github.io/response/
     docs: https://iqb-berlin.github.io/tba-info/coding/data-structures/response.html
     repo: https://github.com/iqb-specifications/response
+    npm: https://www.npmjs.com/package/@iqbspecs/response
   categories:
     - IQB-Testcenter
     - IQB-Kodierbox
@@ -13,7 +14,18 @@
     spec: https://iqb-specifications.github.io/coding-scheme/
     docs: https://iqb-berlin.github.io/tba-info/coding/data-structures/coding-scheme.html
     repo: https://github.com/iqb-specifications/coding-scheme
+    npm: https://www.npmjs.com/package/@iqbspecs/coding-scheme
   categories:
     - IQB-Testcenter
     - IQB-Kodierbox
     - Unit-Daten
+- name: variable-info
+  description: "Info über Variablen in einer Unit-Definition"
+  link:
+    spec: https://verona-interfaces.github.io/variable-info/
+    docs: https://verona-interfaces.github.io/editor-docs/#parameter-variables
+    repo: https://github.com/verona-interfaces/variable-info
+    npm: https://www.npmjs.com/package/@iqbspecs/variable-info
+  categories:
+    - IQB-Testcenter
+    - IQB-Kodierbox

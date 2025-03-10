@@ -40,6 +40,11 @@
                             <i class="fa-solid fa-book" aria-label="book"></i> Doku
                         </a>
                     <% } %>
+                    <% if (item.link.npm) { %>
+                        <a class="no-external" href="<%= item.link.npm %>">
+                            <i class="fa-brands fa-npm" aria-label="npm"></i> npm
+                        </a>
+                    <% } %>
                 </div>
             </div>
         </div>
