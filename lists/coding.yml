@@ -6,8 +6,8 @@
     repo: https://github.com/iqb-specifications/response
     npm: https://www.npmjs.com/package/@iqbspecs/response
   categories:
-    - "IQB-Testcenter"
-    - "IQB-Kodierbox"
+    - IQB&ndash;Testcenter
+    - IQB&ndash;Kodierbox
 - name: coding-scheme
   description: "Regeln und Instruktionen für die Kodierung der Antworten einer Unit"
   link:
@@ -16,9 +16,9 @@
     repo: https://github.com/iqb-specifications/coding-scheme
     npm: https://www.npmjs.com/package/@iqbspecs/coding-scheme
   categories:
-    - "IQB-Testcenter"
-    - "IQB-Kodierbox"
-    - "Unit-Daten"
+    - IQB&ndash;Testcenter
+    - IQB&ndash;Kodierbox
+    - Unit&ndash;Daten
 - name: variable-info
   description: "Info über Variablen in einer Unit-Definition"
   link:
@@ -28,4 +28,4 @@
     npm: https://www.npmjs.com/package/@iqbspecs/variable-info
   categories:
     - Verona
-    - "IQB-Studio"
+    - IQB&ndash;Studio
