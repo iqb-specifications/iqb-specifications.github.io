@@ -2,11 +2,11 @@
 <div class="list">
 <% for (const [index, item] of items.entries()) { %>
     <div class="quarto-post body"
-         data-categories="<%= item.categories %>"
-         data-index="<%= index %>"
+         data-categories="<%- item.categories %>"
+         data-index="<%- index %>"
          style="display: flex; flex-direction: column; gap: 0;">
         <h3 class="listing-title" style="margin-top: 0.2rem">
-            <a class="no-external" href="<%= item.link.docs %>">
+            <a class="no-external" style="color: white;" href="<%- item.link.docs %>">
                 <%= item.name %>
             </a>
         </h3>
@@ -26,22 +26,22 @@
             <div class="metadata" style="margin: 4px 12px;flex: 1;">
                 <div class="listing-date" style="display: flex; flex-direction: column; align-items: end;">
                     <% if (item.link.repo) { %>
-                        <a class="no-external" href="<%= item.link.repo %>">
+                        <a class="no-external" href="<%- item.link.repo %>">
                             <i class="fa-brands fa-github" aria-label="github"></i> Repo
                         </a>
                     <% } %>
                     <% if (item.link.spec) { %>
-                        <a class="no-external" href="<%= item.link.spec %>">
+                        <a class="no-external" href="<%- item.link.spec %>">
                             <i class="fa-solid fa-code" aria-label="code"></i> Spec
                         </a>
                     <% } %>
                     <% if (item.link.docs) { %>
-                        <a class="no-external" href="<%= item.link.docs %>">
+                        <a class="no-external" href="<%- item.link.docs %>">
                             <i class="fa-solid fa-book" aria-label="book"></i> Doku
                         </a>
                     <% } %>
                     <% if (item.link.npm) { %>
-                        <a class="no-external" href="<%= item.link.npm %>">
+                        <a class="no-external" href="<%- item.link.npm %>">
                             <i class="fa-brands fa-npm" aria-label="npm"></i> npm
                         </a>
                     <% } %>
