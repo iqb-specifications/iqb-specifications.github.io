@@ -2,7 +2,7 @@
 <div class="list">
 <% for (const [index, item] of items.entries()) { %>
     <div class="quarto-post body"
-         data-categories="<%= metadataAttrs(item) %>"
+         <%= metadataAttrs(item) %>
          data-index="<%- index %>"
          style="display: flex; flex-direction: column; gap: 0;">
         <h3 class="listing-title" style="margin-top: 0.2rem">
