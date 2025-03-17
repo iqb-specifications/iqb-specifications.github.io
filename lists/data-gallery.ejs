@@ -2,7 +2,7 @@
 <div class="list">
 <% for (const [index, item] of items.entries()) { %>
     <div class="quarto-post body"
-         data-categories="<%- item.categories %>"
+         data-categories="<%= metadataAttrs(item) %>"
          data-index="<%- index %>"
          style="display: flex; flex-direction: column; gap: 0;">
         <h3 class="listing-title" style="margin-top: 0.2rem">
@@ -17,7 +17,7 @@
                 <% } %>
                 <div class="listing-categories">
                     <% for (const category of item.categories) { %>
-                        <div class="listing-category" onclick="window.quartoListingCategory('<%- category %>'); return false;">
+                        <div class="listing-category" onclick="window.quartoListingCategory('<%= utils.b64encode(category) %>'); return false;">
                             <%= category %>
                         </div>
                     <% } %>
