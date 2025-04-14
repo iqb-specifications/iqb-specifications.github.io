@@ -1,0 +1,8 @@
+- name: metadata-values
+  description: "Speichern von Metadaten in/an einem Datenobjekt"
+  link:
+    spec: https://iqb-specifications.github.io/metadata-values/
+    repo: https://github.com/iqb-specifications/metadata-values
+    npm: https://www.npmjs.com/package/@iqbspecs/metadata-values
+  categories:
+    - Metadaten
