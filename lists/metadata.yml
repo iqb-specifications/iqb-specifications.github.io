@@ -6,3 +6,11 @@
     npm: https://www.npmjs.com/package/@iqbspecs/metadata-values
   categories:
     - Metadaten
+- name: ordinal-scale
+  description: "Definition von ordinalen Skalen z. B. für Kompetenzstufenmodelle"
+  link:
+    spec: https://iqb-specifications.github.io/ordinal-scale/
+    repo: https://github.com/iqb-specifications/ordinal-scale
+    npm: https://www.npmjs.com/package/@iqbspecs/ordinal-scale
+  categories:
+    - Metadaten
