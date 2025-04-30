@@ -3,6 +3,7 @@
   link:
     spec: https://iqb-specifications.github.io/metadata-values/
     repo: https://github.com/iqb-specifications/metadata-values
+    docs: https://iqb-vocabs.github.io/specs/metadata-values.html
     npm: https://www.npmjs.com/package/@iqbspecs/metadata-values
   categories:
     - Metadaten
