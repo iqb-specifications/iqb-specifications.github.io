@@ -11,7 +11,7 @@ website:
   navbar:
     pinned: true
     search: true
-    logo: IQB-klein.png
+    logo: assets/iqb-logo-only-white.png
   page-footer:
     border: true
     background: light
