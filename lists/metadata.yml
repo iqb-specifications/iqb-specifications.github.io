@@ -15,3 +15,12 @@
     npm: https://www.npmjs.com/package/@iqbspecs/ordinal-scale
   categories:
     - Metadaten
+- name: metadata-profile
+  description: "Metadaten-Vorlage für ein Datenobjekt"
+  link:
+    spec: https://iqb-specifications.github.io/metadata-profile/
+    repo: https://github.com/iqb-specifications/metadata-profile
+    docs: https://iqb-vocabs.github.io/specs/metadata-profile.html
+    npm: https://www.npmjs.com/package/@iqbspecs/metadata-profile
+  categories:
+    - Metadaten
