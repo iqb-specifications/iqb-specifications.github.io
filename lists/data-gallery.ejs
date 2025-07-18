@@ -6,9 +6,15 @@
          data-index="<%- index %>"
          style="display: flex; flex-direction: column; gap: 0;">
         <h3 class="listing-title" style="margin-top: 0.2rem">
-            <a class="no-external listing-name" style="color: white;" href="<%- item.link.docs %>">
-                <%= item.name %>
-            </a>
+            <% if (item.link.docs) { %>
+                <a class="no-external listing-name" style="color: white;" href="<%- item.link.docs %>">
+                    <%= item.name %>
+                </a>
+            <% } else { %>
+                <a class="no-external listing-name" style="color: white;" href="<%- item.link.spec %>">
+                    <%= item.name %>
+                </a>
+            <% } %>
         </h3>
         <div style="display: flex; flex-direction: row">
             <div style="margin: 4px 12px;flex: 6">

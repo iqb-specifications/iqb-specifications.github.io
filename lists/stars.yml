@@ -1,4 +1,4 @@
-- name: nemo-player-unitdefinition
+- name: nemo-player-unit-definition
   description: "Spezifikation der Unitdefinition für den Stars-Player 'Nemo'"
   link:
     spec: https://iqb-specifications.github.io/nemo-player-unit-definition/
