@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed fullcontent quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -123,24 +123,24 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Über diese Seiten</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./license.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lizenz</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./api.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">API-Spezifikationen</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#permanenete-id" id="toc-permanenete-id" class="nav-link active" data-scroll-target="#permanenete-id">Permanenete ID</a></li>
+  <li><a href="#validierung" id="toc-validierung" class="nav-link" data-scroll-target="#validierung">Validierung</a></li>
+  <li><a href="#weitere-quellen-für-spezifikationen" id="toc-weitere-quellen-für-spezifikationen" class="nav-link" data-scroll-target="#weitere-quellen-für-spezifikationen">Weitere Quellen für Spezifikationen</a></li>
+  <li><a href="#lizenz" id="toc-lizenz" class="nav-link" data-scroll-target="#lizenz">Lizenz</a></li>
+  <li><a href="#impressum" id="toc-impressum" class="nav-link" data-scroll-target="#impressum">Impressum</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -165,6 +165,28 @@ ul.task-list li input[type="checkbox"] {
 
 <p><img src="assets/banner.jpg" class="img-fluid"></p>
 <p>Auf diesen Seite finden Sie direkte Links zu Spezifikationen des <a href="https://www.iqb.hu-berlin.de">Instituts zur Qualitätsentwicklung im Bildungswesen (IQB)</a> bzw. zu solchen, an denen das IQB maßgeblich mitgearbeitet hat. Die Spezifikationen sind meist in englischer Sprache gehalten. Soweit verfügbar, sind Verweise auf Erläuterungen der Spezifikationen zu finden, dann auch oft in Deutsch.</p>
+<section id="permanenete-id" class="level1">
+<h1>Permanenete ID</h1>
+<p>Sollte eine Spezifikation unter <code>iqb-specifications</code> veröffentlicht sein, erhält das JSON-Schema bei einem Release automatisch eine w3id als permanente und damit langfristig referenzierbare ID. Sie bildet sich folgendermaßen:</p>
+<pre><code>https://w3id.org/iqb/spec/&lt;schema-id&gt;/&lt;schema-version&gt;</code></pre>
+<p>Für die Spezifikation <code>response</code> in der Version <code>1.5</code> würde die Perma-Id lauten: <code>https://w3id.org/iqb/spec/response/1.5</code>.</p>
+</section>
+<section id="validierung" class="level1">
+<h1>Validierung</h1>
+<p>Sollte eine Spezifikation unter <code>iqb-specifications</code> veröffentlicht sein und als Release nach obigem Schema eine w3id haben, können über ein Script <a href="https://github.com/iqb-specifications/validate-json#readme-ov-file">validate-json</a> JSON-Datendateien validiert werden. In einem Projekt müssen üblicherweise viele Beispiel- und Testdaten hinterlegt werden. Um triviale Tipp-Fehler oder Verständnisprobleme zu vermeiden, können die Datendateien gegen das Schema auf einfache Art validiert werden.</p>
+</section>
+<section id="weitere-quellen-für-spezifikationen" class="level1">
+<h1>Weitere Quellen für Spezifikationen</h1>
+<ul>
+<li><a href="https://verona-interfaces.github.io/">Verona-Interfaces</a></li>
+<li><a href="https://iqb-berlin.github.io/releases.html">IQB-Programierungen</a></li>
+</ul>
+</section>
+<section id="lizenz" class="level1">
+<h1>Lizenz</h1>
+<p>Sämtliche Spezifikationen unterliegen der Lizenz <a href="https://open-educational-resources.de/was-die-cc0-freigabe-bedeutet-und-welche-moeglichkeiten-sie-eroeffnen/">CC0</a>.</p>
+<p>Sämtliche Programmierungen sind unter einer <a href="https://iqb-berlin.github.io/license.html">MIT</a>-Lizenz veröffentlicht, bei der der Punkt “Haftung” für die deutsche Rechtspraxis differenzierter definiert ist.</p>
+</section>
 <section id="impressum" class="level1">
 <h1>Impressum</h1>
 <p><strong>Postanschrift</strong></p>
