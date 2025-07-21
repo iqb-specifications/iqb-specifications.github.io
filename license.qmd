@@ -1,8 +1,0 @@
----
-lang: de
-title: Lizenz
----
-
-Sämtliche Spezifikationen unterliegen der Lizenz [CC0](https://open-educational-resources.de/was-die-cc0-freigabe-bedeutet-und-welche-moeglichkeiten-sie-eroeffnen/).
-
-Sämtliche Programmierungen sind unter einer [MIT](https://iqb-berlin.github.io/license.html)-Lizenz veröffentlicht, bei der der Punkt "Haftung" für die deutsche Rechtspraxis differenzierter definiert ist.

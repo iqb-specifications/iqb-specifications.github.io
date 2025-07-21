@@ -9,6 +9,7 @@ listing:
   template: lists/data-gallery.ejs
   contents: lists/*.yml
   filter-ui: true
+  sort: "name"
   type: default
   categories: true
 ---
