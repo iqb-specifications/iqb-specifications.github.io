@@ -10,7 +10,7 @@ format:
 
 Auf diesen Seite finden Sie direkte Links zu Spezifikationen des [Instituts zur Qualitätsentwicklung im Bildungswesen (IQB)](https://www.iqb.hu-berlin.de) bzw. zu solchen, an denen das IQB maßgeblich mitgearbeitet hat. Die Spezifikationen sind meist in englischer Sprache gehalten. Soweit verfügbar, sind Verweise auf Erläuterungen der Spezifikationen zu finden, dann auch oft in Deutsch.
 
-# Permanenete ID
+# Permanente ID
 
 Sollte eine Spezifikation unter `iqb-specifications` veröffentlicht sein, erhält das JSON-Schema bei einem Release automatisch eine w3id als permanente und damit langfristig referenzierbare ID. Sie bildet sich folgendermaßen:
 
