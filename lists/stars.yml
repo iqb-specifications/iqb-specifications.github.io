@@ -1,9 +1,9 @@
-- name: nemo-player-unit-definition
-  description: "Spezifikation der Unitdefinition für den Stars-Player 'Nemo'"
+- name: stars-unit-definition
+  description: "Spezifikation der Unitdefinition für den Player 'StarS'"
   link:
-    spec: https://iqb-specifications.github.io/nemo-player-unit-definition/
-    docs: https://iqb-berlin.github.io/tba-info/tasks/design/nemo/
-    repo: https://github.com/iqb-specifications/nemo-player-unit-definition
+    spec: https://iqb-specifications.github.io/stars-unit-definition/
+    docs: https://iqb-berlin.github.io/tba-info/tasks/design/stars/
+    repo: https://github.com/iqb-specifications/stars-unit-definition
   categories:
     - Verona
     - Player
