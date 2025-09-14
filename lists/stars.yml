@@ -1,3 +1,19 @@
+- name: coding-service-api
+  description: "API des Webservices zur automatischen Kodierung und Datenanalyse"
+  link:
+    spec: https://iqb-specifications.github.io/coding-service-api/
+    docs: https://iqb-berlin.github.io/rising-stars/coding-service/
+    repo: https://github.com/iqb-specifications/coding-service-api
+  categories:
+    - SCP
+- name: scp-index
+  description: "Survey Content Package Index"
+  link:
+    spec: https://iqb-specifications.github.io/scp-index/
+    docs: https://iqb-berlin.github.io/rising-stars/survey-content/
+    repo: https://github.com/iqb-specifications/scp-index
+  categories:
+    - SCP
 - name: stars-unit-definition
   description: "Spezifikation der Unitdefinition für den Player 'StarS'"
   link:
