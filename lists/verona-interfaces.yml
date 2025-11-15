@@ -1,0 +1,42 @@
+- name: variable-info
+  description: "Info über Variablen in einer Unit-Definition"
+  link:
+    spec: https://verona-interfaces.github.io/variable-info/
+    docs: https://verona-interfaces.github.io/editor-docs/#parameter-variables
+    repo: https://github.com/verona-interfaces/variable-info
+    npm: https://www.npmjs.com/package/@iqbspecs/variable-info
+  categories:
+    - Verona
+    - IQB-Studio
+- name: verona-player
+  description: "Interface-Spezifikation für einen Verona-Player"
+  link:
+    spec: https://verona-interfaces.github.io/player/
+    docs: https://verona-interfaces.github.io/player-docs/
+    repo: https://github.com/verona-interfaces/player/
+  categories:
+    - Verona
+- name: verona-editor
+  description: "Interface-Spezifikation für einen Verona-Editor"
+  link:
+    spec: https://verona-interfaces.github.io/editor/
+    docs: https://verona-interfaces.github.io/editor-docs/
+    repo: https://github.com/verona-interfaces/editor/
+  categories:
+    - Verona
+- name: verona-schemer
+  description: "Interface-Spezifikation für einen Verona-Schemer"
+  link:
+    spec: https://verona-interfaces.github.io/schemer/
+    docs: https://verona-interfaces.github.io/schemer-docs/
+    repo: https://github.com/verona-interfaces/schemer/
+  categories:
+    - Verona
+- name: verona-widget
+  description: "Interface-Spezifikation für ein Verona-Widget"
+  link:
+    spec: https://verona-interfaces.github.io/widget/
+    docs: https://verona-interfaces.github.io/widget-docs/
+    repo: https://github.com/verona-interfaces/widget/
+  categories:
+    - Verona

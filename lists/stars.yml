@@ -5,15 +5,15 @@
     docs: https://iqb-berlin.github.io/rising-stars/coding-service/
     repo: https://github.com/iqb-specifications/coding-service-api
   categories:
-    - SCP
-- name: scp-index
-  description: "Survey Content Package Index"
+    - ACP
+- name: acp-index
+  description: "Assessment Content Package: Index"
   link:
-    spec: https://iqb-specifications.github.io/scp-index/
-    docs: https://iqb-berlin.github.io/rising-stars/survey-content/
-    repo: https://github.com/iqb-specifications/scp-index
+    spec: https://iqb-specifications.github.io/acp-index/
+    docs: https://iqb-berlin.github.io/rising-stars/content-package/
+    repo: https://github.com/iqb-specifications/acp-index
   categories:
-    - SCP
+    - ACP
 - name: stars-unit-definition
   description: "Spezifikation der Unitdefinition für den Player 'StarS'"
   link:
