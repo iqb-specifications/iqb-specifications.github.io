@@ -1,0 +1,14 @@
+- name: testcenter-booklet-xml
+  description: "XML-Spezifikation für Booklets im Testcenter"
+  link:
+    repo: https://github.com/iqb-specifications/testcenter-booklet-xml
+  categories:
+    - IQB-Testcenter
+- name: unit-xml
+  description: "XML-Spezifikation für die Datei-Form einer Unit"
+  link:
+    repo: https://github.com/iqb-specifications/unit-xml
+  categories:
+    - IQB-Testcenter
+    - IQB-Studio
+    - Unit-Daten
