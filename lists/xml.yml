@@ -12,3 +12,15 @@
     - IQB-Testcenter
     - IQB-Studio
     - Unit-Daten
+- name: testcenter-testtaker-xml
+  description: "XML-Spezifikation für Testtaker/Logins im Testcenter"
+  link:
+    repo: https://github.com/iqb-specifications/testcenter-testtaker-xml
+  categories:
+    - IQB-Testcenter
+- name: testcenter-syscheck-xml
+  description: "XML-Spezifikation für System-Check im Testcenter"
+  link:
+    repo: https://github.com/iqb-specifications/testcenter-syscheck-xml
+  categories:
+    - IQB-Testcenter
