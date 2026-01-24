@@ -1,9 +1,9 @@
-- name: coding-service-api
+- name: response-analyser-api
   description: "API des Webservices zur automatischen Kodierung und Datenanalyse"
   link:
-    spec: https://iqb-specifications.github.io/coding-service-api/
-    docs: https://iqb-berlin.github.io/rising-stars/coding-service/
-    repo: https://github.com/iqb-specifications/coding-service-api
+    spec: https://iqb-specifications.github.io/response-analyser-api/
+    docs: https://iqb-berlin.github.io/rising-stars/response-analyser/
+    repo: https://github.com/iqb-specifications/response-analyser-api
   categories:
     - ACP
 - name: acp-index
