@@ -26,6 +26,7 @@
   link:
     spec: https://iqb-specifications.github.io/acp-scale/
     repo: https://github.com/iqb-specifications/acp-scale
+    docs: https://iqb-berlin.github.io/rising-stars/content-package/scales.html#umsetzung-als-datenspezifikation
   categories:
     - ACP
 - name: stars-unit-definition
