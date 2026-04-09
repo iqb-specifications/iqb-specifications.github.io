@@ -1,0 +1,20 @@
+- name: unit-xml
+  description: "XML-Spezifikation für die Datei-Form einer Unit"
+  link:
+    repo: https://github.com/iqb-specifications/unit-xml
+  categories:
+    - IQB-Testcenter
+    - IQB-Studio
+    - Unit-Daten
+- name: unit-items
+  description: "JSON-Spezifikation für Unit-Dateblock 'Items'"
+  link:
+    repo: https://github.com/iqb-specifications/unit-items
+  categories:
+    - Unit-Daten
+- name: unit-rich-notes
+  description: "JSON-Spezifikation für Unit-Dateblock 'Rich Notes' (Formatierte Texte)"
+  link:
+    repo: https://github.com/iqb-specifications/unit-rich-notes
+  categories:
+    - Unit-Daten

@@ -4,14 +4,6 @@
     repo: https://github.com/iqb-specifications/testcenter-booklet-xml
   categories:
     - IQB-Testcenter
-- name: unit-xml
-  description: "XML-Spezifikation für die Datei-Form einer Unit"
-  link:
-    repo: https://github.com/iqb-specifications/unit-xml
-  categories:
-    - IQB-Testcenter
-    - IQB-Studio
-    - Unit-Daten
 - name: testcenter-testtaker-xml
   description: "XML-Spezifikation für Testtaker/Logins im Testcenter"
   link:
