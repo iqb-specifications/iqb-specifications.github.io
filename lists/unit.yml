@@ -10,11 +10,13 @@
   description: "JSON-Spezifikation für Unit-Dateblock 'Items'"
   link:
     repo: https://github.com/iqb-specifications/unit-items
+    spec: https://iqb-specifications.github.io/unit-items/
   categories:
     - Unit-Daten
 - name: unit-rich-notes
   description: "JSON-Spezifikation für Unit-Dateblock 'Rich Notes' (Formatierte Texte)"
   link:
     repo: https://github.com/iqb-specifications/unit-rich-notes
+    spec: https://iqb-specifications.github.io/unit-rich-notes/
   categories:
     - Unit-Daten
