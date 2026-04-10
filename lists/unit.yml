@@ -14,6 +14,13 @@
     spec: https://iqb-specifications.github.io/unit-items/
   categories:
     - Unit-Daten
+- name: unit-comments
+  description: "JSON-Spezifikation für Unit-Dateblock 'Comments'"
+  link:
+    repo: https://github.com/iqb-specifications/unit-comments
+    spec: https://iqb-specifications.github.io/unit-comments/
+  categories:
+    - Unit-Daten
 - name: unit-rich-notes
   description: "JSON-Spezifikation für Unit-Dateblock 'Rich Notes' (Formatierte Texte)"
   link:
