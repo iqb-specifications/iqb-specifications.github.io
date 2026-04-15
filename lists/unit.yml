@@ -1,8 +1,8 @@
-- name: unit-xml
-  description: "XML-Spezifikation für die Datei-Form einer Unit"
+- name: unit-index
+  description: "Spezifikation für den Unit-Index - also die zentrale Hauptdatei einer Assessment Unit"
   link:
-    repo: https://github.com/iqb-specifications/unit-xml
-    docs: https://iqb-specifications.github.io/unit-xml/
+    repo: https://github.com/iqb-specifications/unit-index
+    docs: https://iqb-specifications.github.io/unit-index/
   categories:
     - IQB-Testcenter
     - IQB-Studio

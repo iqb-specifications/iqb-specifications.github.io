@@ -40,3 +40,13 @@
     - Player
     - StarS
     - Unit-Daten
+- name: lottie-unit-definition
+  description: "Spezifikation der Unitdefinition für den Player 'Lottie' (Animationen)"
+  link:
+    spec: https://iqb-specifications.github.io/lottie-unit-definition/
+    repo: https://github.com/iqb-specifications/lottie-unit-definition
+  categories:
+    - Verona
+    - Player
+    - StarS
+    - Unit-Daten
