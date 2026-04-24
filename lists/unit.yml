@@ -2,7 +2,8 @@
   description: "Spezifikation für den Unit-Index - also die zentrale Hauptdatei einer Assessment Unit"
   link:
     repo: https://github.com/iqb-specifications/unit-index
-    docs: https://iqb-specifications.github.io/unit-index/
+    spec: https://iqb-specifications.github.io/unit-index/
+    docs: https://github.com/iqb-specifications/unit-index?tab=readme-ov-file#kurzdokumentation
   categories:
     - IQB-Testcenter
     - IQB-Studio
