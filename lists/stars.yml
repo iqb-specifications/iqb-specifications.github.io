@@ -21,11 +21,19 @@
     repo: https://github.com/iqb-specifications/acp-unit
   categories:
     - ACP
-- name: acp-scale
-  description: "Assessment Content Package: Scale"
+- name: acp-scale-base
+  description: "Assessment Content Package: Base Scale"
   link:
-    spec: https://iqb-specifications.github.io/acp-scale/
-    repo: https://github.com/iqb-specifications/acp-scale
+    spec: https://iqb-specifications.github.io/acp-scale-base/
+    repo: https://github.com/iqb-specifications/acp-scale-base
+    docs: https://iqb-berlin.github.io/rising-stars/content-package/scales.html#umsetzung-als-datenspezifikation
+  categories:
+    - ACP
+- name: acp-scale-derived
+  description: "Assessment Content Package: Derived Scale"
+  link:
+    spec: https://iqb-specifications.github.io/acp-scale-derived/
+    repo: https://github.com/iqb-specifications/acp-scale-derived
     docs: https://iqb-berlin.github.io/rising-stars/content-package/scales.html#umsetzung-als-datenspezifikation
   categories:
     - ACP
