@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://iqb-specifications.github.io/intro.html</loc>
-    <lastmod>2026-09-03T15:13:59.919Z</lastmod>
+    <loc>https://iqb-specifications.github.io/concepts/index.html</loc>
+    <lastmod>2026-09-09T14:37:19.994Z</lastmod>
   </url>
   <url>
     <loc>https://iqb-specifications.github.io/index.html</loc>
-    <lastmod>2026-09-03T15:13:59.919Z</lastmod>
+    <lastmod>2026-09-09T14:37:19.994Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-specifications.github.io/intro.html</loc>
+    <lastmod>2026-09-09T14:37:19.994Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-specifications.github.io/concepts/unit.html</loc>
+    <lastmod>2026-09-09T14:37:19.994Z</lastmod>
   </url>
 </urlset>
