@@ -9,6 +9,8 @@ Auf den Seiten im Bereich "Konzepte" finden Sie übergreifende Texte. Mehrere Sp
 
 Die Zielgruppe für diese Texte sind Personen, die APIs oder Daten genau verstehen sollen - für die Programmierung von Datenauswertungen, Datenumformungen, Datenbanken, Tools, Grafiken einer Ergebnisrückmeldung usw..
 
-{{< include https://raw.githubusercontent.com/iqb-specifications/acp-scale-derived/refs/heads/main/README.md >}}
+{{< external https://raw.githubusercontent.com/iqb-specifications/acp-scale-derived/refs/heads/main/README.md >}}
 
-End of File.
+![](https://iqb-specifications.github.io/acp-scale-base/index.html){width="100%" height="800px"}
+
+EoF
