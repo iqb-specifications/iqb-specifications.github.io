@@ -20,6 +20,8 @@ https://w3id.org/iqb/spec/<schema-id>/<schema-version>
 
 Für die Spezifikation `response` in der Version `1.5` würde die Perma-Id lauten: `https://w3id.org/iqb/spec/response/1.5`.
 
+![](https://iqb-specifications.github.io/acp-scale-base/index.html){width="100%" height="600px"}
+
 # Validierung
 
 Sollte eine Spezifikation unter `iqb-specifications` veröffentlicht sein und als Release nach obigem Schema eine w3id haben, können über ein Script [validate-json](https://github.com/iqb-specifications/validate-json#readme-ov-file) JSON-Datendateien validiert werden. In einem Projekt müssen üblicherweise viele Beispiel- und Testdaten hinterlegt werden. Um triviale Tipp-Fehler oder Verständnisprobleme zu vermeiden, können die Datendateien gegen das Schema auf einfache Art validiert werden.

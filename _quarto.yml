@@ -28,6 +28,10 @@ website:
     collapse-level: 1
     contents:
       - intro.qmd
+      - section: Konzepte
+        href: concepts/index.qmd
+        contents:
+          - href: concepts/unit.qmd
 format:
   html:
     theme:
