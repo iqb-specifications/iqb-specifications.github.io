@@ -2,7 +2,8 @@ project:
   type: website
 
 website:
-  page-navigation: false
+  page-navigation: true
+  llms-txt: true
   back-to-top-navigation: true
   site-url: https://iqb-specifications.github.io/
   favicon: favicon.ico
@@ -46,5 +47,6 @@ format:
       - cyborg
       - custom.scss
     anchor-sections: true
+    toc: true
     link-external-newwindow: true
     

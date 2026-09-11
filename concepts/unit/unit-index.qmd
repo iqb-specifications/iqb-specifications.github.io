@@ -3,3 +3,7 @@
   title: "Unit: Index"
 ---
 
+Eine Unit besteht normalerweise aus mehreren Dateien. Die Index-Datei (Konvention für Dateiname: *.ix.json) ist zwingend erforderlich und enthält Referenzen auf die anderen Dateien. Außerdem werden Abhängigkeiten deklariert.
+
+{{< external https://raw.githubusercontent.com/iqb-specifications/unit-index/refs/heads/main/README.md#spezifikation >}}
+
