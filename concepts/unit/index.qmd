@@ -6,6 +6,57 @@
     Die Unit ist Teil einer Befragung oder eines Tests und enthält mindestens ein Interaktionselement. Sie besteht aus mehreren Datenblöcken (z. B. UI-Definition, Kommentare, Metadaten, Items) und wird vor allem bei der Testdurchführung benötigt.
 ---
 
-# Unit Index
+# Begriff
 
-yoyo
+Eine Befragung bzw. ein Leistungstest ist darauf angewiesen, dass die Testperson mit dem Testsystem interagiert und über die dadurch erzeugten Daten Rückschlüsse erlaubt. Eine Interaktion ist z. B. das Ankreuzen in einem Formular, eine Texteingabe, ein Verschieben einer Grafik (Drag'n'Drop) usw. Die eplizite Aufforderung zu einer Interaktion und deren Erfassung nennen wir hier **Frage-Item**.
+
+Diese Items sind aus Gründen der Durchführungseffizienz zusammengefasst in Gruppen. Ein solche Itemgruppe ist dann z. B. bezogen auf einen Audiotext oder eine grafische Darstellung. Dadurch bekommt die Gruppenbildung einen inhaltlichen Kontext und ist nicht mehr beliebig.
+
+Wir nennen die Itemgruppe mit allen notwendigen Daten **Unit**. Für das Management der Units ist wichtig, dass sie grundsätzlich unabhängig von einem Einsatz in einer konkreten Testung entwickelt und gespeichert werden.
+
+Im computerbasierten Testen ist es nötig, zwischen den Units mit Frage-Items weitere Erläuterungen einzufügen (z. B. Hinweise zu Kopfhörern für nachfolgende Audio-Units). Die Durchführung im Testcenter sieht hierzu das Einstreuen von weiteren Seiten ohne Items vor. Diese Seiten sind technisch identisch mit den Units, die Items enthalten, und werden auf dieselbe Art und Weise entwickelt. Sie haben aber verständlicherweise keine Kodieranweisungen oder Variablenlisten usw..
+
+# Datenblöcke
+
+Die Daten für eine Unit sind in mindestens einer sog. Index-Datei gespeichert: `*.ix.json`. In den meisten Fällen wird diese Datei nicht ausreichen, sondern es kommen weitere Datendateien hinzu, die dann von der Index-Datei referenziert werden. Die Datei-Form schafft die Möglichkeit eines schnellen dateibasierten Austausches und gewährleistet die erforderliche Flexibilität in den Schnittstellen (oft muss eine API die Unitdaten nicht kennen).
+
+Die folgende Tabelle gibt eine Übersicht über die Datenblöcke, die zu den Unitdaten gehören. Die erste Spalte enthält den Namen der entsprechenden Property in der Index-Datei. Es sind weitere Erläuterungen verlinkt.
+
+| Tag           | Erläuterung                                                                                                                                                                                                              | Konvention Dateiname                  |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+|          | [Index](unit-index.qmd): Diese Datei ist mindestens erforderlich und referenziert die anderen Datenblöcke. | *.ix.json |
+| `userInterface`         | [User-Interface](userInterface.qmd): Daten für die Darstellung und ggf. Interaktion durch die Testperson. | *.ui.json |
+| `codingScheme`         | **Kodieranweisungen/Kodierschema**: Vorschriften, wie die Antworten der Unit zu kodieren sind. | *.cs.json |
+| `comments` | **Kommentare**: Formatierte hierarchische Texte (Html ggf. mit eingebetteten Bildern) zur Diskussion während der Entwicklungszeit  | *.co.json |
+| `richNotes` | **Formatierte Texte/ Begleitmaterial**: Formatierte Texte (Html ggf. mit eingebetteten Bildern) mit unterschiedlichen Verwendungszwecken (z. B. didaktische Kommentare, Transcript) und Links.  |  *.rn.json |
+| `metadata` | **Metadaten der Unit**: In einem standardisierten JSON-Format werden Verweise auf Vokabulare und Metadatenprofile gespeichert. | *.md.json |
+| `items`     | **Items**: Liste von Items mit Metadaten und Zuordnung von Variablen  | *.it.json |
+| `variables` | **Variablen**: Es werden alle möglichen Variablen aufgeführt, die die Antwortwerte enthalten. | *.va.json |
+
+# Lebenszyklus
+
+## Entwicklung
+
+Ein Unit-Index und auch das User-Interface kann mit einem Texteditor geschrieben werden. So sind auch die ersten IQB-Units entstanden, und bei sehr einfach gehaltenen Units (vor allem die ohne Items) kann das auch heute noch ausreichen.
+
+Natürlich entsteht bei höherer Komplexität der Bedarf nach einem Autorensystem. Hier kann man interaktiv die Unit gestalten, über einen Preview prüfen, die Kodierung entwerfen, Metadaten hinzufügen usw.. Das IQB stellt hierfür das [IQB-Studio](https://iqb-berlin.github.io/tba-info/tasks/) bereit, aber durch eine konsequente Modularisierung z. B. mit einem Plug-in-System kann die Unit-Entwicklung auch durch andere Webanwendungen erfolgen.
+
+## Einfügen in Assessment Package
+
+Zur Vorbereitung einer Studie müssen die Units in eine Abfolge gebracht werden (sog. Booklets oder Testhefte). Dieser Schritt kann ebenfalls über das Bearbeiten von Steuerdateien mit einem Texteditor erfolgen, das IQB wird hierzu aber schrittweise die Webanwendung IQB-ContenHub ausbauen. Hier werden die Units vorgehalten und zu einem Paket zusammengeführt, das die Durchführung und die Auswertung einer Studie definiert.
+
+## Durchführung
+
+Zur Durchführung bietet das IQB das [IQB-Testcenter](https://iqb-berlin.github.io/tba-info/study-run/) an, aber auch hier können durch den modularen Aufbau über Plug-ins Alternativen genutzt werden. Die Units werden hochgeladen und während des Tests "ausgeführt" - also angezeigt, und die Testperson erzeugt über die Interaktion die Ergebnisdaten.
+
+## Auswertung und Ergebnisdarstellung
+
+Es gibt eine Reihe von Unit-Datenblöcken, die die Verarbeitung der Daten nach der Testung steuern. Dazu gehören die Variablenlisten, aber vor allem dienen die Kodiervorschriften dazu, die Antworten bestimmten Kategorien zuzuordnen. Die Bewertung, ob eine Antwort als richtig einzuschätzen ist, muss bei jedem Einsatz der Unit auf einheitliche Art passieren. Teilweise kann diese Kodierung und Bewertung auch automatisch erfolgen, wozu ebenfalls das maschinenlesbare Kodierschema erforderlich ist.
+
+Bei der Auswertung und Ergebnisdarstellung ist mitunter gewünscht, dass die Unit angezeigt wird und dann ggf. auch die Antworten einer bestimmten Testperson eingeblendet werden. Auch für diese Anwendungsfälle sind die Datenstrukturen optimiert, z. B. über Metadaten und erweiterte Erläuterungen für Lehrkräfte (sog. didaktische Handreichungen; technisch Rich Notes).
+
+## Speicherung und Weiterentwicklung
+
+Die dauerhafte Speicherung von Units ist in der Webanwendung **IQB-ContentHub** vorgesehen. Hier kann man Units aus verschiedenen Studien verwalten, um sie in anderen Studien einzusetzen oder neue Varianten oder Versionen zu entwickeln. An dieser Stelle sollen auch emprirische Itemkennwerte hinzugefügt werden. Dies sind Parameter, die für die Datenanalyse bei der Ergebnisauswertung wichtig sind.
+
+Die Webanwendung IQB-ContentHub wird auch die Bereitstellung von Assessment Packages für Dritte übernehmen. Das betrifft z. B. die Abgabe der VERA-Testmaterialien an die Länder. Eine weitere geplante Funktion ist das direkte Anspringen einer Unit über einen Deep Link. Units haben eindeutige IDs (UUID).

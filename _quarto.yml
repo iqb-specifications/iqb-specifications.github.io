@@ -31,10 +31,15 @@ website:
       - section: Konzepte
         href: concepts/index.qmd
         contents:
-          - href: concepts/unit/index.qmd
-            name: Unit
+          - section: Unit
+            href: concepts/unit/index.qmd
+            contents:
+              - href: concepts/unit/unit-index.qmd
+                text: Index
+              - href: concepts/unit/userInterface.qmd
+                text: User-Interface
           - href: concepts/response/index.qmd
-            name: Antwort
+            text: Antwort
 format:
   html:
     theme:

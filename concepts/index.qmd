@@ -4,10 +4,11 @@ title: "Konzepte"
 listing:
   id: concepts
   type: table
+  fields: [title, description, date]
+  sort: "title"
   categories: false
   sort-ui: false
   filter-ui: false
-  fields: [title, description, date]
   contents:
     - "*/index.qmd"
   field-display-names:
@@ -24,9 +25,26 @@ Die Zielgruppe für diese Texte sind Personen, die APIs oder Daten genau versteh
 ::: {#concepts}
 :::
 
+# Hinweise für Autor\*innen
 
-{{< external https://raw.githubusercontent.com/iqb-specifications/acp-scale-derived/refs/heads/main/README.md >}}
+## Liste der Konzepte
 
-![](https://iqb-specifications.github.io/acp-scale-base/index.html){width="100%" height="800px"}
+Die obige Liste ist automatisch erzeugt. Dazu muss jedes Konzept in einem separaten Ordner abgelegt werden, der über eine `index.qmd` verfügt. Die Kopfdaten dieser Datei (sog. front matter) werden für die Tabelle ausgelesen: title, description und date.
 
-EoF
+## Externe README.md
+
+Jede Spezifikation sollte über eine README.md verfügen. Diese kann man in einem Konzept einbinden, da diese Quarto-Seiten die Erweiterung `external` nutzen. Beispiel einer Einbindung:
+
+```
+{{{< external https://raw.githubusercontent.com/iqb-specifications/acp-scale-derived/refs/heads/main/README.md >}}}
+```
+
+Quarto ist ein System zum Generieren statischer Webseiten. Die obige Anweisung zum Einbinden wird nur zum Zeitpunkt des Renderns ausgeführt. Um sicherzustellen, dass bei einer Änderung der Spezifikation und dann der README.md auch diese Quarto-Seiten neu gerendert werden, muss das Repository der Spezifikation ein Rendern eine `POST`-Nachricht an Quarto schicken. Siehe hierzu die Definition bei Webhook bzw. die Action-Dateien im Ordner `.github/workflows`!
+
+## Html der Spezifikation einbinden
+
+Soll die Spezifikation selbst eingebunden werden, kann dies über ein iFrame erfolgen. In Quarto wäre folgende Syntax zu wählen:
+
+```
+![](https://iqb-specifications.github.io/acp-scale-base/index.html){width="100%" height="600px"}
+```
