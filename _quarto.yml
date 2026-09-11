@@ -16,7 +16,7 @@ website:
     border: true
     background: light
     right:
-      - text: "IQB 2025"
+      - text: "IQB 2026"
         href: https://www.iqb.hu-berlin.de
     left:
       - href: index.qmd
@@ -31,7 +31,10 @@ website:
       - section: Konzepte
         href: concepts/index.qmd
         contents:
-          - href: concepts/unit.qmd
+          - href: concepts/unit/index.qmd
+            name: Unit
+          - href: concepts/response/index.qmd
+            name: Antwort
 format:
   html:
     theme:

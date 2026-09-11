@@ -1,6 +1,18 @@
 ---
 lang: de
 title: "Konzepte"
+listing:
+  id: concepts
+  type: table
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, description, date]
+  contents:
+    - "*/index.qmd"
+  field-display-names:
+    title: Konzept
+    description: Beschreibung
 ---
 
 Die Liste auf der Startseite dieser Dokumentation bietet eine schnelle Navigation zu spezifischen Definitionen. Viele dieser Einträge haben ein Symbol {{< fa book >}}. Dies ist ein Link zu einer ausführlicheren Dokumentation, sofern die Spezifikation im OpenAPI- bzw. im AsyncAPI-Format nicht ausreicht.
@@ -8,6 +20,10 @@ Die Liste auf der Startseite dieser Dokumentation bietet eine schnelle Navigatio
 Auf den Seiten im Bereich "Konzepte" finden Sie übergreifende Texte. Mehrere Spezifikationen sind in ihrem Zusammenwirken dargestellt und die Anwendungen, die diese Daten bzw. Schnittstellen verwenden und implementieren, sind erläutert.
 
 Die Zielgruppe für diese Texte sind Personen, die APIs oder Daten genau verstehen sollen - für die Programmierung von Datenauswertungen, Datenumformungen, Datenbanken, Tools, Grafiken einer Ergebnisrückmeldung usw..
+
+::: {#concepts}
+:::
+
 
 {{< external https://raw.githubusercontent.com/iqb-specifications/acp-scale-derived/refs/heads/main/README.md >}}
 

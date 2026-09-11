@@ -1,0 +1,11 @@
+---
+  lang: de
+  title: Unit
+  date: 2026-09-11
+  description: |
+    Die Unit ist Teil einer Befragung oder eines Tests und enthält mindestens ein Interaktionselement. Sie besteht aus mehreren Datenblöcken (z. B. UI-Definition, Kommentare, Metadaten, Items) und wird vor allem bei der Testdurchführung benötigt.
+---
+
+# Unit Index
+
+yoyo
