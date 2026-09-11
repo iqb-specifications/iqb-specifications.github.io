@@ -1,0 +1,9 @@
+# Antwort
+
+Während der Durchführung einer Befragung oder eines Tests entstehen durch die Interaktionen Antwortdaten. Es handelt sich hierbei um eine einfache Datenstruktur, die anschließend in vielen Zusammenhängen verarbeitet wird.
+
+# Struktur
+
+yoyo
+
+Zurück nach oben

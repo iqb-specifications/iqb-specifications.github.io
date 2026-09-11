@@ -35,6 +35,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../concepts/unit/userInterface.html" rel="next">
+<link href="../../concepts/unit/index.html" rel="prev">
 <link href="../../favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -45,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5ab8afadfe808e48590ae0a877956e1c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-bac0dcfcdb462518edcda29b030ecf7b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -79,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed fullcontent quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -175,7 +177,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#spezifikation" id="toc-spezifikation" class="nav-link active" data-scroll-target="#spezifikation">Spezifikation</a>
+  <ul class="collapse">
+  <li><a href="#allgemeine-daten" id="toc-allgemeine-daten" class="nav-link" data-scroll-target="#allgemeine-daten">Allgemeine Daten</a></li>
+  <li><a href="#abhängigkeitendependencies" id="toc-abhängigkeitendependencies" class="nav-link" data-scroll-target="#abhängigkeitendependencies">Abhängigkeiten/dependencies</a></li>
+  <li><a href="#ui-definition-userinterface" id="toc-ui-definition-userinterface" class="nav-link" data-scroll-target="#ui-definition-userinterface">UI-Definition <code>userInterface</code></a></li>
+  <li><a href="#externe-datenblöcke" id="toc-externe-datenblöcke" class="nav-link" data-scroll-target="#externe-datenblöcke">Externe Datenblöcke</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -198,8 +214,113 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Eine Unit besteht normalerweise aus mehreren Dateien. Die Index-Datei (Konvention für Dateiname: *.ix.json) ist zwingend erforderlich und enthält Referenzen auf die anderen Dateien. Außerdem werden Abhängigkeiten deklariert.</p>
+<section id="spezifikation" class="level1">
+<h1>Spezifikation</h1>
+<section id="allgemeine-daten" class="level2">
+<h2 class="anchored" data-anchor-id="allgemeine-daten">Allgemeine Daten</h2>
+<ul>
+<li><code>id</code>: Id der Unit - wird durch den User vergeben</li>
+<li><code>uuid</code>: Optionale universelle Id der Unit. Sie wird für neu erzeugte Units typischerweise automatisch vergeben. Die gesicherte Einmaligkeit hilft beim Wiederfinden von Varianten/Versionen einer Unit</li>
+<li><code>modifiedAt</code>: Markiert den Zeitpunkt der letzten Änderung der Index-Daten. Sollte sich ein externer Datenblock ändern, wird dessen <code>modifiedAt</code>-Wert neu gesetzt, aber der <code>modifiedAt</code>-Wert für den Index ändert sich nicht.</li>
+<li>Die optionalen Werte für <code>label</code> und <code>description</code> können Texte enthalten, die bei der Anzeige und der Verarbeitung der Unit genutzt werden.</li>
+<li>Hinweis: Über den externen Datenblock <code>metadata</code> können weitere Unit-Metadaten übergeben werden (s. u.).</li>
+</ul>
+</section>
+<section id="abhängigkeitendependencies" class="level2">
+<h2 class="anchored" data-anchor-id="abhängigkeitendependencies">Abhängigkeiten/dependencies</h2>
+<p>In diesem Dokument werden an mehreren Stellen Abhängigkeiten definiert. Das sind Referenzen zu Ressourcen, die notwendig sind für die entsprechende Funktion. Es handelt sich stets um ein Array, das mehrere Typen als Einträge haben kann:</p>
+<ul>
+<li><strong>Datei</strong>: Folgende Eigenschaften spezifizieren diese Datei:
+<ul>
+<li><code>fileName</code>: Name der Datei relativ zur Index-Datei (erforderlich)</li>
+<li><code>unpackBeforeProviding</code>: Wenn <code>true</code>, dann erfolgt der Zugriff (Request) nicht auf die Datei selbst, sondern es handelt sich um ein Datei-Archiv mit mehreren Dateien. Dieses Archiv (z. B. ZIP) muss erst ausgepackt werden, und der Zugriff erfolgt dann auf eine dieser Dateien. Der Typ des Archives ist standardmäßig zip (Steuerung ggf. über Dateiendung).</li>
+<li><code>httpResponseMode</code>: Bei der Auslieferung können Sets von Parametern die Performance verbessern. Beim Modus <code>STREAM</code> sollte beispielsweise eine variable Bitrate bei der multipart-Auslieferung eingestellt werden. <code>STANDARD</code> wäre ein normales GET.</li>
+</ul></li>
+<li><strong>Widget</strong>: Es wird nur ein String übergeben, der den Typ des <a href="https://verona-interfaces.github.io/widget-docs/">Verona-Widgets</a> angibt. Es wird bei Widgets kein spezifisches Modul angegeben, sondern es muss irgendein Modul dieser Art verfügbar sein.</li>
+</ul>
+</section>
+<section id="ui-definition-userinterface" class="level2">
+<h2 class="anchored" data-anchor-id="ui-definition-userinterface">UI-Definition <code>userInterface</code></h2>
+<p>Eine Unit benötigt eine Definition für die Darstellung und ggf. Interaktion durch die Testperson.</p>
+<ul>
+<li><code>player</code>: Zur Anzeige in einem Verona-System muss ein zu der UI-Definition passender Player zur Verfügung stehen. Mit diesem Attribut wird die Id und ggf. die Version des Players angegeben.</li>
+<li><code>editor</code>: Zum Editieren in einem Verona-System kann ein zu der UI-Definition passender Editor genutzt werden. Mit diesem Attribut wird die Id und ggf. die Version des Editors angegeben.</li>
+<li><code>type</code>: Wenn die UI-Definition einer Spezifikation folgt, kann die Id und die Version dieser Spezifikation angegeben werden. Dadurch kann ein alternativer Player oder Editor zugewiesen werden, falls der oben Genannte nicht gefunden wird. Außerdem kann diese Angabe helfen, Kompatibilitätsprobleme zu finden und zu beheben.</li>
+<li><code>definition</code>: Hier ist die eigentliche UI-Definition zu finden, die der Player für die Präsentation und ggf. Interaktion bekommen soll. Es kann sich hier um einen Dateinamen handeln mit diesem Inhalt (Standardname <code>*.ui.json</code>) oder um die (maskierte/stringified) Definition selbst. Die Unterscheidung wird über den Schalter <code>isDefinitionInline</code> getroffen.</li>
+<li><code>isDefinitionInline</code>: Legt fest, wie die Eigenschaft <code>definition</code> zu interpretieren ist. Wenn false (Default-Wert), dann ist dort ein Key als externer Datenblock gespeichert. Wenn true, dann ist der Inhalt von <code>definition</code> direkt die UI-Definition. Hinweis: Es kann auch Player geben, die keine UI-Definition benötigen, wie z. B. kleine Spiele, die in den Testverlauf eingestreut werden. Dann fehlt <code>definition</code> oder ist leer.</li>
+<li><code>modifiedAt</code>: Zeitpunkt der letzten Änderung</li>
+<li><code>playerDependencies</code>, <code>editorDependencies</code>: Abhängigkeiten, die für die Funktionalität des Players bzw. Editors bereitgestellt werden müssen.</li>
+</ul>
+</section>
+<section id="externe-datenblöcke" class="level2">
+<h2 class="anchored" data-anchor-id="externe-datenblöcke">Externe Datenblöcke</h2>
+<p>Die folgende Tabelle listet alle möglichen externen Datenblöcke. Es handelt sich jeweils um dieselbe Datenstruktur:</p>
+<ul>
+<li><code>id</code>: Dieser String wird genutzt, um den Datenblock zu finden. Es handelt sich üblicherweise um den Namen einer Datei, die im selben Verzeichnis liegt wie die Index-Datei.</li>
+<li><code>type</code>: Die externe Datei folgt i.d.R. einer Spezifikation. Die Id und die Version können im <code>type</code>-Attribut angegeben werden und helfen, Kompatibilitätsprobleme zu finden und zu beheben. Bei allen Datenblöcken gibt es einen Default-Typ (s. u.).</li>
+<li><code>modifiedAt</code>: Zeitpunkt der letzten Änderung</li>
+<li><code>dependencies</code>: Abhängigkeiten, die ggf. für die Verwendbarkeit des Datenblockes bereitgestellt werden müssen.</li>
+</ul>
+<p>Folgende Datenblöcke werden auf diese Art referenziert:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 68%">
+<col style="width: 22%">
+<col style="width: 3%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tag</th>
+<th>Erläuterung</th>
+<th>Relevante Spec</th>
+<th>Konvention Dateiname</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>codingScheme</code></td>
+<td><strong>Kodieranweisungen/Kodierschema</strong>: Vorschriften, wie die Antworten der Unit zu kodieren sind.</td>
+<td><a href="https://iqb-specifications.github.io/coding-scheme/">iqb-coding-scheme</a></td>
+<td>*.cs.json</td>
+</tr>
+<tr class="even">
+<td><code>comments</code></td>
+<td><strong>Kommentare</strong>: Formatierte hierarchische Texte (Html ggf. mit eingebetteten Bildern) zur Diskussion während der Entwicklungszeit</td>
+<td><a href="https://iqb-specifications.github.io/unit-comments/">iqb-unit-comments</a></td>
+<td>*.co.json</td>
+</tr>
+<tr class="odd">
+<td><code>richNotes</code></td>
+<td><strong>Formatierte Texte/ Begleitmaterial</strong>: Formatierte Texte (Html ggf. mit eingebetteten Bildern) mit unterschiedlichen Verwendungszwecken (z. B. didaktische Kommentare, Transcript) und Links.</td>
+<td><a href="https://iqb-specifications.github.io/unit-rich-notes/">iqb-unit-rich-notes</a></td>
+<td>*.rn.json</td>
+</tr>
+<tr class="even">
+<td><code>metadata</code></td>
+<td><strong>Metadaten der Unit</strong>: In einem standardisierten JSON-Format werden Verweise auf Vokabulare und Metadatenprofile gespeichert.</td>
+<td><a href="https://iqb-specifications.github.io/metadata-values/">metadata-values</a></td>
+<td>*.md.json</td>
+</tr>
+<tr class="odd">
+<td><code>items</code></td>
+<td><strong>Items</strong>: Liste von Items mit Metadaten und Zuordnung von Variablen</td>
+<td><a href="https://iqb-specifications.github.io/unit-items/">iqb-unit-items</a></td>
+<td>*.it.json</td>
+</tr>
+<tr class="even">
+<td><code>variables</code></td>
+<td><strong>Variablen</strong>: Es werden alle möglichen Variablen aufgeführt, die die Antwortwerte enthalten. Die JSON-Datei enthält zwei Einträge <code>baseVariables</code> und <code>derivedVariables</code>.</td>
+<td><a href="https://iqb-specifications.github.io/unit-variables/">unit-variables</a></td>
+<td>*.va.json</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -607,6 +728,18 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../concepts/unit/index.html" class="pagination-link" aria-label="Unit">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Unit</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../concepts/unit/userInterface.html" class="pagination-link" aria-label="User-Interface">
+        <span class="nav-page-text">User-Interface</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
