@@ -1,9 +1,18 @@
 ---
   lang: de
   title: "Unit: Index"
+  format:
+    html:
+      code-overflow: wrap
+      other-links:
+        - text: Spezifikation "unit-index"
+          href: https://iqb-specifications.github.io/unit-index
 ---
 
 Eine Unit besteht normalerweise aus mehreren Dateien. Die Index-Datei (Konvention für Dateiname: *.ix.json) ist zwingend erforderlich und enthält Referenzen auf die anderen Dateien. Außerdem werden Abhängigkeiten deklariert.
 
 {{< external https://raw.githubusercontent.com/iqb-specifications/unit-index/refs/heads/main/README.md#spezifikation >}}
 
+# Umstellungsprozess
+
+Das JSON-Format ist erst kürzlich als Nachfolger des XML-Formats entwickelt worden, um verschiedene Probleme seitens der verarbeitenden Systeme zu beheben. Bis Ende 2027 wird das alte XML-Format von allen IQB-Systemkompnenten weiterhin unterstützt.
