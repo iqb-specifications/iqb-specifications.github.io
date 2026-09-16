@@ -2,17 +2,26 @@
   description: "XML-Spezifikation für Booklets im Testcenter"
   link:
     repo: https://github.com/iqb-specifications/testcenter-booklet-xml
+    spec: https://iqb-specifications.github.io/testcenter-booklet-xml/
   categories:
     - IQB-Testcenter
 - name: testcenter-testtaker-xml
   description: "XML-Spezifikation für Testtaker/Logins im Testcenter"
   link:
     repo: https://github.com/iqb-specifications/testcenter-testtaker-xml
+    spec: https://iqb-specifications.github.io/testcenter-testtaker-xml/
   categories:
     - IQB-Testcenter
 - name: testcenter-syscheck-xml
   description: "XML-Spezifikation für System-Check im Testcenter"
   link:
     repo: https://github.com/iqb-specifications/testcenter-syscheck-xml
+  categories:
+    - IQB-Testcenter
+- name: testcenter-workspace-config
+  description: "Spezifikation für zentrale Steuerdatei eines Workspaces im Testcenter"
+  link:
+    repo: https://github.com/iqb-specifications/testcenter-workspace-config
+    spec: https://iqb-specifications.github.io/testcenter-workspace-config/
   categories:
     - IQB-Testcenter
