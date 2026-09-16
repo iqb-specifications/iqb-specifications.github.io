@@ -70,11 +70,11 @@ Spezifikation der Unitdefinition für den Player 'StarS'
 
 [ Repo](https://github.com/iqb-specifications/stars-unit-definition) [ Spec](https://iqb-specifications.github.io/stars-unit-definition/) [ Doku](https://iqb-berlin.github.io/tba-info/tasks/design/stars/)
 
-### [testcenter-booklet-xml]()
+### [testcenter-booklet-xml](https://iqb-specifications.github.io/testcenter-booklet-xml/)
 
 XML-Spezifikation für Booklets im Testcenter
 
-[ Repo](https://github.com/iqb-specifications/testcenter-booklet-xml)
+[ Repo](https://github.com/iqb-specifications/testcenter-booklet-xml) [ Spec](https://iqb-specifications.github.io/testcenter-booklet-xml/)
 
 ### [testcenter-syscheck-xml]()
 
@@ -82,11 +82,17 @@ XML-Spezifikation für System-Check im Testcenter
 
 [ Repo](https://github.com/iqb-specifications/testcenter-syscheck-xml)
 
-### [testcenter-testtaker-xml]()
+### [testcenter-testtaker-xml](https://iqb-specifications.github.io/testcenter-testtaker-xml/)
 
 XML-Spezifikation für Testtaker/Logins im Testcenter
 
-[ Repo](https://github.com/iqb-specifications/testcenter-testtaker-xml)
+[ Repo](https://github.com/iqb-specifications/testcenter-testtaker-xml) [ Spec](https://iqb-specifications.github.io/testcenter-testtaker-xml/)
+
+### [testcenter-workspace-config](https://iqb-specifications.github.io/testcenter-workspace-config/)
+
+Spezifikation für zentrale Steuerdatei eines Workspaces im Testcenter
+
+[ Repo](https://github.com/iqb-specifications/testcenter-workspace-config) [ Spec](https://iqb-specifications.github.io/testcenter-workspace-config/)
 
 ### [unit-comments](https://iqb-specifications.github.io/unit-comments/)
 
