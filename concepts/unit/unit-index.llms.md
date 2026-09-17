@@ -54,4 +54,8 @@ Folgende Datenblöcke werden auf diese Art referenziert:
 | `items` | **Items**: Liste von Items mit Metadaten und Zuordnung von Variablen | [iqb-unit-items](https://iqb-specifications.github.io/unit-items/) | \*.it.json |
 | `variables` | **Variablen**: Es werden alle möglichen Variablen aufgeführt, die die Antwortwerte enthalten. Die JSON-Datei enthält zwei Einträge `baseVariables` und `derivedVariables`. | [unit-variables](https://iqb-specifications.github.io/unit-variables/) | \*.va.json |
 
+# Umstellungsprozess
+
+Das JSON-Format ist erst kürzlich als Nachfolger des XML-Formats entwickelt worden, um verschiedene Probleme seitens der verarbeitenden Systeme zu beheben. Bis Ende 2027 wird das alte XML-Format von allen IQB-Systemkompnenten weiterhin unterstützt.
+
 Zurück nach oben

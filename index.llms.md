@@ -88,11 +88,11 @@ XML-Spezifikation für Testtaker/Logins im Testcenter
 
 [ Repo](https://github.com/iqb-specifications/testcenter-testtaker-xml) [ Spec](https://iqb-specifications.github.io/testcenter-testtaker-xml/)
 
-### [testcenter-workspace-config](https://iqb-specifications.github.io/testcenter-workspace-config/)
+### [testcenter-workspace-config](https://github.com/iqb-specifications/testcenter-workspace-config#datenstrukturen-mit-beispielen)
 
 Spezifikation für zentrale Steuerdatei eines Workspaces im Testcenter
 
-[ Repo](https://github.com/iqb-specifications/testcenter-workspace-config) [ Spec](https://iqb-specifications.github.io/testcenter-workspace-config/)
+[ Repo](https://github.com/iqb-specifications/testcenter-workspace-config) [ Spec](https://iqb-specifications.github.io/testcenter-workspace-config/) [ Doku](https://github.com/iqb-specifications/testcenter-workspace-config#datenstrukturen-mit-beispielen)
 
 ### [unit-comments](https://iqb-specifications.github.io/unit-comments/)
 
