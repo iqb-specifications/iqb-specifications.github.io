@@ -23,5 +23,6 @@
   link:
     repo: https://github.com/iqb-specifications/testcenter-workspace-config
     spec: https://iqb-specifications.github.io/testcenter-workspace-config/
+    docs: https://github.com/iqb-specifications/testcenter-workspace-config#datenstrukturen-mit-beispielen
   categories:
     - IQB-Testcenter
