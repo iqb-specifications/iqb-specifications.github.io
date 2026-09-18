@@ -5,38 +5,38 @@
     docs: https://iqb-berlin.github.io/rising-stars/response-analyser/
     repo: https://github.com/iqb-specifications/response-analyser-api
   categories:
-    - ACP
-- name: acp-index
-  description: "Assessment Content Package: Index"
+    - AP
+- name: ap-index
+  description: "Assessment Package: Index"
   link:
     spec: https://iqb-specifications.github.io/acp-index/
     docs: https://iqb-berlin.github.io/rising-stars/content-package/
     repo: https://github.com/iqb-specifications/acp-index
   categories:
-    - ACP
-- name: acp-unit
-  description: "Assessment Content Package: Unit"
+    - AP
+- name: ap-unit
+  description: "Assessment Package: Unit"
   link:
     spec: https://iqb-specifications.github.io/acp-unit/
     repo: https://github.com/iqb-specifications/acp-unit
   categories:
-    - ACP
-- name: acp-scale-base
-  description: "Assessment Content Package: Base Scale"
+    - AP
+- name: ap-scale-base
+  description: "Assessment Package: Base Scale"
   link:
     spec: https://iqb-specifications.github.io/acp-scale-base/
     repo: https://github.com/iqb-specifications/acp-scale-base
     docs: https://iqb-berlin.github.io/rising-stars/content-package/scales.html#umsetzung-als-datenspezifikation
   categories:
-    - ACP
-- name: acp-scale-derived
-  description: "Assessment Content Package: Derived Scale"
+    - AP
+- name: ap-scale-derived
+  description: "Assessment Package: Derived Scale"
   link:
     spec: https://iqb-specifications.github.io/acp-scale-derived/
     repo: https://github.com/iqb-specifications/acp-scale-derived
     docs: https://iqb-berlin.github.io/rising-stars/content-package/scales.html#umsetzung-als-datenspezifikation
   categories:
-    - ACP
+    - AP
 - name: stars-unit-definition
   description: "Spezifikation der Unitdefinition für den Player 'StarS'"
   link:

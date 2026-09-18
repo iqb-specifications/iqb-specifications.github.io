@@ -9,6 +9,8 @@ website:
   favicon: favicon.ico
   repo-url: https://github.com/iqb-specifications/iqb-specifications.github.io/
   title: "IQB-Spezifikationen"
+  margin-header: |
+    ![](/assets/tebea.png)
   navbar:
     pinned: true
     search: true
