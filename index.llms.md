@@ -1,24 +1,24 @@
-### [acp-index](https://iqb-berlin.github.io/rising-stars/content-package/)
+### [ap-index](https://iqb-berlin.github.io/rising-stars/content-package/)
 
-Assessment Content Package: Index
+Assessment Package: Index
 
 [ Repo](https://github.com/iqb-specifications/acp-index) [ Spec](https://iqb-specifications.github.io/acp-index/) [ Doku](https://iqb-berlin.github.io/rising-stars/content-package/)
 
-### [acp-scale-base](https://iqb-berlin.github.io/rising-stars/content-package/scales.html#umsetzung-als-datenspezifikation)
+### [ap-scale-base](https://iqb-berlin.github.io/rising-stars/content-package/scales.html#umsetzung-als-datenspezifikation)
 
-Assessment Content Package: Base Scale
+Assessment Package: Base Scale
 
 [ Repo](https://github.com/iqb-specifications/acp-scale-base) [ Spec](https://iqb-specifications.github.io/acp-scale-base/) [ Doku](https://iqb-berlin.github.io/rising-stars/content-package/scales.html#umsetzung-als-datenspezifikation)
 
-### [acp-scale-derived](https://iqb-berlin.github.io/rising-stars/content-package/scales.html#umsetzung-als-datenspezifikation)
+### [ap-scale-derived](https://iqb-berlin.github.io/rising-stars/content-package/scales.html#umsetzung-als-datenspezifikation)
 
-Assessment Content Package: Derived Scale
+Assessment Package: Derived Scale
 
 [ Repo](https://github.com/iqb-specifications/acp-scale-derived) [ Spec](https://iqb-specifications.github.io/acp-scale-derived/) [ Doku](https://iqb-berlin.github.io/rising-stars/content-package/scales.html#umsetzung-als-datenspezifikation)
 
-### [acp-unit](https://iqb-specifications.github.io/acp-unit/)
+### [ap-unit](https://iqb-specifications.github.io/acp-unit/)
 
-Assessment Content Package: Unit
+Assessment Package: Unit
 
 [ Repo](https://github.com/iqb-specifications/acp-unit) [ Spec](https://iqb-specifications.github.io/acp-unit/)
 
