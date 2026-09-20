@@ -41,6 +41,11 @@ website:
                 text: Index
               - href: concepts/unit/userInterface.qmd
                 text: User-Interface
+          - section: Plug-ins
+            href: concepts/plug-ins/index.qmd
+            contents:
+              - href: concepts/plug-ins/communcation.qmd
+                text: Kommunkation
           - href: concepts/response/index.qmd
             text: Antwort
 format:

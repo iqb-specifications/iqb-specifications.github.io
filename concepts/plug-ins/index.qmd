@@ -28,3 +28,9 @@ An mehreren Stellen des TBA-Systems muss zur Laufzeit einer Webanwendung UI-Code
  * Der Simple-Player und einige andere Module des IQB haben als Teil der Datenstruktur Html-Code, der dann zur Anzeige gebracht wird. Hier besteht potenziell ein Risiko, dass Fremdcode von außen mit eingeschleust werden kann. Daher wird konsequent ein sog. Sanitizer verwendet, also eine Bibliothek, die verlässlich solchen Fremdcode vor der Anzeige aus dem Html entfernt.
 
  Die Beurteilung der Risiken ist wesentlich einfacher, wenn der Programmcode veröffentlicht ist. Dann kann jede Institution, die ein Modul einsetzen möchte, eine Sicherheitsanalyse durchführen. Alle Module des IQB sind mit einer MIT-Lizenz auf GitHub veröffentlicht.
+
+ Die Content-Security-Policy (CSP) einer Host-Anwendung muss  `https: http: 'unsafe-eval'` für script-src ist nötig für das Nachladen von GeoGebra.
+
+# Name *Verona*
+
+Eine der großen Lernstandserhebungen in Deutschland ist unter dem Namen *VERA* bekannt (VERgleichsArbeiten), und aus der Kombination mit *Online* ist 2018 die Bezeichnung *Verona* entstanden. Der Name steht für die ersten Anstrengungn, eine nationale übergreifende Open Source Software Community für TBA zu bilden. Heute ist der Name noch als Synonym für TBA-Plug-ins gebräuchlich.
