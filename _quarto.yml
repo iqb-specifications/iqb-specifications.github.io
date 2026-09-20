@@ -44,7 +44,7 @@ website:
           - section: Plug-ins
             href: concepts/plug-ins/index.qmd
             contents:
-              - href: concepts/plug-ins/communcation.qmd
+              - href: concepts/plug-ins/communication.qmd
                 text: Kommunkation
           - href: concepts/response/index.qmd
             text: Antwort
