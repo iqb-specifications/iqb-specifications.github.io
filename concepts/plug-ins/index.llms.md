@@ -1,0 +1,38 @@
+# Plug-ins - Verona
+
+Im TBA-System wird für das Abspielen von Units, für das Editieren der UI-Definition und der Kodierinformationen sowie für universelle Widgets eine Plug-in-Architektur benutzt.
+
+Veröffentlichungsdatum
+
+20\. September 2026
+
+An mehreren Stellen des TBA-Systems muss zur Laufzeit einer Webanwendung UI-Code dynamisch in das Frontend nachgeladen werden. Technisch wird dies durch Html-Seiten gelöst, die Code enthalten. Sie werden in ein `iframe`-Element einer Webseite geladen, und die Kommunikation erfolgt anschließend asynchron über die JavaScript-Methode `postMessage()`.
+
+- **Player**: Modul für die Darstellung und Interaktion für eine Unit während der Testdurchführung. Üblicherweise wird dem Player durch die Testumgebung (z. B. IQB-Testcenter) ein großer Bildschirmbereich überlassen. Andere Anwendungsfälle für den Player sind die Voransicht beim Editieren, der Review von Aufgaben und das Anzeigen einer Unit im Rahmen der manuellen Kodierung. Ein Player benötigt i. d. R. die UI-Definition der Unit, um diese abzuspielen.
+- **Editor**: Eingebettet in die Webanwendung für Autor\*innen (z. B. IQB-Studio), ermöglicht ein Editor Änderungen an der UI-Definition der Unit. Außerdem erzeugt der Editor die Variablenliste für die Planung und Konfiguration der Kodierung.
+- **Schemer**: Mit einem Schemer wird das Kodierschema einer Unit angelegt und geändert. Dazu bekommt der Schemer die Variablenliste vom Editor und erzeugt selbst eine Übersicht zusätzlicher Variablen (sog. abgeleitete Variablen) des Kodierschemas.
+- **Widgets**: Während der Testdurchführung können Unit-übergreifende UI-Komponenten aufgerufen werden. Beispiele: Taschenrechner, periodensystem der Elemente, Molekül-Editor.
+
+# Grundsätze
+
+- Das Modul muss in einer einzigen Datei zusammengefasst sein. Der Build-Prozess muss also alle sonst separat vorliegenden Komponenten einer Html-Seite (Styles, Code, Schriften, Bilder usw.) zusammenbinden.
+- Außer über `postMessage()` darf das Modul keinen weiteren Kontakt mit der Außenwelt pflegen. Jedweder Zugriff auf Ressourcen des Hosts (Frontend, Backend) oder auf andere Web-Ressourcen ist nicht gestattet. Als Ausnahme gilt nur beim Player über den Parameter `directUrl`.
+- Dem Modul können Daten übergeben werden, die dann das Verhalten, die Erscheinung usw. beeinflussen. Ein Player z. B. bekommt die sog. Unit-Definition, ein Schemer das Unit-Kodierschema. Diese Daten dürfen selbst keinen Code enthalten.
+- Das Modul muss Metadaten in einem JSON-LD-Format (z. B. Version, Maintainer usw., s. u.) enthalten.
+
+# Datensicherheit
+
+Die genannten Konventionen dienen der Datensicherheit. Es muss eine verlässliche Basis für die Abschätzung von Risiken geben, die durch die Plug-in-Technik verursacht werden. Sollten diese Konventionen nicht eingehalten werden können, muss dazu eine ausführliche Dokumentation zur Verfügung stehen. Das Modul muss alles Machbare unternehmen, die aus der Abweichung resultierenden Risiken zu minimieren und zu dokumentieren. Beispiele:
+
+- Player und Editor des Aspect-Paketes des IQB nutzen GeoGebra, also eine Programmierung Dritter. Dies wird während der Laufzeit je nach Bedarf nachgeladen. Das IQB steht in direktem Kontakt mit dem Entwicklungsteam, um Risiken abzuschätzen.
+- Der Simple-Player und einige andere Module des IQB haben als Teil der Datenstruktur Html-Code, der dann zur Anzeige gebracht wird. Hier besteht potenziell ein Risiko, dass Fremdcode von außen mit eingeschleust werden kann. Daher wird konsequent ein sog. Sanitizer verwendet, also eine Bibliothek, die verlässlich solchen Fremdcode vor der Anzeige aus dem Html entfernt.
+
+Die Beurteilung der Risiken ist wesentlich einfacher, wenn der Programmcode veröffentlicht ist. Dann kann jede Institution, die ein Modul einsetzen möchte, eine Sicherheitsanalyse durchführen. Alle Module des IQB sind mit einer MIT-Lizenz auf GitHub veröffentlicht.
+
+Die Content-Security-Policy (CSP) einer Host-Anwendung muss `https: http: 'unsafe-eval'` für script-src ist nötig für das Nachladen von GeoGebra.
+
+# Name *Verona*
+
+Eine der großen Lernstandserhebungen in Deutschland ist unter dem Namen *VERA* bekannt (VERgleichsArbeiten), und aus der Kombination mit *Online* ist 2018 die Bezeichnung *Verona* entstanden. Der Name steht für die ersten Anstrengungn, eine nationale übergreifende Open Source Software Community für TBA zu bilden. Heute ist der Name noch als Synonym für TBA-Plug-ins gebräuchlich.
+
+Zurück nach oben

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Während der Durchführung einer Befragung oder eines Tests entstehen durch die Interaktionen Antwortdaten. Es handelt sich hierbei um eine einfache Datenstruktur, die anschließend in vielen Zusammenhängen verarbeitet wird.">
+<meta name="description" content="Im TBA-System wird für das Abspielen von Units, für das Editieren der UI-Definition und der Kodierinformationen sowie für universelle Widgets eine Plug-in-Architektur benutzt.">
 
-<title>Antwort – IQB-Spezifikationen</title>
+<title>Plug-ins - Verona – IQB-Spezifikationen</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -36,7 +36,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../concepts/plug-ins/communcation.qmd" rel="prev">
+<link href="../../concepts/plug-ins/communcation.qmd" rel="next">
+<link href="../../concepts/unit/userInterface.html" rel="prev">
 <link href="../../favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -106,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/response/index.html">Antwort</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/plug-ins/index.html">Plug-ins</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -166,13 +167,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../concepts/plug-ins/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../concepts/plug-ins/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Plug-ins</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../concepts/plug-ins/communcation.qmd" class="sidebar-item-text sidebar-link">
@@ -183,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../concepts/response/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../concepts/response/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Antwort</span></a>
   </div>
 </li>
@@ -201,21 +202,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#struktur" id="toc-struktur" class="nav-link active" data-scroll-target="#struktur">Struktur</a></li>
+  <li><a href="#grundsätze" id="toc-grundsätze" class="nav-link active" data-scroll-target="#grundsätze">Grundsätze</a></li>
+  <li><a href="#datensicherheit" id="toc-datensicherheit" class="nav-link" data-scroll-target="#datensicherheit">Datensicherheit</a></li>
+  <li><a href="#name-verona" id="toc-name-verona" class="nav-link" data-scroll-target="#name-verona">Name <em>Verona</em></a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/response/index.html">Antwort</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/plug-ins/index.html">Plug-ins</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Antwort</h1>
+<h1 class="title">Plug-ins - Verona</h1>
 </div>
 
 <div>
   <div class="description">
-    <p>Während der Durchführung einer Befragung oder eines Tests entstehen durch die Interaktionen Antwortdaten. Es handelt sich hierbei um eine einfache Datenstruktur, die anschließend in vielen Zusammenhängen verarbeitet wird.</p>
+    <p>Im TBA-System wird für das Abspielen von Units, für das Editieren der UI-Definition und der Kodierinformationen sowie für universelle Widgets eine Plug-in-Architektur benutzt.</p>
   </div>
 </div>
 
@@ -223,6 +226,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">20. September 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -232,9 +241,35 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="struktur" class="level1">
-<h1>Struktur</h1>
-<p>yoyo</p>
+<p>An mehreren Stellen des TBA-Systems muss zur Laufzeit einer Webanwendung UI-Code dynamisch in das Frontend nachgeladen werden. Technisch wird dies durch Html-Seiten gelöst, die Code enthalten. Sie werden in ein <code>iframe</code>-Element einer Webseite geladen, und die Kommunikation erfolgt anschließend asynchron über die JavaScript-Methode <code>postMessage()</code>.</p>
+<ul>
+<li><strong>Player</strong>: Modul für die Darstellung und Interaktion für eine Unit während der Testdurchführung. Üblicherweise wird dem Player durch die Testumgebung (z. B. IQB-Testcenter) ein großer Bildschirmbereich überlassen. Andere Anwendungsfälle für den Player sind die Voransicht beim Editieren, der Review von Aufgaben und das Anzeigen einer Unit im Rahmen der manuellen Kodierung. Ein Player benötigt i. d.&nbsp;R. die UI-Definition der Unit, um diese abzuspielen.</li>
+<li><strong>Editor</strong>: Eingebettet in die Webanwendung für Autor*innen (z. B. IQB-Studio), ermöglicht ein Editor Änderungen an der UI-Definition der Unit. Außerdem erzeugt der Editor die Variablenliste für die Planung und Konfiguration der Kodierung.</li>
+<li><strong>Schemer</strong>: Mit einem Schemer wird das Kodierschema einer Unit angelegt und geändert. Dazu bekommt der Schemer die Variablenliste vom Editor und erzeugt selbst eine Übersicht zusätzlicher Variablen (sog. abgeleitete Variablen) des Kodierschemas.</li>
+<li><strong>Widgets</strong>: Während der Testdurchführung können Unit-übergreifende UI-Komponenten aufgerufen werden. Beispiele: Taschenrechner, periodensystem der Elemente, Molekül-Editor.</li>
+</ul>
+<section id="grundsätze" class="level1">
+<h1>Grundsätze</h1>
+<ul>
+<li>Das Modul muss in einer einzigen Datei zusammengefasst sein. Der Build-Prozess muss also alle sonst separat vorliegenden Komponenten einer Html-Seite (Styles, Code, Schriften, Bilder usw.) zusammenbinden.</li>
+<li>Außer über <code>postMessage()</code> darf das Modul keinen weiteren Kontakt mit der Außenwelt pflegen. Jedweder Zugriff auf Ressourcen des Hosts (Frontend, Backend) oder auf andere Web-Ressourcen ist nicht gestattet. Als Ausnahme gilt nur beim Player über den Parameter <code>directUrl</code>.</li>
+<li>Dem Modul können Daten übergeben werden, die dann das Verhalten, die Erscheinung usw. beeinflussen. Ein Player z. B. bekommt die sog. Unit-Definition, ein Schemer das Unit-Kodierschema. Diese Daten dürfen selbst keinen Code enthalten.</li>
+<li>Das Modul muss Metadaten in einem JSON-LD-Format (z. B. Version, Maintainer usw., s. u.) enthalten.</li>
+</ul>
+</section>
+<section id="datensicherheit" class="level1">
+<h1>Datensicherheit</h1>
+<p>Die genannten Konventionen dienen der Datensicherheit. Es muss eine verlässliche Basis für die Abschätzung von Risiken geben, die durch die Plug-in-Technik verursacht werden. Sollten diese Konventionen nicht eingehalten werden können, muss dazu eine ausführliche Dokumentation zur Verfügung stehen. Das Modul muss alles Machbare unternehmen, die aus der Abweichung resultierenden Risiken zu minimieren und zu dokumentieren. Beispiele:</p>
+<ul>
+<li>Player und Editor des Aspect-Paketes des IQB nutzen GeoGebra, also eine Programmierung Dritter. Dies wird während der Laufzeit je nach Bedarf nachgeladen. Das IQB steht in direktem Kontakt mit dem Entwicklungsteam, um Risiken abzuschätzen.</li>
+<li>Der Simple-Player und einige andere Module des IQB haben als Teil der Datenstruktur Html-Code, der dann zur Anzeige gebracht wird. Hier besteht potenziell ein Risiko, dass Fremdcode von außen mit eingeschleust werden kann. Daher wird konsequent ein sog. Sanitizer verwendet, also eine Bibliothek, die verlässlich solchen Fremdcode vor der Anzeige aus dem Html entfernt.</li>
+</ul>
+<p>Die Beurteilung der Risiken ist wesentlich einfacher, wenn der Programmcode veröffentlicht ist. Dann kann jede Institution, die ein Modul einsetzen möchte, eine Sicherheitsanalyse durchführen. Alle Module des IQB sind mit einer MIT-Lizenz auf GitHub veröffentlicht.</p>
+<p>Die Content-Security-Policy (CSP) einer Host-Anwendung muss <code>https: http: 'unsafe-eval'</code> für script-src ist nötig für das Nachladen von GeoGebra.</p>
+</section>
+<section id="name-verona" class="level1">
+<h1>Name <em>Verona</em></h1>
+<p>Eine der großen Lernstandserhebungen in Deutschland ist unter dem Namen <em>VERA</em> bekannt (VERgleichsArbeiten), und aus der Kombination mit <em>Online</em> ist 2018 die Bezeichnung <em>Verona</em> entstanden. Der Name steht für die ersten Anstrengungn, eine nationale übergreifende Open Source Software Community für TBA zu bilden. Heute ist der Name noch als Synonym für TBA-Plug-ins gebräuchlich.</p>
 
 
 </section>
@@ -647,11 +682,14 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../concepts/plug-ins/communcation.qmd" class="pagination-link" aria-label="Kommunkation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Kommunkation</span>
+      <a href="../../concepts/unit/userInterface.html" class="pagination-link" aria-label="User-Interface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">User-Interface</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../concepts/plug-ins/communcation.qmd" class="pagination-link" aria-label="Kommunkation">
+        <span class="nav-page-text">Kommunkation</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

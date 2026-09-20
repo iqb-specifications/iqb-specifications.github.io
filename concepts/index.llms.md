@@ -9,6 +9,7 @@ Die Zielgruppe für diese Texte sind Personen, die APIs oder Daten genau versteh
 | Konzept | Beschreibung | Datum |
 |----|----|----|
 | [Antwort](../concepts/response/index.llms.md) | Während der Durchführung einer Befragung oder eines Tests entstehen durch die Interaktionen Antwortdaten. Es handelt sich hierbei um eine einfache Datenstruktur, die anschließend in vielen Zusammenhängen verarbeitet wird. |   |
+| [Plug-ins - Verona](../concepts/plug-ins/index.llms.md) | Im TBA-System wird für das Abspielen von Units, für das Editieren der UI-Definition und der Kodierinformationen sowie für universelle Widgets eine Plug-in-Architektur benutzt. | 20.09.2026 |
 | [Unit](../concepts/unit/index.llms.md) | Die Unit ist Teil einer Befragung oder eines Tests und enthält mindestens ein Interaktionselement. Sie besteht aus mehreren Datenblöcken (z. B. UI-Definition, Kommentare, Metadaten, Items) und wird vor allem bei der Testdurchführung benötigt. | 11.09.2026 |
 
 # Hinweise für Autor\*innen

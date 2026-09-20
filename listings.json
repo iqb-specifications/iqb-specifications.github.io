@@ -7,6 +7,7 @@
     "listing": "/concepts/index.html",
     "items": [
       "/concepts/response/index.html",
+      "/concepts/plug-ins/index.html",
       "/concepts/unit/index.html"
     ]
   }
