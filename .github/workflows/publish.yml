@@ -1,15 +1,17 @@
-on:
-    workflow_dispatch:
-    repository_dispatch:
-      types: [spec-updated]
-    push:
-      branches:
-        - main
-    pull_request:
-      branches:
-        - main
-
 name: Quarto Render and Publish
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_call:
+    secrets:
+      SPECIFICATIONS_TOKEN:
+        required: false
 
 jobs:
   build-deploy:
@@ -19,13 +21,17 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-        
+        with:
+          repository: iqb-specifications/iqb-specifications.github.io
+          ref: ${{ github.event_name == 'workflow_call' && 'main' || github.ref }}
+          token: ${{ secrets.SPECIFICATIONS_TOKEN || secrets.GITHUB_TOKEN }}
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Publish to GitHub Pages (and render) 
+      - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SPECIFICATIONS_TOKEN || secrets.GITHUB_TOKEN }}

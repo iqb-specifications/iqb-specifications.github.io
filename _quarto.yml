@@ -3,7 +3,7 @@ project:
 
 website:
   page-navigation: true
-  llms-txt: true
+#  llms-txt: true
   back-to-top-navigation: true
   site-url: https://iqb-specifications.github.io/
   favicon: favicon.ico
@@ -48,6 +48,8 @@ website:
                 text: Kommunkation
           - href: concepts/response/index.qmd
             text: Antwort
+          - href: concepts/scale/index.qmd
+            text: Skalen
 format:
   html:
     theme:
