@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/index.html",
-    "items": []
-  },
-  {
     "listing": "/concepts/index.html",
     "items": [
       "/concepts/response/index.html",
@@ -11,5 +7,9 @@
       "/concepts/scale/index.html",
       "/concepts/unit/index.html"
     ]
+  },
+  {
+    "listing": "/index.html",
+    "items": []
   }
 ]
