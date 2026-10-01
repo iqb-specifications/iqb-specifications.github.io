@@ -3,12 +3,14 @@ project:
 
 website:
   page-navigation: true
-  llms-txt: true
+#  llms-txt: true
   back-to-top-navigation: true
   site-url: https://iqb-specifications.github.io/
   favicon: favicon.ico
   repo-url: https://github.com/iqb-specifications/iqb-specifications.github.io/
   title: "IQB-Spezifikationen"
+  margin-header: |
+    ![](/assets/tebea.png)
   navbar:
     pinned: true
     search: true
@@ -39,8 +41,15 @@ website:
                 text: Index
               - href: concepts/unit/userInterface.qmd
                 text: User-Interface
+          - section: Plug-ins
+            href: concepts/plug-ins/index.qmd
+            contents:
+              - href: concepts/plug-ins/communication.qmd
+                text: Kommunkation
           - href: concepts/response/index.qmd
             text: Antwort
+          - href: concepts/scale/index.qmd
+            text: Skalen
 format:
   html:
     theme:
