@@ -27,3 +27,11 @@
     repo: https://github.com/iqb-specifications/item-matrix-rules
   categories:
     - Kodieren
+- name: response-analyser-api
+  description: "API des Webservice 'IQB-ResponseAnalyser'"
+  link:
+    spec: https://iqb-specifications.github.io/response-analyser-api/
+    docs: https://iqb-berlin.github.io/rising-stars/response-analyser/
+    repo: https://github.com/iqb-specifications/response-analyser-api
+  categories:
+    - Kodieren
