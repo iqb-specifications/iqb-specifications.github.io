@@ -7,7 +7,7 @@
     npm: https://www.npmjs.com/package/@iqbspecs/response
   categories:
     - IQB-Testcenter
-    - IQB-Kodierbox
+    - Kodieren
 - name: coding-scheme
   description: "Regeln und Instruktionen für die Kodierung der Antworten einer Unit"
   link:
@@ -17,5 +17,13 @@
     npm: https://www.npmjs.com/package/@iqbspecs/coding-scheme
   categories:
     - IQB-Testcenter
-    - IQB-Kodierbox
+    - Kodieren
     - Unit-Daten
+- name: item-matrix-rules
+  description: "Regeln für die Transformation kodierter Antworten in die Itemmatrix"
+  link:
+    spec: https://iqb-specifications.github.io/item-matrix-rules/
+    docs: https://github.com/iqb-specifications/item-matrix-rules#readme-ov-file
+    repo: https://github.com/iqb-specifications/item-matrix-rules
+  categories:
+    - Kodieren
