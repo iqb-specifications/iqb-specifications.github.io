@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Plug-ins - Kommunikation – IQB-Spezifikationen</title>
+<title>Plugins - Kommunikation – IQB-Spezifikationen</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -145,7 +145,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/index.html">Plug-ins</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/communication.html">Kommunkation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/index.html">Plugins</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/communication.html">Kommunkation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -206,7 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../concepts/plugins/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Plug-ins</span></a>
+ <span class="menu-text">Plugins</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -228,6 +228,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../../concepts/plugins/variable-info.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variablen-Info</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../concepts/plugins/player.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Player</span></a>
   </div>
 </li>
       </ul>
@@ -269,9 +275,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/index.html">Plug-ins</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/communication.html">Kommunkation</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/index.html">Plugins</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/communication.html">Kommunkation</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Plug-ins - Kommunikation</h1>
+<h1 class="title">Plugins - Kommunikation</h1>
 </div>
 
 
@@ -288,7 +294,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Die Interaktion zwischen der Hostanwendung und dem Plug-in folgt einem einheitlichen Schema:</p>
+<p>Die Interaktion zwischen der Hostanwendung und dem Plugin folgt einem einheitlichen Schema:</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -297,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre class="mermaid mermaid-js">sequenceDiagram
     participant HA as Host-Anwendung
 
-    participant VM as Plug-in
+    participant VM as Plugin
     HA-&gt;&gt;VM:Initialisierung
     VM-&gt;&gt;HA:vo_ReadyNotification
     HA-&gt;&gt;VM:vo_StartCommand
@@ -313,10 +319,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <ul>
-<li><strong>Initialisierung</strong>: Der <code>iframe</code> wird angelegt und der Plug-in-Code z. B. über das Attribute <code>srcdoc</code> darin platziert.</li>
-<li><strong>vo_ReadyNotification</strong>: Das Plug-in schickt eine Meldung an den Host, dass alle erforderlichen Initialisierungen abgeschlossen sind.</li>
-<li><strong>vo_StartCommand</strong>: Der Host schickt spezifische Daten zum Plug-in (z. B. die UI-Definition der Unit oder das Kodierschema) und startet damit die Darstellung und Interaktion.</li>
-<li>Danach meldet das Plug-in üblicherweise Zustandsänderungen <strong>vo_StateChangedNotification</strong>.</li>
+<li><strong>Initialisierung</strong>: Der <code>iframe</code> wird angelegt und der Plugin-Code z. B. über das Attribute <code>srcdoc</code> darin platziert.</li>
+<li><strong>vo_ReadyNotification</strong>: Das Plugin schickt eine Meldung an den Host, dass alle erforderlichen Initialisierungen abgeschlossen sind.</li>
+<li><strong>vo_StartCommand</strong>: Der Host schickt spezifische Daten zum Plugin (z. B. die UI-Definition der Unit oder das Kodierschema) und startet damit die Darstellung und Interaktion.</li>
+<li>Danach meldet das Plugin üblicherweise Zustandsänderungen <strong>vo_StateChangedNotification</strong>.</li>
 <li>Im Verlauf der Kommunikation können dann noch von beiden Seiten weitere Informationen ausgetauscht werden.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -348,7 +354,7 @@ Hinweis
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      }</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>In diesem Beispiel prüft die Funktion, ob der Typ der Nachricht mit ‘vo’ beginnt. In diesem Fall wird angenommen, dass es sich um eine Nachricht von einem Plug-in handelt und ein Observable wird auf einen neuen Wert gesetzt. An passenden Stellen im Host kann dann darauf reagiert werden.</p>
+<p>In diesem Beispiel prüft die Funktion, ob der Typ der Nachricht mit ‘vo’ beginnt. In diesem Fall wird angenommen, dass es sich um eine Nachricht von einem Plugin handelt und ein Observable wird auf einen neuen Wert gesetzt. An passenden Stellen im Host kann dann darauf reagiert werden.</p>
 <p>An das <code>&lt;iframe&gt;</code>-Element können Nachrichten beispielsweise so geschickt werden:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -374,20 +380,20 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Bei schnellen Tastatureingaben oder ambitionierter Beobachtung des Userverhaltens (Logging) fallen sehr viele Daten an. Beim Player-Plug-in kann man die Daten aufteilen (sog. <code>dataParts</code>), aber auch sonst könnte es viel werden. Die Hostanwendung sollte einen Puffer einrichten und nicht alles sofort wegspeichern. Bei <code>rxjs</code> gibt es beispielsweise den Operator <code>debounceTime</code>.</p>
+<p>Bei schnellen Tastatureingaben oder ambitionierter Beobachtung des Userverhaltens (Logging) fallen sehr viele Daten an. Beim Player-Plugin kann man die Daten aufteilen (sog. <code>dataParts</code>), aber auch sonst könnte es viel werden. Die Hostanwendung sollte einen Puffer einrichten und nicht alles sofort wegspeichern. Bei <code>rxjs</code> gibt es beispielsweise den Operator <code>debounceTime</code>.</p>
 </div>
 </div>
 </section>
 <section id="gemeinsame-parameter-sharedparameters" class="level1">
 <h1>Gemeinsame Parameter <code>sharedParameters</code></h1>
-<p>Plug-ins kennen einander nicht. Sie werden nach Bedarf geladen in einer nicht vorhersehbaren Reihenfolge. Allerdings gibt es Situationen, in denen Daten von einem Plug-in zum anderen weitergegeben werden soll. Beispiele:</p>
+<p>Plugins kennen einander nicht. Sie werden nach Bedarf geladen in einer nicht vorhersehbaren Reihenfolge. Allerdings gibt es Situationen, in denen Daten von einem Plugin zum anderen weitergegeben werden soll. Beispiele:</p>
 <ul>
 <li>Ein Player kann bei einem Convertible nicht verlässlich erkennen, ob eine Tastatur vorhanden ist. Vorsichtshalber wird der Player die eigene Tastatur einblenden, und die Testperson wird diese virtuelle Tastatur ausblenden, um die des Gerätes zu verwenden. Das passiert jedoch bei jeder Unit neu, wenn der Player geladen wird. Besser wäre, dass die Einstellung “bitte keine virtuelle Tastatur” an folgende Player weitergegeben wird.</li>
 <li>Ein Schemer hat verschiedene UI-Modi - je nachdem, ob automatische oder manuelle Kodierung definiert werden soll. Den gewählten Modus an folgende Schemer weiterzugeben, wäre eine gute UX.</li>
 <li>Zu Beginn der Testdurchführung wählt die Testperson einen Begleiter (Avatar). Wenn diese Figur in jeder Unit auftauchen soll wäre es klug, dem Player die Auswahl mitzuteilen und damit die richtige Figur einzublenden. Es wäre alternativ sehr aufwändig, für jede Unit getrennte Varianten für jeden Avatar zu entwickeln und dann über adaptiven Testverlauf die korrekte Anzeige zu erreichen.</li>
 </ul>
-<p>Unter <code>sharedParameters</code> sind also Daten zu verstehen, die ein Plug-in während der Laufzeit einem anderen Modul weitergeben kann. Es kann sich um ein Modul derselben Art handeln. Wenn man übergreifende Konventionen für die Parameter entwickelt, können auch unterschiedliche Module aus verschiedenen Quellen diese Informationen nutzen. Daher enthalten alle Plug-ins in ihrem Kommunikationsmodell diese Art von Datenaustausch.</p>
-<p>Die Spezifikation eines Plug-ins nutzt eine einfache Struktur <code>key</code> und <code>value</code>.</p>
+<p>Unter <code>sharedParameters</code> sind also Daten zu verstehen, die ein Plugin während der Laufzeit einem anderen Modul weitergeben kann. Es kann sich um ein Modul derselben Art handeln. Wenn man übergreifende Konventionen für die Parameter entwickelt, können auch unterschiedliche Module aus verschiedenen Quellen diese Informationen nutzen. Daher enthalten alle Plugins in ihrem Kommunikationsmodell diese Art von Datenaustausch.</p>
+<p>Die Spezifikation eines Plugins nutzt eine einfache Struktur <code>key</code> und <code>value</code>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"AVATAR"</span><span class="fu">,</span></span>
@@ -407,13 +413,13 @@ Hinweis
 <h1>Korrekte Zuordnung der Modul-Instanz bzw. der Daten</h1>
 <p>Bei den Nachrichten gibt es zwei Eigenschaften, die eine korrekte Zuordnung unterstützen:</p>
 <ul>
-<li><code>sessionId</code>: Diese ID wird beim Startkommando vom Host vergeben und wird vom Plug-in bei jeder Nachricht mitgeschickt. Diese ID wird durch das Plug-in nicht verändert. Der Host kann darüber das Plug-in-Element identifizieren und daher sicherstellen, dass bei den überwiegend asynchronen Vorgängen im Browser die Daten stets z. B. der richtigen Unit zugeordnet werden.</li>
-<li><code>timeStamp</code>: Auch diese Eigenschaft wird stets vom Plug-in mitgeschickt. Darüber kann sichergestellt werden, dass die Reihenfolge der Nachrichten nicht vertauscht wird. Es ist stets die jeweils letzte Änderung feststellbar.</li>
+<li><code>sessionId</code>: Diese ID wird beim Startkommando vom Host vergeben und wird vom Plugin bei jeder Nachricht mitgeschickt. Diese ID wird durch das Plugin nicht verändert. Der Host kann darüber das Plugin-Element identifizieren und daher sicherstellen, dass bei den überwiegend asynchronen Vorgängen im Browser die Daten stets z. B. der richtigen Unit zugeordnet werden.</li>
+<li><code>timeStamp</code>: Auch diese Eigenschaft wird stets vom Plugin mitgeschickt. Darüber kann sichergestellt werden, dass die Reihenfolge der Nachrichten nicht vertauscht wird. Es ist stets die jeweils letzte Änderung feststellbar.</li>
 </ul>
 </section>
 <section id="beenden-unnötig" class="level1">
 <h1>Beenden: unnötig</h1>
-<p>Da Änderungen sofort gemeldet werden, ist ein formelles Beenden des Plug-ins unnötig. Es gibt bei keinem Plug-in Bedarf, vor Entfernen des Moduls bestimmte Funktionen aufzurufen. Wenn das Modul nicht mehr benötigt wird, kann das <code>&lt;iframe&gt;</code>-Element entfernt oder geleert werden (<code>srcdoc=""</code>).</p>
+<p>Da Änderungen sofort gemeldet werden, ist ein formelles Beenden des Plugins unnötig. Es gibt bei keinem Plugin Bedarf, vor Entfernen des Moduls bestimmte Funktionen aufzurufen. Wenn das Modul nicht mehr benötigt wird, kann das <code>&lt;iframe&gt;</code>-Element entfernt oder geleert werden (<code>srcdoc=""</code>).</p>
 </section>
 <section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736b756c6c2d63726f7373626f6e6573203e7d7d-sicherheitshinweis" class="level1">
 <h1><i class="fa-solid fa-skull-crossbones" aria-label="skull-crossbones"></i> Sicherheitshinweis</h1>
@@ -421,7 +427,7 @@ Hinweis
 <blockquote class="blockquote">
 <p>Any window may access this method on any other window, at any time, regardless of the location of the document in the window, to send it a message. Consequently, any event listener used to receive messages <strong>must</strong> first check the identity of the sender of the message, using the <code>origin</code> and possibly <code>source</code> properties. This cannot be overstated: <strong>Failure to check the <code>origin</code> and possibly <code>source</code> properties enables cross-site scripting attacks.</strong></p>
 </blockquote>
-<p>Host-Anwendung und Plug-in sollten also alles unternehmen, die Identität des Senders festzustellen. Dazu kann man die Html-Elemente mit IDs versehen und die sessionId verwenden.</p>
+<p>Host-Anwendung und Plugin sollten also alles unternehmen, die Identität des Senders festzustellen. Dazu kann man die Html-Elemente mit IDs versehen und die sessionId verwenden.</p>
 
 
 </section>
@@ -834,8 +840,8 @@ Hinweis
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../concepts/plugins/index.html" class="pagination-link" aria-label="Plug-ins">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Plug-ins</span>
+      <a href="../../concepts/plugins/index.html" class="pagination-link" aria-label="Plugins">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Plugins</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
