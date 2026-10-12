@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Modul-Metadaten – IQB-Spezifikationen</title>
+<title>Plug-ins - Kommunikation – IQB-Spezifikationen</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -70,8 +70,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../concepts/response/index.html" rel="next">
-<link href="../../concepts/plug-ins/communication.html" rel="prev">
+<link href="../../concepts/plugins/metadata.html" rel="next">
+<link href="../../concepts/plugins/index.html" rel="prev">
 <link href="../../favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -112,6 +112,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Suchen"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -141,7 +145,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/plug-ins/index.html">Plug-ins</a></li><li class="breadcrumb-item"><a href="../../concepts/plug-ins/metadata.html">Metadaten</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/index.html">Plug-ins</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/communication.html">Kommunkation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -201,7 +205,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../concepts/plug-ins/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../concepts/plugins/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plug-ins</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -210,14 +214,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../concepts/plug-ins/communication.html" class="sidebar-item-text sidebar-link">
+  <a href="../../concepts/plugins/communication.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Kommunkation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../concepts/plug-ins/metadata.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../concepts/plugins/metadata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Metadaten</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../concepts/plugins/variable-info.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Variablen-Info</span></a>
   </div>
 </li>
       </ul>
@@ -242,25 +252,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="../../assets/tebea.png" class="img-fluid"></p>
+<p><img src="../../assets/tba-lab_logo.png" class="img-fluid"></p>
 </div></div>
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#kopfdaten" id="toc-kopfdaten" class="nav-link active" data-scroll-target="#kopfdaten">Kopfdaten</a></li>
-  <li><a href="#abhängigkeiten" id="toc-abhängigkeiten" class="nav-link" data-scroll-target="#abhängigkeiten">Abhängigkeiten</a></li>
-  <li><a href="#herkunft-pflege" id="toc-herkunft-pflege" class="nav-link" data-scroll-target="#herkunft-pflege">Herkunft, Pflege</a></li>
-  <li><a href="#programmcode" id="toc-programmcode" class="nav-link" data-scroll-target="#programmcode">Programmcode</a></li>
+  <li><a href="#nachrichten-empfangen" id="toc-nachrichten-empfangen" class="nav-link active" data-scroll-target="#nachrichten-empfangen">Nachrichten empfangen</a></li>
+  <li><a href="#gemeinsame-parameter-sharedparameters" id="toc-gemeinsame-parameter-sharedparameters" class="nav-link" data-scroll-target="#gemeinsame-parameter-sharedparameters">Gemeinsame Parameter <code>sharedParameters</code></a></li>
+  <li><a href="#korrekte-zuordnung-der-modul-instanz-bzw.-der-daten" id="toc-korrekte-zuordnung-der-modul-instanz-bzw.-der-daten" class="nav-link" data-scroll-target="#korrekte-zuordnung-der-modul-instanz-bzw.-der-daten">Korrekte Zuordnung der Modul-Instanz bzw. der Daten</a></li>
+  <li><a href="#beenden-unnötig" id="toc-beenden-unnötig" class="nav-link" data-scroll-target="#beenden-unnötig">Beenden: unnötig</a></li>
+  <li><a href="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736b756c6c2d63726f7373626f6e6573203e7d7d-sicherheitshinweis" id="toc-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736b756c6c2d63726f7373626f6e6573203e7d7d-sicherheitshinweis" class="nav-link" data-scroll-target="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736b756c6c2d63726f7373626f6e6573203e7d7d-sicherheitshinweis"><i class="fa-solid fa-skull-crossbones" aria-label="skull-crossbones"></i> Sicherheitshinweis</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Weitere Links</h2><ul><li><a href="https://verona-interfaces.github.io/verona-module-metadata/"><i class="bi bi-link-45deg"></i>Spezifikation Metadaten</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/plug-ins/index.html">Plug-ins</a></li><li class="breadcrumb-item"><a href="../../concepts/plug-ins/metadata.html">Metadaten</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/index.html">Plug-ins</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/communication.html">Kommunkation</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Modul-Metadaten</h1>
+<h1 class="title">Plug-ins - Kommunikation</h1>
 </div>
 
 
@@ -277,113 +288,145 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Ein Verona-Modul muss Metadaten enthalten. Der wichtigste Anwendungsfall für Metadaten ist das Bereitstellen von Informationen, um die Auswahl für das passende Verona-Modul für die eigene Webapplikation zu erleichtern. Erst wenn z. B. die Beschreibung und die Version eines Moduls auf standardisierte Art bekannt gemacht wird, können potenzielle Anwender über dessen Verwendung sinnvoll entscheiden.</p>
-<p>Eine Html-Seite kann auf diverse Arten Metadaten speichern. Im Verona-Kontext benutzen wir einen <code>&lt;script&gt;</code>-Block im Header, der ein JSON-Datenobjekt enthält. Diese Vorgehensweise wird als “Linked Data” bezeichnet, d.&nbsp;h. der Script-Typ wäre mit <code>application/ld+json</code> zu bezeichnen.</p>
-<details>
-<summary>
-Beispiel
-</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"UTF-8"</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Verona Editor Aspect<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> id</span><span class="op">=</span><span class="st">"verona-metadata"</span><span class="ot"> type=</span><span class="st">"application/ld+json"</span><span class="dt">&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      {</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">"id"</span><span class="op">:</span> <span class="st">"iqb-editor-aspect"</span><span class="op">,</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">"version"</span><span class="op">:</span> <span class="st">"2.10.1"</span><span class="op">,</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">"specVersion"</span><span class="op">:</span> <span class="st">"4.0"</span><span class="op">,</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"metadataVersion"</span><span class="op">:</span> <span class="st">"3.0"</span><span class="op">,</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">"type"</span><span class="op">:</span> <span class="st">"EDITOR"</span><span class="op">,</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"name"</span><span class="op">:</span> [</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>          {</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="st">"lang"</span><span class="op">:</span> <span class="st">"en"</span><span class="op">,</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">"value"</span><span class="op">:</span> <span class="st">"IQB Editor (Aspect)"</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>          }<span class="op">,</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>          {</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            <span class="st">"lang"</span><span class="op">:</span> <span class="st">"de"</span><span class="op">,</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>            <span class="st">"value"</span><span class="op">:</span> <span class="st">"IQB-Editor (Aspect)"</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>          }</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        ]<span class="op">,</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">"description"</span><span class="op">:</span> [</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>          {</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>            <span class="st">"lang"</span><span class="op">:</span> <span class="st">"de"</span><span class="op">,</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            <span class="st">"value"</span><span class="op">:</span> <span class="st">"Dieser Editor erstellt Aufgabendefinitionen in einem eigenen, JSON-Format. Anzeige- und Interaktionselemente können auf einer oder über mehreren Seiten frei oder in einem Grid positioniert werden."</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>          }<span class="op">,</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>          {</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>            <span class="st">"lang"</span><span class="op">:</span> <span class="st">"en"</span><span class="op">,</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            <span class="st">"value"</span><span class="op">:</span> <span class="st">"This editor uses a JSON formatted unit definition. You can place elements for display or interaction purposes freely or in a grid on one or more pages."</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>          }</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        ]<span class="op">,</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        <span class="st">"maintainer"</span><span class="op">:</span> {</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>          <span class="st">"name"</span><span class="op">:</span> [</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>            {</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>              <span class="st">"lang"</span><span class="op">:</span> <span class="st">"en"</span><span class="op">,</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>              <span class="st">"value"</span><span class="op">:</span> <span class="st">"IQB - Institute for Educational Quality Improvement."</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>            {</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>              <span class="st">"lang"</span><span class="op">:</span> <span class="st">"de"</span><span class="op">,</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>              <span class="st">"value"</span><span class="op">:</span> <span class="st">"IQB - Institut zur Qualitätsentwicklung im Bildungswesen."</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>          ]<span class="op">,</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>          <span class="st">"url"</span><span class="op">:</span> <span class="st">"https://www.iqb.hu-berlin.de"</span><span class="op">,</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>          <span class="st">"email"</span><span class="op">:</span> <span class="st">"iqb-tbadev@hu-berlin.de"</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        <span class="st">"code"</span><span class="op">:</span> {</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>          <span class="st">"repositoryType"</span><span class="op">:</span> <span class="st">"git"</span><span class="op">,</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>          <span class="st">"licenseType"</span><span class="op">:</span> <span class="st">"MIT"</span><span class="op">,</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>          <span class="st">"licenseUrl"</span><span class="op">:</span> <span class="st">"https://opensource.org/licenses/MIT"</span><span class="op">,</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>          <span class="st">"repositoryUrl"</span><span class="op">:</span> <span class="st">"https://github.com/iqb-berlin/verona-modules-apect"</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<p>Die vollständige Spezifikation finden Sie <a href="https://verona-interfaces.github.io/verona-module-metadata/">hier</a>.</p>
-<section id="kopfdaten" class="level1">
-<h1>Kopfdaten</h1>
+<p>Die Interaktion zwischen der Hostanwendung und dem Plug-in folgt einem einheitlichen Schema:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant HA as Host-Anwendung
+
+    participant VM as Plug-in
+    HA-&gt;&gt;VM:Initialisierung
+    VM-&gt;&gt;HA:vo_ReadyNotification
+    HA-&gt;&gt;VM:vo_StartCommand
+    loop
+        Actor TP as Person
+        VM-&gt;TP:Interaktion
+        VM-&gt;&gt;HA:vo_StateChangedNotification
+    end
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <ul>
-<li><code>id</code>: Die ID kann in internen Referenzen verwendet werden. Wenn beispielsweise eine Unitdefinition mit einem bestimmten Editor erzeugt wurde, kann die ID des Editor-Moduls die spätere Weiterarbeit sichern.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
-<li><code>version</code>: Hier wird eine übliche <a href="https://semver.org/lang/de/">SemVer</a>-Notation erwartet, also auch mit Suffixen wie <code>beta</code> oder <code>rc4</code>.</li>
-<li><code>type</code>: Die möglichen Werte dieser Aufzählung sind <code>PLAYER</code>, <code>EDITOR</code>, <code>SCHEMER</code> und <code>WIDGET</code>. Bitte lesen die entsprechenden Teile dieser Dokumentation für ein besseres Verständnis.</li>
-<li><code>model</code>: Hier kann man den Typ näher spezifizieren. Bei einem Player könnte man beispielsweise die Id und Version des Datenformates angeben, das der Player maximal verarbeiten kann. Bei einem Widget muss hier der Untertyp angegeben werden, also z. B. <code>PERIODIC_TABLE</code> oder <code>CALC</code>.</li>
-<li><code>name</code>: Diese Bezeichnung erscheint als Label z. B. in Auswahllisten, und dient als menschlich besser lesbare Version der ID. Es handelt sich um eine Datenstruktur für mehrere Sprachen.</li>
-<li><code>description</code>: Hier soll eine knappe Beschreibung helfen, die Besonderheiten dieses Moduls zu erkennen und darüber zu entscheiden, ob das Modul für die eigenen Zwecke interessant sein könnte. Es handelt sich um eine Datenstruktur für mehrere Sprachen.</li>
-<li><code>specVersion</code>: Dieser String erklärt, welche Version der Modul-Interfacedefinition unterstützt wird. Da Interfacedefinitionen einer Entwicklung unterliegen und Eigenschaften geändert und hinzugefügt werden, sollte sich eine Hostanwendung darauf einstellen, welchen Dialekt der Kommunikation das Modul versteht.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
-<li><code>metadataVersion</code>: Diese Information kann helfen, die Metadaten gezielt zu verarbeiten.</li>
+<li><strong>Initialisierung</strong>: Der <code>iframe</code> wird angelegt und der Plug-in-Code z. B. über das Attribute <code>srcdoc</code> darin platziert.</li>
+<li><strong>vo_ReadyNotification</strong>: Das Plug-in schickt eine Meldung an den Host, dass alle erforderlichen Initialisierungen abgeschlossen sind.</li>
+<li><strong>vo_StartCommand</strong>: Der Host schickt spezifische Daten zum Plug-in (z. B. die UI-Definition der Unit oder das Kodierschema) und startet damit die Darstellung und Interaktion.</li>
+<li>Danach meldet das Plug-in üblicherweise Zustandsänderungen <strong>vo_StateChangedNotification</strong>.</li>
+<li>Im Verlauf der Kommunikation können dann noch von beiden Seiten weitere Informationen ausgetauscht werden.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Das Zeichen <code>_</code> ist ein Platzhalter für die jeweilige konkrete Bezeichnung der Operation. <code>vopStartCommand</code> ist z. B. die Bezeichnung des Start-Kommandos des Players.</p>
+</div>
+</div>
+<section id="nachrichten-empfangen" class="level1">
+<h1>Nachrichten empfangen</h1>
+<p>Die Kommunikation kann nur erfolgen, wenn die Host-Anwendung Nachrichten an das <code>window</code>-Objekt abfängt. Das Verona-Modul kann nur allgemein an seine Host-Anwendung Nachrichten schicken, nicht gezielt an eine bestimmte Komponente oder ein bestimmtes DOM-Element. Auf höchster Ebene muss also z. B. so etwas einmalig aufgerufen werden:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Listener einrichten bei Start der Hostanwendung</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="Listener einrichten bei Start der Hostanwendung"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a> <span class="bu">window</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'message'</span><span class="op">,</span> (event<span class="op">:</span> <span class="bu">MessageEvent</span>) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> msgData <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">data</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> msgType <span class="op">=</span> msgData<span class="op">.</span><span class="at">type</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> ((msgType <span class="op">!==</span> <span class="kw">undefined</span>) <span class="op">&amp;&amp;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            (msgType<span class="op">.</span><span class="fu">substr</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">2</span>) <span class="op">===</span> <span class="st">'vo'</span>)) {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">tcs</span><span class="op">.</span><span class="at">postMessage$</span><span class="op">.</span><span class="fu">next</span>(<span class="bu">event</span>)<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>In diesem Beispiel prüft die Funktion, ob der Typ der Nachricht mit ‘vo’ beginnt. In diesem Fall wird angenommen, dass es sich um eine Nachricht von einem Plug-in handelt und ein Observable wird auf einen neuen Wert gesetzt. An passenden Stellen im Host kann dann darauf reagiert werden.</p>
+<p>An das <code>&lt;iframe&gt;</code>-Element können Nachrichten beispielsweise so geschickt werden:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Beispiel Startkommando für Player</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="Beispiel Startkommando für Player"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="at">postMessageTarget</span><span class="op">.</span><span class="fu">postMessage</span>({</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>        type<span class="op">:</span> <span class="st">'vopStartCommand'</span><span class="op">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        sessionId<span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">itemPlayerSessionId</span><span class="op">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        unitDefinition<span class="op">:</span> pendingUnitDef<span class="op">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        unitState<span class="op">:</span> {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>          dataParts<span class="op">:</span> pendingUnitDataToRestore</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        playerConfig<span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">tcs</span><span class="op">.</span><span class="at">fullPlayerConfig</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span> <span class="st">'*'</span>)<span class="op">;</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warnung</span>Vorsicht Datenflut
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bei schnellen Tastatureingaben oder ambitionierter Beobachtung des Userverhaltens (Logging) fallen sehr viele Daten an. Beim Player-Plug-in kann man die Daten aufteilen (sog. <code>dataParts</code>), aber auch sonst könnte es viel werden. Die Hostanwendung sollte einen Puffer einrichten und nicht alles sofort wegspeichern. Bei <code>rxjs</code> gibt es beispielsweise den Operator <code>debounceTime</code>.</p>
+</div>
+</div>
+</section>
+<section id="gemeinsame-parameter-sharedparameters" class="level1">
+<h1>Gemeinsame Parameter <code>sharedParameters</code></h1>
+<p>Plug-ins kennen einander nicht. Sie werden nach Bedarf geladen in einer nicht vorhersehbaren Reihenfolge. Allerdings gibt es Situationen, in denen Daten von einem Plug-in zum anderen weitergegeben werden soll. Beispiele:</p>
+<ul>
+<li>Ein Player kann bei einem Convertible nicht verlässlich erkennen, ob eine Tastatur vorhanden ist. Vorsichtshalber wird der Player die eigene Tastatur einblenden, und die Testperson wird diese virtuelle Tastatur ausblenden, um die des Gerätes zu verwenden. Das passiert jedoch bei jeder Unit neu, wenn der Player geladen wird. Besser wäre, dass die Einstellung “bitte keine virtuelle Tastatur” an folgende Player weitergegeben wird.</li>
+<li>Ein Schemer hat verschiedene UI-Modi - je nachdem, ob automatische oder manuelle Kodierung definiert werden soll. Den gewählten Modus an folgende Schemer weiterzugeben, wäre eine gute UX.</li>
+<li>Zu Beginn der Testdurchführung wählt die Testperson einen Begleiter (Avatar). Wenn diese Figur in jeder Unit auftauchen soll wäre es klug, dem Player die Auswahl mitzuteilen und damit die richtige Figur einzublenden. Es wäre alternativ sehr aufwändig, für jede Unit getrennte Varianten für jeden Avatar zu entwickeln und dann über adaptiven Testverlauf die korrekte Anzeige zu erreichen.</li>
+</ul>
+<p>Unter <code>sharedParameters</code> sind also Daten zu verstehen, die ein Plug-in während der Laufzeit einem anderen Modul weitergeben kann. Es kann sich um ein Modul derselben Art handeln. Wenn man übergreifende Konventionen für die Parameter entwickelt, können auch unterschiedliche Module aus verschiedenen Quellen diese Informationen nutzen. Daher enthalten alle Plug-ins in ihrem Kommunikationsmodell diese Art von Datenaustausch.</p>
+<p>Die Spezifikation eines Plug-ins nutzt eine einfache Struktur <code>key</code> und <code>value</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"AVATAR"</span><span class="fu">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"CRAB"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"BACKGROUND_COLOR"</span><span class="fu">,</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"#34F"</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"UI_MODE"</span><span class="fu">,</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"value"</span><span class="fu">:</span> <span class="st">"RULES_ONLY"</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="korrekte-zuordnung-der-modul-instanz-bzw.-der-daten" class="level1">
+<h1>Korrekte Zuordnung der Modul-Instanz bzw. der Daten</h1>
+<p>Bei den Nachrichten gibt es zwei Eigenschaften, die eine korrekte Zuordnung unterstützen:</p>
+<ul>
+<li><code>sessionId</code>: Diese ID wird beim Startkommando vom Host vergeben und wird vom Plug-in bei jeder Nachricht mitgeschickt. Diese ID wird durch das Plug-in nicht verändert. Der Host kann darüber das Plug-in-Element identifizieren und daher sicherstellen, dass bei den überwiegend asynchronen Vorgängen im Browser die Daten stets z. B. der richtigen Unit zugeordnet werden.</li>
+<li><code>timeStamp</code>: Auch diese Eigenschaft wird stets vom Plug-in mitgeschickt. Darüber kann sichergestellt werden, dass die Reihenfolge der Nachrichten nicht vertauscht wird. Es ist stets die jeweils letzte Änderung feststellbar.</li>
 </ul>
 </section>
-<section id="abhängigkeiten" class="level1">
-<h1>Abhängigkeiten</h1>
-<p>Das Datenobjekt <code>dependencies</code> soll helfen zu vermeiden, dass zur Laufzeit wichtige Objekte oder Dienste fehlen und damit die Funktionalität gefährdet ist.</p>
-<ul>
-<li><code>id</code>: Die ID soll helfen, das Objekt oder den Dienst zu finden. Es kann sich um einen Dateinamen oder eine Uri handeln.</li>
-<li><code>description</code>: Dieser Text hilft, die Funktion des Objektes bzw. des Dienstes zu verstehen. Er sollte in Englisch verfasst sein.</li>
-<li><code>type</code>: Der Wert <code>FILE</code> steht für eine Datei, <code>WIDGET</code> für ein Verona-Widget-Modul und <code>SERVICE</code> für einen webgestützten Dienst.</li>
-<li><code>required</code>: Wenn dieser Wert <code>true</code> ist, dann benötigt das Modul zwingend für seine Funktion dieses Objekt bzw. Dienst. Ansonsten (<code>false</code> ist der Standardwert) kommt die Abhängigkeit nur in bestimmten Fällen zum Tragen. Beispielsweise benötigt der Aspect-Player GeoGebra – allerdings nur, wenn in der Unit-Definition hierzu ein bestimmter Eintrag enthalten ist.</li>
-</ul>
+<section id="beenden-unnötig" class="level1">
+<h1>Beenden: unnötig</h1>
+<p>Da Änderungen sofort gemeldet werden, ist ein formelles Beenden des Plug-ins unnötig. Es gibt bei keinem Plug-in Bedarf, vor Entfernen des Moduls bestimmte Funktionen aufzurufen. Wenn das Modul nicht mehr benötigt wird, kann das <code>&lt;iframe&gt;</code>-Element entfernt oder geleert werden (<code>srcdoc=""</code>).</p>
 </section>
-<section id="herkunft-pflege" class="level1">
-<h1>Herkunft, Pflege</h1>
-<p>Im Datenobjekt <code>maintainer</code> finden sich Angaben zur Person, Firma oder Einrichtung, die das Modul entwickelt hat.</p>
-<ul>
-<li><code>name</code>: Bezeichnung der Person, Firma oder Einrichtung. Es handelt sich um eine Datenstruktur für mehrere Sprachen.</li>
-<li><code>url</code>: Ort im öffentlichen Internet, an dem weitere Dokumentationen und Kontaktinformationen zu finden sind.</li>
-<li><code>email</code>: E-Mail für Nachfragen, Anregungen usw.</li>
-</ul>
-</section>
-<section id="programmcode" class="level1">
-<h1>Programmcode</h1>
-<p>Sollte es sich um eine Open Source-Programmierung handeln, kann man im Datenobjekt <code>code</code> Informationen dazu mitteilen. Die Einträge <code>repositoryType</code>, <code>repositoryUrl</code>, <code>licenseType</code> und <code>licenseUrl</code> enthalten dann entsprechende Angaben.</p>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736b756c6c2d63726f7373626f6e6573203e7d7d-sicherheitshinweis" class="level1">
+<h1><i class="fa-solid fa-skull-crossbones" aria-label="skull-crossbones"></i> Sicherheitshinweis</h1>
+<p>Über die Verwendung von postMessage() in den <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage#notes">MDN Web Docs</a>:</p>
+<blockquote class="blockquote">
+<p>Any window may access this method on any other window, at any time, regardless of the location of the document in the window, to send it a message. Consequently, any event listener used to receive messages <strong>must</strong> first check the identity of the sender of the message, using the <code>origin</code> and possibly <code>source</code> properties. This cannot be overstated: <strong>Failure to check the <code>origin</code> and possibly <code>source</code> properties enables cross-site scripting attacks.</strong></p>
+</blockquote>
+<p>Host-Anwendung und Plug-in sollten also alles unternehmen, die Identität des Senders festzustellen. Dazu kann man die Html-Elemente mit IDs versehen und die sessionId verwenden.</p>
 
 
 </section>
 
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Fußnoten</h2>
-
-<ol>
-<li id="fn1"><p>Achtung: Um sicherzustellen, dass dann auch die passende Version des Moduls verwendet wird, sollte diese Version ebenfalls als Referenz abgespeichert werden, also z. B. <code>iqb-editor-aspect@2.4.9</code>, statt nur <code>iqb-editor-aspect</code>. Dies kann auch der Dateiname des Moduls sein, obwohl in unixbasierten Systemen das @-Zeichen reserviert ist. Das IQB verwendet daher als Dateinamen die ID sowie die Version auf folgende Art: <code>iqb-player-aspect-2.4.11.html</code>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Allerdings kann man diese Information auch ignorieren und als Host einfach alle Varianten unterstützen. Wenn eine bestimmte Information nicht gefunden wird in einem Datenobjekt eines Players, versucht der Host andere Bezeichnungen oder Datenformate entsprechend älterer Varianten der Spezifikation. Dieses defensive Verhalten erhöht die Robustheit der Programmierung, kann aber auch ernste Probleme verschleiern.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -791,13 +834,13 @@ Beispiel
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../concepts/plug-ins/communication.html" class="pagination-link" aria-label="Kommunkation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Kommunkation</span>
+      <a href="../../concepts/plugins/index.html" class="pagination-link" aria-label="Plug-ins">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Plug-ins</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../concepts/response/index.html" class="pagination-link" aria-label="Antwort">
-        <span class="nav-page-text">Antwort</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../concepts/plugins/metadata.html" class="pagination-link" aria-label="Metadaten">
+        <span class="nav-page-text">Metadaten</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

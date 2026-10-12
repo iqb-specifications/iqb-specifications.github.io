@@ -2,46 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://iqb-specifications.github.io/index.html</loc>
-    <lastmod>2026-10-12T11:08:26.981Z</lastmod>
-  </url>
-  <url>
-    <loc>https://iqb-specifications.github.io/concepts/plug-ins/metadata.html</loc>
-    <lastmod>2026-10-12T11:08:26.981Z</lastmod>
-  </url>
-  <url>
-    <loc>https://iqb-specifications.github.io/concepts/plug-ins/communication.html</loc>
-    <lastmod>2026-10-12T11:08:26.981Z</lastmod>
-  </url>
-  <url>
-    <loc>https://iqb-specifications.github.io/concepts/unit/unit-index.html</loc>
-    <lastmod>2026-10-12T11:08:26.981Z</lastmod>
-  </url>
-  <url>
-    <loc>https://iqb-specifications.github.io/concepts/unit/index.html</loc>
-    <lastmod>2026-10-12T11:08:26.981Z</lastmod>
-  </url>
-  <url>
-    <loc>https://iqb-specifications.github.io/concepts/index.html</loc>
-    <lastmod>2026-10-12T11:08:26.980Z</lastmod>
-  </url>
-  <url>
-    <loc>https://iqb-specifications.github.io/intro.html</loc>
-    <lastmod>2026-10-12T11:08:26.981Z</lastmod>
-  </url>
-  <url>
-    <loc>https://iqb-specifications.github.io/concepts/scale/index.html</loc>
-    <lastmod>2026-10-12T11:08:26.981Z</lastmod>
-  </url>
-  <url>
-    <loc>https://iqb-specifications.github.io/concepts/unit/userInterface.html</loc>
-    <lastmod>2026-10-12T11:08:26.981Z</lastmod>
+    <lastmod>2026-10-12T13:44:23.051Z</lastmod>
   </url>
   <url>
     <loc>https://iqb-specifications.github.io/concepts/response/index.html</loc>
-    <lastmod>2026-10-12T11:08:26.981Z</lastmod>
+    <lastmod>2026-10-12T13:44:23.051Z</lastmod>
   </url>
   <url>
-    <loc>https://iqb-specifications.github.io/concepts/plug-ins/index.html</loc>
-    <lastmod>2026-10-12T11:08:26.981Z</lastmod>
+    <loc>https://iqb-specifications.github.io/concepts/unit/userInterface.html</loc>
+    <lastmod>2026-10-12T13:44:23.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-specifications.github.io/concepts/scale/index.html</loc>
+    <lastmod>2026-10-12T13:44:23.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-specifications.github.io/concepts/plugins/metadata.html</loc>
+    <lastmod>2026-10-12T13:44:23.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-specifications.github.io/concepts/plugins/index.html</loc>
+    <lastmod>2026-10-12T13:44:23.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-specifications.github.io/intro.html</loc>
+    <lastmod>2026-10-12T13:44:23.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-specifications.github.io/concepts/plugins/communication.html</loc>
+    <lastmod>2026-10-12T13:44:23.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-specifications.github.io/concepts/plugins/variable-info.html</loc>
+    <lastmod>2026-10-12T13:44:23.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-specifications.github.io/concepts/index.html</loc>
+    <lastmod>2026-10-12T13:44:23.050Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-specifications.github.io/concepts/unit/index.html</loc>
+    <lastmod>2026-10-12T13:44:23.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://iqb-specifications.github.io/concepts/unit/unit-index.html</loc>
+    <lastmod>2026-10-12T13:44:23.051Z</lastmod>
   </url>
 </urlset>
