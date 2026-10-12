@@ -1,0 +1,11 @@
+---
+lang: de
+title: TBA Plugin - Variablen-Info
+format:
+    html:
+        other-links:
+            - text: Spezifikation Variablen-Info
+              href: https://iqb-specifications.github.io/variable-info/
+---
+
+{{< external https://raw.githubusercontent.com/iqb-specifications/variable-info/refs/heads/main/README.md#spezifikation >}}

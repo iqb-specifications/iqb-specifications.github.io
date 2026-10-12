@@ -10,7 +10,7 @@ website:
   repo-url: https://github.com/iqb-specifications/iqb-specifications.github.io/
   title: "IQB-Spezifikationen"
   margin-header: |
-    ![](/assets/tebea.png)
+    ![](/assets/tba-lab_logo.png)
   navbar:
     pinned: true
     search: true
@@ -42,12 +42,14 @@ website:
               - href: concepts/unit/userInterface.qmd
                 text: User-Interface
           - section: Plug-ins
-            href: concepts/plug-ins/index.qmd
+            href: concepts/plugins/index.qmd
             contents:
-              - href: concepts/plug-ins/communication.qmd
+              - href: concepts/plugins/communication.qmd
                 text: Kommunkation
-              - href: concepts/plug-ins/metadata.qmd
+              - href: concepts/plugins/metadata.qmd
                 text: Metadaten
+              - href: concepts/plugins/variable-info.qmd
+                text: Variablen-Info
           - href: concepts/response/index.qmd
             text: Antwort
           - href: concepts/scale/index.qmd

@@ -1,13 +1,22 @@
 - name: variable-info
   description: "Info über Variablen in einer Unit-Definition"
   link:
-    spec: https://verona-interfaces.github.io/variable-info/
-    docs: https://verona-interfaces.github.io/editor-docs/#parameter-variables
-    repo: https://github.com/verona-interfaces/variable-info
+    spec: https://iqb-specifications.github.io/variable-info/
+    docs: https://iqb-specifications.github.io/concepts/plugins/variable-info.html
+    repo: https://github.com/iqb-specifications/variable-info
     npm: https://www.npmjs.com/package/@iqbspecs/variable-info
   categories:
-    - Verona
+    - Plugin/Verona
     - IQB-Studio
+- name: plugin-metadata
+  description: "Metadaten-Spezifikation für TBA-Plugins"
+  link:
+    spec: https://iqb-specifications.github.io/plugin-metadata/
+    docs: https://iqb-specifications.github.io/concepts/plugins/metadata.html
+    repo: https://github.com/iqb-specifications/plugin-metadata
+  categories:
+    - Metadaten
+    - Plugin/Verona
 - name: verona-player
   description: "Interface-Spezifikation für einen Verona-Player"
   link:
@@ -15,7 +24,7 @@
     docs: https://verona-interfaces.github.io/player-docs/
     repo: https://github.com/verona-interfaces/player/
   categories:
-    - Verona
+    - Plugin/Verona
 - name: verona-editor
   description: "Interface-Spezifikation für einen Verona-Editor"
   link:
@@ -23,7 +32,7 @@
     docs: https://verona-interfaces.github.io/editor-docs/
     repo: https://github.com/verona-interfaces/editor/
   categories:
-    - Verona
+    - Plugin/Verona
 - name: verona-schemer
   description: "Interface-Spezifikation für einen Verona-Schemer"
   link:
@@ -31,7 +40,7 @@
     docs: https://verona-interfaces.github.io/schemer-docs/
     repo: https://github.com/verona-interfaces/schemer/
   categories:
-    - Verona
+    - Plugin/Verona
 - name: verona-widget
   description: "Interface-Spezifikation für ein Verona-Widget"
   link:
@@ -39,4 +48,4 @@
     docs: https://verona-interfaces.github.io/widget-docs/
     repo: https://github.com/verona-interfaces/widget/
   categories:
-    - Verona
+    - Plugin/Verona
