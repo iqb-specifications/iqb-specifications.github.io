@@ -44,7 +44,7 @@
     docs: https://iqb-berlin.github.io/tba-info/tasks/design/stars/
     repo: https://github.com/iqb-specifications/stars-unit-definition
   categories:
-    - Verona
+    - Plugin/Verona
     - Player
     - StarS
     - Unit-Daten
@@ -54,7 +54,7 @@
     spec: https://iqb-specifications.github.io/lottie-unit-definition/
     repo: https://github.com/iqb-specifications/lottie-unit-definition
   categories:
-    - Verona
+    - Plugin/Verona
     - Player
     - StarS
     - Unit-Daten

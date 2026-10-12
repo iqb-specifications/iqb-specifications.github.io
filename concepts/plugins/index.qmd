@@ -1,8 +1,8 @@
 ---
 lang: de
-title: Plug-ins - Verona
+title: Plugins - Verona
 description: |
-    Im TBA-System wird für das Abspielen von Units, für das Editieren der UI-Definition und der Kodierinformationen sowie für universelle Widgets eine Plug-in-Architektur benutzt (sog. Verona-Module).
+    Im TBA-System wird für das Abspielen von Units, für das Editieren der UI-Definition und der Kodierinformationen sowie für universelle Widgets eine Plugin-Architektur benutzt (sog. Verona-Module).
 date: 2026-09-20
 ---
 
@@ -22,7 +22,7 @@ An mehreren Stellen des TBA-Systems muss zur Laufzeit einer Webanwendung UI-Code
 
 # Datensicherheit
  
- Die genannten Konventionen dienen der Datensicherheit. Es muss eine verlässliche Basis für die Abschätzung von Risiken geben, die durch die Plug-in-Technik verursacht werden. Sollten diese Konventionen nicht eingehalten werden können, muss dazu eine ausführliche Dokumentation zur Verfügung stehen. Das Modul muss alles Machbare unternehmen, die aus der Abweichung resultierenden Risiken zu minimieren und zu dokumentieren. Beispiele:
+ Die genannten Konventionen dienen der Datensicherheit. Es muss eine verlässliche Basis für die Abschätzung von Risiken geben, die durch die Plugin-Technik verursacht werden. Sollten diese Konventionen nicht eingehalten werden können, muss dazu eine ausführliche Dokumentation zur Verfügung stehen. Das Modul muss alles Machbare unternehmen, die aus der Abweichung resultierenden Risiken zu minimieren und zu dokumentieren. Beispiele:
  
  * Player und Editor des Aspect-Paketes des IQB nutzen GeoGebra, also eine Programmierung Dritter. Dies wird während der Laufzeit je nach Bedarf nachgeladen. Das IQB steht in direktem Kontakt mit dem Entwicklungsteam, um Risiken abzuschätzen.
  * Der Simple-Player und einige andere Module des IQB haben als Teil der Datenstruktur Html-Code, der dann zur Anzeige gebracht wird. Hier besteht potenziell ein Risiko, dass Fremdcode von außen mit eingeschleust werden kann. Daher wird konsequent ein sog. Sanitizer verwendet, also eine Bibliothek, die verlässlich solchen Fremdcode vor der Anzeige aus dem Html entfernt.
@@ -33,4 +33,4 @@ An mehreren Stellen des TBA-Systems muss zur Laufzeit einer Webanwendung UI-Code
 
 # Name *Verona*
 
-Eine der großen Lernstandserhebungen in Deutschland ist unter dem Namen *VERA* bekannt (VERgleichsArbeiten), und aus der Kombination mit *Online* ist 2018 die Bezeichnung *Verona* entstanden. Der Name steht für die ersten Anstrengungn, eine nationale übergreifende Open Source Software Community für TBA zu bilden. Heute ist der Name noch als Synonym für TBA-Plug-ins gebräuchlich.
+Eine der großen Lernstandserhebungen in Deutschland ist unter dem Namen *VERA* bekannt (VERgleichsArbeiten), und aus der Kombination mit *Online* ist 2018 die Bezeichnung *Verona* entstanden. Der Name steht für die ersten Anstrengungn, eine nationale übergreifende Open Source Software Community für TBA zu bilden. Heute ist der Name noch als Synonym für TBA-Plugins gebräuchlich.

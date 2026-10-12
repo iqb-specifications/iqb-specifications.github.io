@@ -41,7 +41,7 @@ website:
                 text: Index
               - href: concepts/unit/userInterface.qmd
                 text: User-Interface
-          - section: Plug-ins
+          - section: Plugins
             href: concepts/plugins/index.qmd
             contents:
               - href: concepts/plugins/communication.qmd
@@ -50,6 +50,8 @@ website:
                 text: Metadaten
               - href: concepts/plugins/variable-info.qmd
                 text: Variablen-Info
+              - href: concepts/plugins/player.qmd
+                text: Player
           - href: concepts/response/index.qmd
             text: Antwort
           - href: concepts/scale/index.qmd

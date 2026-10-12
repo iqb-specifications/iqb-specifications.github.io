@@ -39,7 +39,7 @@ Die folgende Tabelle gibt eine Übersicht über die Datenblöcke, die zu den Uni
 
 Ein Unit-Index und auch das User-Interface kann mit einem Texteditor geschrieben werden. So sind auch die ersten IQB-Units entstanden, und bei sehr einfach gehaltenen Units (vor allem die ohne Items) kann das auch heute noch ausreichen.
 
-Natürlich entsteht bei höherer Komplexität der Bedarf nach einem Autorensystem. Hier kann man interaktiv die Unit gestalten, über einen Preview prüfen, die Kodierung entwerfen, Metadaten hinzufügen usw.. Das IQB stellt hierfür das [IQB-Studio](https://iqb-berlin.github.io/tba-info/tasks/) bereit, aber durch eine konsequente Modularisierung z. B. mit einem Plug-in-System kann die Unit-Entwicklung auch durch andere Webanwendungen erfolgen.
+Natürlich entsteht bei höherer Komplexität der Bedarf nach einem Autorensystem. Hier kann man interaktiv die Unit gestalten, über einen Preview prüfen, die Kodierung entwerfen, Metadaten hinzufügen usw.. Das IQB stellt hierfür das [IQB-Studio](https://iqb-berlin.github.io/tba-info/tasks/) bereit, aber durch eine konsequente Modularisierung z. B. mit einem Plugin-System kann die Unit-Entwicklung auch durch andere Webanwendungen erfolgen.
 
 ## Einfügen in Assessment Package
 
@@ -47,7 +47,7 @@ Zur Vorbereitung einer Studie müssen die Units in eine Abfolge gebracht werden 
 
 ## Durchführung
 
-Zur Durchführung bietet das IQB das [IQB-Testcenter](https://iqb-berlin.github.io/tba-info/study-run/) an, aber auch hier können durch den modularen Aufbau über Plug-ins Alternativen genutzt werden. Die Units werden hochgeladen und während des Tests "ausgeführt" - also angezeigt, und die Testperson erzeugt über die Interaktion die Ergebnisdaten.
+Zur Durchführung bietet das IQB das [IQB-Testcenter](https://iqb-berlin.github.io/tba-info/study-run/) an, aber auch hier können durch den modularen Aufbau über Plugins Alternativen genutzt werden. Die Units werden hochgeladen und während des Tests "ausgeführt" - also angezeigt, und die Testperson erzeugt über die Interaktion die Ergebnisdaten.
 
 ## Auswertung und Ergebnisdarstellung
 

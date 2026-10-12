@@ -1,0 +1,13 @@
+---
+lang: de
+title: TBA Plugin - Player
+format:
+    html:
+        other-links:
+            - text: Spezifikation Player
+              href: https://iqb-specifications.github.io/plugin-player/
+mermaid:
+  theme: neutral
+---
+
+{{< external https://raw.githubusercontent.com/iqb-specifications/plugin-player/refs/heads/main/README.md#spec >}}
