@@ -1,6 +1,8 @@
 ---
 lang: de
 title: Plug-ins - Kommunikation
+mermaid:
+  theme: neutral
 ---
 
 Die Interaktion zwischen der Hostanwendung und dem Plug-in folgt einem einheitlichen Schema:
