@@ -10,4 +10,4 @@ mermaid:
   theme: neutral
 ---
 
-{{< external https://raw.githubusercontent.com/iqb-specifications/plugin-player/refs/heads/main/README.md#spec >}}
+{{< external https://raw.githubusercontent.com/iqb-specifications/plugin-player/refs/heads/master/README.md#spec >}}
