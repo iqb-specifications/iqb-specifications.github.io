@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Im TBA-System wird für das Abspielen von Units, für das Editieren der UI-Definition und der Kodierinformationen sowie für universelle Widgets eine Plug-in-Architektur benutzt.">
+<meta name="description" content="Im TBA-System wird für das Abspielen von Units, für das Editieren der UI-Definition und der Kodierinformationen sowie für universelle Widgets eine Plug-in-Architektur benutzt (sog. Verona-Module).">
 
 <title>Plug-ins - Verona – IQB-Spezifikationen</title>
 <style>
@@ -45,10 +45,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-86e1eddff8ef08d0e8d761b47b5dd5c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-d43534a38c84d5328b7b27a17f7c73e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -180,6 +180,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Kommunkation</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../concepts/plug-ins/metadata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metadaten</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item">
@@ -224,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>Im TBA-System wird für das Abspielen von Units, für das Editieren der UI-Definition und der Kodierinformationen sowie für universelle Widgets eine Plug-in-Architektur benutzt.</p>
+    <p>Im TBA-System wird für das Abspielen von Units, für das Editieren der UI-Definition und der Kodierinformationen sowie für universelle Widgets eine Plug-in-Architektur benutzt (sog. Verona-Module).</p>
   </div>
 </div>
 
@@ -247,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>An mehreren Stellen des TBA-Systems muss zur Laufzeit einer Webanwendung UI-Code dynamisch in das Frontend nachgeladen werden. Technisch wird dies durch Html-Seiten gelöst, die Code enthalten. Sie werden in ein <code>iframe</code>-Element einer Webseite geladen, und die Kommunikation erfolgt anschließend asynchron über die JavaScript-Methode <code>postMessage()</code>.</p>
+<p>An mehreren Stellen des TBA-Systems muss zur Laufzeit einer Webanwendung UI-Code dynamisch in das Frontend nachgeladen werden. Technisch wird dies durch Html-Seiten gelöst, die Code enthalten. Sie werden in ein <code>iframe</code>-Element einer Webseite geladen, und die <a href="../../concepts/plug-ins/communication.html">Kommunikation</a> erfolgt anschließend asynchron über die JavaScript-Methode <code>postMessage()</code>.</p>
 <ul>
 <li><strong>Player</strong>: Modul für die Darstellung und Interaktion für eine Unit während der Testdurchführung. Üblicherweise wird dem Player durch die Testumgebung (z. B. IQB-Testcenter) ein großer Bildschirmbereich überlassen. Andere Anwendungsfälle für den Player sind die Voransicht beim Editieren, der Review von Aufgaben und das Anzeigen einer Unit im Rahmen der manuellen Kodierung. Ein Player benötigt i. d.&nbsp;R. die UI-Definition der Unit, um diese abzuspielen.</li>
 <li><strong>Editor</strong>: Eingebettet in die Webanwendung für Autor*innen (z. B. IQB-Studio), ermöglicht ein Editor Änderungen an der UI-Definition der Unit. Außerdem erzeugt der Editor die Variablenliste für die Planung und Konfiguration der Kodierung.</li>
@@ -260,7 +266,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Das Modul muss in einer einzigen Datei zusammengefasst sein. Der Build-Prozess muss also alle sonst separat vorliegenden Komponenten einer Html-Seite (Styles, Code, Schriften, Bilder usw.) zusammenbinden.</li>
 <li>Außer über <code>postMessage()</code> darf das Modul keinen weiteren Kontakt mit der Außenwelt pflegen. Jedweder Zugriff auf Ressourcen des Hosts (Frontend, Backend) oder auf andere Web-Ressourcen ist nicht gestattet. Als Ausnahme gilt nur beim Player über den Parameter <code>directUrl</code>.</li>
 <li>Dem Modul können Daten übergeben werden, die dann das Verhalten, die Erscheinung usw. beeinflussen. Ein Player z. B. bekommt die sog. Unit-Definition, ein Schemer das Unit-Kodierschema. Diese Daten dürfen selbst keinen Code enthalten.</li>
-<li>Das Modul muss Metadaten in einem JSON-LD-Format (z. B. Version, Maintainer usw., s. u.) enthalten.</li>
+<li>Das Modul muss <a href="../../concepts/plug-ins/metadata.html">Metadaten</a> in einem JSON-LD-Format (z. B. Version, Maintainer usw., s. u.) enthalten.</li>
 </ul>
 </section>
 <section id="datensicherheit" class="level1">
