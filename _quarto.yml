@@ -46,6 +46,8 @@ website:
             contents:
               - href: concepts/plug-ins/communication.qmd
                 text: Kommunkation
+              - href: concepts/plug-ins/metadata.qmd
+                text: Metadaten
           - href: concepts/response/index.qmd
             text: Antwort
           - href: concepts/scale/index.qmd
