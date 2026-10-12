@@ -271,7 +271,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#navigation-denied-notification" id="toc-navigation-denied-notification" class="nav-link" data-scroll-target="#navigation-denied-notification">7 Navigation Denied Notification</a></li>
   <li><a href="#player-config-changed-notification" id="toc-player-config-changed-notification" class="nav-link" data-scroll-target="#player-config-changed-notification">8 Player Config Changed Notification</a></li>
   <li><a href="#runtime-error-notification" id="toc-runtime-error-notification" class="nav-link" data-scroll-target="#runtime-error-notification">9 Runtime Error Notification</a></li>
-  <li><a href="#subject-to-change" id="toc-subject-to-change" class="nav-link" data-scroll-target="#subject-to-change">Subject to change</a></li>
   <li><a href="#widget-call" id="toc-widget-call" class="nav-link" data-scroll-target="#widget-call">10 Widget Call</a></li>
   <li><a href="#widget-return" id="toc-widget-return" class="nav-link" data-scroll-target="#widget-return">11 Widget Return</a></li>
   <li><a href="#window-focus-changed-notification" id="toc-window-focus-changed-notification" class="nav-link" data-scroll-target="#window-focus-changed-notification">Window Focus Changed Notification</a></li>
@@ -287,30 +286,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#presentationprogress" id="toc-presentationprogress" class="nav-link" data-scroll-target="#presentationprogress"><code>presentationProgress</code></a></li>
   <li><a href="#responseprogress" id="toc-responseprogress" class="nav-link" data-scroll-target="#responseprogress"><code>responseProgress</code></a></li>
   </ul></li>
-  <li><a href="#hinweis-validierung" id="toc-hinweis-validierung" class="nav-link" data-scroll-target="#hinweis-validierung">Hinweis Validierung</a></li>
-  <li><a href="#hinweis-required" id="toc-hinweis-required" class="nav-link" data-scroll-target="#hinweis-required">Hinweis “required”</a></li>
-  <li><a href="#unitstatedatatype" id="toc-unitstatedatatype" class="nav-link" data-scroll-target="#unitstatedatatype"><code>unitStateDataType</code></a></li>
-  <li><a href="#playerconfig" id="toc-playerconfig" class="nav-link" data-scroll-target="#playerconfig"><code>playerConfig</code></a>
-  <ul class="collapse">
-  <li><a href="#unitnumber-unittitle-unitid" id="toc-unitnumber-unittitle-unitid" class="nav-link" data-scroll-target="#unitnumber-unittitle-unitid"><code>unitNumber</code>, <code>unitTitle</code>, <code>unitId</code></a></li>
-  <li><a href="#logpolicy" id="toc-logpolicy" class="nav-link" data-scroll-target="#logpolicy"><code>logPolicy</code></a></li>
-  <li><a href="#pagingmode" id="toc-pagingmode" class="nav-link" data-scroll-target="#pagingmode"><code>pagingMode</code></a></li>
-  </ul></li>
-  <li><a href="#scroll-snap-nicht-verlässlich" id="toc-scroll-snap-nicht-verlässlich" class="nav-link" data-scroll-target="#scroll-snap-nicht-verlässlich">Scroll-snap nicht verlässlich</a></li>
-  <li><a href="#printmode" id="toc-printmode" class="nav-link" data-scroll-target="#printmode"><code>printMode</code></a></li>
-  <li><a href="#elementstohighlight" id="toc-elementstohighlight" class="nav-link" data-scroll-target="#elementstohighlight"><code>elementsToHighlight</code></a></li>
-  <li><a href="#enablednavigationtargets" id="toc-enablednavigationtargets" class="nav-link" data-scroll-target="#enablednavigationtargets"><code>enabledNavigationTargets</code></a></li>
-  <li><a href="#startpage" id="toc-startpage" class="nav-link" data-scroll-target="#startpage"><code>startPage</code></a></li>
-  <li><a href="#directdownloadurl" id="toc-directdownloadurl" class="nav-link" data-scroll-target="#directdownloadurl"><code>directDownloadUrl</code></a></li>
-  <li><a href="#sharedparameters" id="toc-sharedparameters" class="nav-link" data-scroll-target="#sharedparameters"><code>sharedParameters</code></a></li>
-  </ul></li>
-  <li><a href="#meldung-von-änderungen-vopstatechangednotification" id="toc-meldung-von-änderungen-vopstatechangednotification" class="nav-link" data-scroll-target="#meldung-von-änderungen-vopstatechangednotification">Meldung von Änderungen <code>vopStateChangedNotification</code></a>
-  <ul class="collapse">
-  <li><a href="#sessionid-1" id="toc-sessionid-1" class="nav-link" data-scroll-target="#sessionid-1"><code>sessionId</code></a></li>
-  <li><a href="#timestamp" id="toc-timestamp" class="nav-link" data-scroll-target="#timestamp"><code>timestamp</code></a></li>
-  <li><a href="#unitstate-1" id="toc-unitstate-1" class="nav-link" data-scroll-target="#unitstate-1"><code>unitState</code></a></li>
-  <li><a href="#playerstate" id="toc-playerstate" class="nav-link" data-scroll-target="#playerstate"><code>playerState</code></a></li>
-  <li><a href="#log" id="toc-log" class="nav-link" data-scroll-target="#log"><code>log</code></a></li>
   </ul></li>
   </ul>
 <div class="quarto-other-links"><h2>Weitere Links</h2><ul><li><a href="https://iqb-specifications.github.io/plugin-player/"><i class="bi bi-link-45deg"></i>Spezifikation Player</a></li></ul></div></nav>
@@ -351,41 +326,73 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Die Spezifikation der API finden Sie <a href="https://iqb-specifications.github.io/plugin-player/">hier</a>.</p>
 <section id="kommunikationsmodell" class="level1">
 <h1>Kommunikationsmodell</h1>
-<p><code>{mermaid} sequenceDiagram     autonumber     participant HA as Host-Anwendung     participant VM as Player (Plugin)     HA-&gt;&gt;VM:Initialisierung     VM-&gt;&gt;HA:vopReadyNotification     HA-&gt;&gt;VM:vopStartCommand     loop         opt             VM-&gt;&gt;HA:vopStateChangedNotification         end         opt             HA-&gt;&gt;VM:vopPageNavigationCommand         end         opt             VM-&gt;&gt;HA:vopUnitNavigationRequestedNotification         end         opt             HA-&gt;&gt;VM:vopNavigationDeniedNotification         end         opt             HA-&gt;&gt;VM:vopPlayerConfigChangedNotification         end         opt             VM-&gt;&gt;HA:vopRuntimeErrorNotification         end         opt             VM-&gt;&gt;HA:vopWidgetCall             HA-&gt;&gt;VM:vopWidgetReturn         end     end</code></p>
+<pre class="mermaid"><code>
+sequenceDiagram
+    autonumber
+    participant HA as Host-Anwendung
+    participant VM as Player (Plugin)
+    HA-&gt;&gt;VM:Initialisierung
+    VM-&gt;&gt;HA:vopReadyNotification
+    HA-&gt;&gt;VM:vopStartCommand
+    loop
+        opt
+            VM-&gt;&gt;HA:vopStateChangedNotification
+        end
+        opt
+            HA-&gt;&gt;VM:vopPageNavigationCommand
+        end
+        opt
+            VM-&gt;&gt;HA:vopUnitNavigationRequestedNotification
+        end
+        opt
+            HA-&gt;&gt;VM:vopNavigationDeniedNotification
+        end
+        opt
+            HA-&gt;&gt;VM:vopPlayerConfigChangedNotification
+        end
+        opt
+            VM-&gt;&gt;HA:vopRuntimeErrorNotification
+        end
+        opt
+            VM-&gt;&gt;HA:vopWidgetCall
+            HA-&gt;&gt;VM:vopWidgetReturn
+        end
+    end
+</code></pre>
 <section id="initialisierung" class="level2">
 <h2 class="anchored" data-anchor-id="initialisierung">1 Initialisierung</h2>
 <p>Der Host richtet ein <code>&lt;iframe&gt;</code>-Element ein und setzt für das <code>srcdoc</code>-Attribut den kompletten Inhalt des Plugins. Das Plugin ist technisch eine Html-Seite, d. h. es wird durch das Laden auch die Ausführung von JavaScript-Code angestoßen, der auf oberster Ebene vorgesehen ist.</p>
 </section>
 <section id="ready-notification" class="level2">
 <h2 class="anchored" data-anchor-id="ready-notification">2 Ready Notification</h2>
-<p>Der Code zur Initialisierung sendet als letzten Schritt eine Nachricht an den Host, dass das Plugin bereit sei für das Start-Kommando. Als Payload wird das <a href="../intro/metadata.qmd">Metadaten-Objekt</a> mitgeschickt – hier allerdings als String serialisiert, um nicht bei jeder Änderung der Metadaten-Spezifikation alle Modul-API ändern zu müssen.</p>
+<p>Der Code zur Initialisierung sendet als letzten Schritt eine Nachricht an den Host, dass das Plugin bereit sei für das Start-Kommando. Als Payload wird das <a href="https://iqb-specifications.github.io/concepts/plugins/metadata.html">Metadaten-Objekt</a> mitgeschickt – hier allerdings als String serialisiert, um nicht bei jeder Änderung der Metadaten-Spezifikation alle Modul-API ändern zu müssen.</p>
 </section>
 <section id="start-command" class="level2">
 <h2 class="anchored" data-anchor-id="start-command">3 Start Command</h2>
-<div class="callout-tip">
-<p>Ausführliche Darstellung des Start-Kommandos siehe <a href="">unten</a>.</p>
-</div>
+<blockquote class="blockquote">
+<p>Ausführliche Darstellung des Start-Kommandos siehe <a href="#start-kommando-vopstartcommand">unten</a>.</p>
+</blockquote>
 <p>Nachdem der Host die Bereitschaftsmeldung erhalten hat, schickt er die Unit-Definition: Parameter <code>unitDefinition</code>, serialisiert als String. Damit stellt der Player – der nach der Initialisierung zunächst eine leere Seite zeigt – alle Elemente dar, die in der Unit-Definition vorgesehen sind und bereitet die Interaktionselemente vor.</p>
 <p>Dem Player wird mit <code>sessionId</code> eine Kennung mitgeschickt, die der Player anschließend in jeder Nachricht verwenden soll. Damit wird die korrekte Zuordnung der Nachricht bzw. der darin enthaltenen Daten zur Unit unterstützt.</p>
 <p>Weitere Parameter:</p>
 <ul>
 <li><code>unitDefinitionType</code>: Sollte es Varianten oder Versionen von Unit-Definitionen geben, kann dies hier dem Player mitgeteilt werden. Alternativ (oder parallel) kann natürlich diese Information als Teil der Datenstruktur der Unit-Definition übergeben werden.</li>
-<li><code>unitState</code>: Sollte die Unit wiederholt präsentiert werden, soll der vorherige Bearbeitungsstatus wiederhergestellt werden. Weitere Erläuterungen zu diesem Datenobjekt finden Sie <a href="vopStartCommand.qmd">hier</a>.</li>
-<li><code>playerConfig</code>: Hier werden Parameter übergeben, die die Anzeige und die Interaktion steuern. Beispielsweise kann die Art und Weise des Blätterns zur nächsten Seite festgelegt werden. Weitere Erläuterungen zu diesem Datenobjekt finden Sie <a href="vopStartCommand.qmd">hier</a>.</li>
+<li><code>unitState</code>: Sollte die Unit wiederholt präsentiert werden, soll der vorherige Bearbeitungsstatus wiederhergestellt werden. Weitere Erläuterungen zu diesem Datenobjekt finden Sie <a href="#unitstate">hier</a>.</li>
+<li><code>playerConfig</code>: Hier werden Parameter übergeben, die die Anzeige und die Interaktion steuern. Beispielsweise kann die Art und Weise des Blätterns zur nächsten Seite festgelegt werden. Weitere Erläuterungen zu diesem Datenobjekt finden Sie <a href="#playerconfig">hier</a>.</li>
 </ul>
 </section>
 <section id="state-changed-notification" class="level2">
 <h2 class="anchored" data-anchor-id="state-changed-notification">4 State Changed Notification</h2>
-<div class="callout-tip">
-<p>Ausführliche Darstellung der Meldung zur Statusänderung siehe <a href="">unten</a>.</p>
-</div>
+<blockquote class="blockquote">
+<p>Ausführliche Darstellung der Meldung zur Statusänderung siehe <a href="#meldung-von-änderungen-vopstatechangednotification">unten</a>.</p>
+</blockquote>
 <p>Sobald eine Interaktion stattgefunden hat, die als Antwort wichtig wäre oder die bei einem wiederholten Aufruf der Unit wiederhergestellt werden soll, meldet der Player diese Änderung. Parameter:</p>
 <ul>
 <li><code>sessionId</code>: Die Kennung aus dem Start-Kommando, um die korrekte Zuordnung der Nachricht bzw. der darin enthaltenen Daten zur Unit zu unterstützen.</li>
 <li><code>timeStamp</code>: Ein String im Standard-Format <a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-time-string-format">date-time</a>. Die Nutzung dieser Information ist dem Host überlassen, soll aber vor allem die korrekte Reihenfolge vieler asynchron eintreffender Nachrichten sicherstellen.</li>
-<li><code>unitState</code>: Daten der Antworten im weiteren Sinne. Diese dienen der Auswertung und der Wiederherstellung beim Zurückblättern. Weitere Erläuterungen zu diesem Datenobjekt finden Sie <a href="vopStateChangedNotification.qmd">hier</a>.</li>
-<li><code>playerState</code>: Hier schickt der Player Informationen, die dem Host helfen können, die UI anzupassen. Beispielsweise wird so ein Wechsel der Seite berichtet, damit der Host in der Navigationsdarstellung die aktive Seite anders darstellt. Weitere Erläuterungen zu diesem Datenobjekt finden Sie <a href="vopStateChangedNotification.qmd">hier</a>.</li>
-<li><code>log</code>: Hierüber werden Log-Einträge geschickt. Dies sind Ereignisse, die nicht unbedingt einen Status ändern, sondern nur der Rekonstruktion der Beantwortung über die Zeit dienen können. Weitere Erläuterungen zu diesem Datenobjekt finden Sie <a href="vopStateChangedNotification.qmd">hier</a>.</li>
+<li><code>unitState</code>: Daten der Antworten im weiteren Sinne. Diese dienen der Auswertung und der Wiederherstellung beim Zurückblättern. Weitere Erläuterungen zu diesem Datenobjekt finden Sie <a href="#unitstate">hier</a>.</li>
+<li><code>playerState</code>: Hier schickt der Player Informationen, die dem Host helfen können, die UI anzupassen. Beispielsweise wird so ein Wechsel der Seite berichtet, damit der Host in der Navigationsdarstellung die aktive Seite anders darstellt. Weitere Erläuterungen zu diesem Datenobjekt finden Sie <a href="#playerstate">hier</a>.</li>
+<li><code>log</code>: Hierüber werden Log-Einträge geschickt. Dies sind Ereignisse, die nicht unbedingt einen Status ändern, sondern nur der Rekonstruktion der Beantwortung über die Zeit dienen können. Weitere Erläuterungen zu diesem Datenobjekt finden Sie <a href="#log">hier</a>.</li>
 </ul>
 </section>
 <section id="page-navigation-command" class="level2">
@@ -425,7 +432,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Parameter:</p>
 <ul>
 <li><code>sessionId</code>: Die Kennung aus dem Start-Kommando, um die korrekte Zuordnung der Nachricht bzw. der darin enthaltenen Daten zur Unit zu unterstützen.</li>
-<li><code>playerConfig</code>: Bitte diese Datenstruktur <a href="vopStartCommand.html#unitnumber-unittitle-unitid">hier nachlesen</a></li>
+<li><code>playerConfig</code>: Bitte diese Datenstruktur <a href="#playerconfig">hier nachlesen</a></li>
 </ul>
 </section>
 <section id="runtime-error-notification" class="level2">
@@ -435,10 +442,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>sessionId</code>: Die Kennung aus dem Start-Kommando, um die korrekte Zuordnung der Nachricht bzw. der darin enthaltenen Daten zur Unit zu unterstützen.</li>
 <li><code>code</code>, <code>message</code>: Strings, die den Fehler beschreiben.</li>
 </ul>
-</section>
-<section id="subject-to-change" class="level2 callout-caution">
-<h2 class="anchored" data-anchor-id="subject-to-change">Subject to change</h2>
-<p>Für den Code sollte es eine Liste von möglichen Werten geben, damit die Host-Anwendungen konsistent reagieren. Aktuell liegen hierzu noch zu wenig Erfahrungen vor. Beispiele: <code>AUDIO_CORRUPT</code>, <code>GEOGEBRA_CRASH</code></p>
+<blockquote class="blockquote">
+<p>Achtung: Für den Code sollte es eine Liste von möglichen Werten geben, damit die Host-Anwendungen konsistent reagieren. Aktuell liegen hierzu noch zu wenig Erfahrungen vor. Beispiele: <code>AUDIO_CORRUPT</code>, <code>GEOGEBRA_CRASH</code></p>
+</blockquote>
 </section>
 <section id="widget-call" class="level2">
 <h2 class="anchored" data-anchor-id="widget-call">10 Widget Call</h2>
@@ -467,34 +473,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <summary>
 Code-Beispiel
 </summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span>Host Fokus: <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"hostFocus"</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span>Client Fokus: <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"clientFocus"</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> iframe <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'iframe'</span>)<span class="op">;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> hostFocus <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'#hostFocus'</span>)<span class="op">;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> clientFocus <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'#clientFocus'</span>)<span class="op">;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  iframe<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'srcdoc'</span><span class="op">,</span> <span class="st">'&lt;div&gt;click me&lt;/div&gt;'</span>)<span class="op">;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  iframe<span class="op">.</span><span class="at">contentWindow</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'blur'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    clientFocus<span class="op">.</span><span class="at">innerText</span> <span class="op">=</span> <span class="st">'no'</span><span class="op">;</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  iframe<span class="op">.</span><span class="at">contentWindow</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'focus'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    clientFocus<span class="op">.</span><span class="at">innerText</span> <span class="op">=</span> <span class="st">'yes'</span><span class="op">;</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="bu">window</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'blur'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    hostFocus<span class="op">.</span><span class="at">innerText</span> <span class="op">=</span> <span class="st">'no'</span><span class="op">;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="bu">window</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'focus'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    hostFocus<span class="op">.</span><span class="at">innerText</span> <span class="op">=</span> <span class="st">'yes'</span><span class="op">;</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span>Host Fokus: <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"hostFocus"</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span>Client Fokus: <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"clientFocus"</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> iframe <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'iframe'</span>)<span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> hostFocus <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'#hostFocus'</span>)<span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> clientFocus <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">'#clientFocus'</span>)<span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  iframe<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'srcdoc'</span><span class="op">,</span> <span class="st">'&lt;div&gt;click me&lt;/div&gt;'</span>)<span class="op">;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  iframe<span class="op">.</span><span class="at">contentWindow</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'blur'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    clientFocus<span class="op">.</span><span class="at">innerText</span> <span class="op">=</span> <span class="st">'no'</span><span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  iframe<span class="op">.</span><span class="at">contentWindow</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'focus'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    clientFocus<span class="op">.</span><span class="at">innerText</span> <span class="op">=</span> <span class="st">'yes'</span><span class="op">;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="bu">window</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'blur'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    hostFocus<span class="op">.</span><span class="at">innerText</span> <span class="op">=</span> <span class="st">'no'</span><span class="op">;</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="bu">window</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'focus'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    hostFocus<span class="op">.</span><span class="at">innerText</span> <span class="op">=</span> <span class="st">'yes'</span><span class="op">;</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </section>
 </section>
@@ -523,10 +529,10 @@ Code-Beispiel
 <section id="dataparts" class="level3">
 <h3 class="anchored" data-anchor-id="dataparts"><code>dataParts</code></h3>
 <p>Dies ist ein JSON-Objekt mit der Struktur <code>key-value</code>-store. Diese Datenstruktur ist auch bekannt als dictionary oder Hash-Tabelle.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="Beispiel dataParts"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"part1"</span><span class="fu">:</span> <span class="st">"3456998"</span><span class="fu">,</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"part3"</span><span class="fu">:</span> <span class="st">"{</span><span class="ch">\"</span><span class="st">x</span><span class="ch">\"</span><span class="st">:[10,null,null,null]}"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="Beispiel dataParts"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"part1"</span><span class="fu">:</span> <span class="st">"3456998"</span><span class="fu">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"part3"</span><span class="fu">:</span> <span class="st">"{</span><span class="ch">\"</span><span class="st">x</span><span class="ch">\"</span><span class="st">:[10,null,null,null]}"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Bei Änderungen muss jeweils nur der Datenteil geschickt werden, der sich geändert hat. Der Host muss dafür sorgen, dass nur dieser Teil überschrieben wird, die anderen Teile müssen erhalten bleiben. Dieses Vorgehen verhindert, dass bei jeder kleinen Änderung eine große Datenmenge geschickt wird und das System ausbremst.</p>
 <p>Wenn der Unit-Status beim Start-Kommando zum Wiederherstellen geschickt wird, müssen natürlich alle Datenteile übergeben werden.</p>
 </section>
@@ -552,17 +558,17 @@ Code-Beispiel
 </ul>
 </section>
 </section>
-<section id="hinweis-validierung" class="level2 callout-tip">
+<div class="callout-tip">
+<section id="hinweis-validierung" class="level2">
 <h2 class="anchored" data-anchor-id="hinweis-validierung">Hinweis Validierung</h2>
 <p>Eine Validierung kann problematisch sein, wenn Elemente eines Standard-Html-Formulars verwendet werden. Wenn als Typ eines <code>&lt;input&gt;</code>-Elementes beispielsweise eine Zahl gesetzt ist, dann wird eine Texteingabe nicht verfügbar. Die Validierung verhindert also den Zugriff auf fehlerhafte Eingaben.</p>
-</section>
-<section id="hinweis-required" class="level2 callout-tip">
-<h2 class="anchored" data-anchor-id="hinweis-required">Hinweis “required”</h2>
-<p>Ob eine Antwort als “erforderlich” – also als “required” – gewertet wird, sollte gezielt gesteuert werden. Das Player-Modul sollte “responses complete” nur für die als erforderlich markierten Elemente melden. Dann meldet der Player sofort nach Start der Unit “responses complete”, wenn die Unit keine Elemente mit der Markierung “erforderlich” hat.</p>
-</section>
+<blockquote class="blockquote">
+<p>Hinweis “required”: Ob eine Antwort als “erforderlich” – also als “required” – gewertet wird, sollte gezielt gesteuert werden. Das Player-Modul sollte “responses complete” nur für die als erforderlich markierten Elemente melden. Dann meldet der Player sofort nach Start der Unit “responses complete”, wenn die Unit keine Elemente mit der Markierung “erforderlich” hat.</p>
+</blockquote>
 <section id="unitstatedatatype" class="level3">
 <h3 class="anchored" data-anchor-id="unitstatedatatype"><code>unitStateDataType</code></h3>
 <p>Hier soll dem Host mitgeteilt werden, um welchen Datentyp es sich bei den Datenteilen <code>dataParts</code> handelt. Beispiel: <code>iqb-standard@1.2</code>. Ein Player kann also eine exotische, nicht dokumentierte Unit-Definition verwenden, erzeugt aber Antworten in einem dokumentierten Format.</p>
+</section>
 </section>
 <section id="playerconfig" class="level2">
 <h2 class="anchored" data-anchor-id="playerconfig"><code>playerConfig</code></h2>
@@ -584,11 +590,9 @@ Code-Beispiel
 <li><code>CONCAT_SCROLL</code>: Alle Seiten werden zu einer einzigen Seite zusammengelegt (gestapelt). Die Testperson scrollt vertikal und bemerkt nicht, dass es mehrere Seiten gibt. Sollte eine Seitennavigation aktiv sein, wird entsprechend gescrollt.</li>
 <li><code>CONCAT_SCROLL_SNAP</code>: Alle Seiten werden zu einer einzigen Seite zusammengelegt, jedoch ist stets nur eine Seite zu sehen. Die Testperson scrollt vertikal und die Seiten “schnappen” in den Sichtbereich, so dass nie zwei Seiten gleichzeitig zu sehen sind. Dieser Modus ist vorteilhaft, wenn die Zeit, die eine Testperson auf einer Seite verbringt, gemessen werden soll. Man erreicht eine intuitive Art des Seitenwechsels, verliert aber nicht die Information “time on page”.</li>
 </ul>
-</section>
-</section>
-<section id="scroll-snap-nicht-verlässlich" class="level2 callout-caution">
-<h2 class="anchored" data-anchor-id="scroll-snap-nicht-verlässlich">Scroll-snap nicht verlässlich</h2>
-<p>Der Scroll-snap-Modus beim Blättern ist eine standardisierte Html-Eigenschaft. Allerdings ist dieses Verhalten unterschiedlich implementiert in den Browsern bzw. Betriebssystemen. Vor der Nutzung sollten ausgiebige Tests sicherstellen, dass sich alle verwendeten Geräte wie gewünscht verhalten.</p>
+<blockquote class="blockquote">
+<p>Achtung: Scroll-snap ist nicht verlässlich. Der Scroll-snap-Modus beim Blättern ist eine standardisierte Html-Eigenschaft. Allerdings ist dieses Verhalten unterschiedlich implementiert in den Browsern bzw. Betriebssystemen. Vor der Nutzung sollten ausgiebige Tests sicherstellen, dass sich alle verwendeten Geräte wie gewünscht verhalten.</p>
+</blockquote>
 </section>
 <section id="printmode" class="level3">
 <h3 class="anchored" data-anchor-id="printmode"><code>printMode</code></h3>
@@ -651,9 +655,11 @@ Code-Beispiel
 <h2 class="anchored" data-anchor-id="log"><code>log</code></h2>
 <p>Die Eigenschaften <code>timeStamp</code>, <code>key</code> und <code>content</code> liefern einen Log-Eintrag. In einer Nachricht zur Statusänderung können mehrere Log-Einträge gleichzeitig geschickt werden.</p>
 <p>Es gibt keine Konventionen zur Nutzung dieses Features.</p>
-
-
 </section>
+</section>
+</div>
+
+
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->

@@ -253,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">20. September 2026</p>
+      <p class="date">12. Oktober 2026</p>
     </div>
   </div>
   
@@ -267,7 +267,7 @@ ul.task-list li input[type="checkbox"] {
 
 <p>An mehreren Stellen des TBA-Systems muss zur Laufzeit einer Webanwendung UI-Code dynamisch in das Frontend nachgeladen werden. Technisch wird dies durch Html-Seiten gelöst, die Code enthalten. Sie werden in ein <code>iframe</code>-Element einer Webseite geladen, und die <a href="../../concepts/plugins/communication.html">Kommunikation</a> erfolgt anschließend asynchron über die JavaScript-Methode <code>postMessage()</code>.</p>
 <ul>
-<li><strong>Player</strong>: Modul für die Darstellung und Interaktion für eine Unit während der Testdurchführung. Üblicherweise wird dem Player durch die Testumgebung (z. B. IQB-Testcenter) ein großer Bildschirmbereich überlassen. Andere Anwendungsfälle für den Player sind die Voransicht beim Editieren, der Review von Aufgaben und das Anzeigen einer Unit im Rahmen der manuellen Kodierung. Ein Player benötigt i. d.&nbsp;R. die UI-Definition der Unit, um diese abzuspielen.</li>
+<li><a href="../../concepts/plugins/player.html">Player</a>: Modul für die Darstellung und Interaktion für eine Unit während der Testdurchführung. Üblicherweise wird dem Player durch die Testumgebung (z. B. IQB-Testcenter) ein großer Bildschirmbereich überlassen. Andere Anwendungsfälle für den Player sind die Voransicht beim Editieren, der Review von Aufgaben und das Anzeigen einer Unit im Rahmen der manuellen Kodierung. Ein Player benötigt i. d.&nbsp;R. die UI-Definition der Unit, um diese abzuspielen.</li>
 <li><strong>Editor</strong>: Eingebettet in die Webanwendung für Autor*innen (z. B. IQB-Studio), ermöglicht ein Editor Änderungen an der UI-Definition der Unit. Außerdem erzeugt der Editor die Variablenliste für die Planung und Konfiguration der Kodierung.</li>
 <li><strong>Schemer</strong>: Mit einem Schemer wird das Kodierschema einer Unit angelegt und geändert. Dazu bekommt der Schemer die Variablenliste vom Editor und erzeugt selbst eine Übersicht zusätzlicher Variablen (sog. abgeleitete Variablen) des Kodierschemas.</li>
 <li><strong>Widgets</strong>: Während der Testdurchführung können Unit-übergreifende UI-Komponenten aufgerufen werden. Beispiele: Taschenrechner, periodensystem der Elemente, Molekül-Editor.</li>
