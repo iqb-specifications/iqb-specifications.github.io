@@ -125,7 +125,7 @@
     "href": "concepts/plugins/player.html",
     "title": "TBA Plugin - Player",
     "section": "",
-    "text": "Ein Player-Modul dient dem “Abspielen” – also der Präsentation – von Units. Es gibt mehrere Anwendungsfälle:\nDie Spezifikation der API finden Sie hier.",
+    "text": "Ein Player-Plugin dient dem “Abspielen” – also der Präsentation – von Units. Es gibt mehrere Anwendungsfälle:\nDie Spezifikation der API finden Sie hier.",
     "crumbs": [
       "Konzepte",
       "Plugins",
@@ -173,7 +173,7 @@
     "href": "concepts/plugins/player.html#state-changed-notification",
     "title": "TBA Plugin - Player",
     "section": "4 State Changed Notification",
-    "text": "4 State Changed Notification\n\nAusführliche Darstellung der Meldung zur Statusänderung siehe unten.\n\nSobald eine Interaktion stattgefunden hat, die als Antwort wichtig wäre oder die bei einem wiederholten Aufruf der Unit wiederhergestellt werden soll, meldet der Player diese Änderung. Parameter:\n\nsessionId: Die Kennung aus dem Start-Kommando, um die korrekte Zuordnung der Nachricht bzw. der darin enthaltenen Daten zur Unit zu unterstützen.\ntimeStamp: Ein String im Standard-Format date-time. Die Nutzung dieser Information ist dem Host überlassen, soll aber vor allem die korrekte Reihenfolge vieler asynchron eintreffender Nachrichten sicherstellen.\nunitState: Daten der Antworten im weiteren Sinne. Diese dienen der Auswertung und der Wiederherstellung beim Zurückblättern. Weitere Erläuterungen zu diesem Datenobjekt finden Sie hier.\nplayerState: Hier schickt der Player Informationen, die dem Host helfen können, die UI anzupassen. Beispielsweise wird so ein Wechsel der Seite berichtet, damit der Host in der Navigationsdarstellung die aktive Seite anders darstellt. Weitere Erläuterungen zu diesem Datenobjekt finden Sie hier.\nlog: Hierüber werden Log-Einträge geschickt. Dies sind Ereignisse, die nicht unbedingt einen Status ändern, sondern nur der Rekonstruktion der Beantwortung über die Zeit dienen können. Weitere Erläuterungen zu diesem Datenobjekt finden Sie hier.",
+    "text": "4 State Changed Notification\n\nAusführliche Darstellung der Meldung zur Statusänderung siehe unten.\n\nSobald eine Interaktion stattgefunden hat, die als Antwort wichtig wäre oder die bei einem wiederholten Aufruf der Unit wiederhergestellt werden soll, meldet der Player diese Änderung. Parameter:\n\nsessionId: Die Kennung aus dem Start-Kommando, um die korrekte Zuordnung der Nachricht bzw. der darin enthaltenen Daten zur Unit zu unterstützen.\ntimeStamp: Ein String im Standard-Format date-time. Die Nutzung dieser Information ist dem Host überlassen, soll aber vor allem die korrekte Reihenfolge vieler asynchron eintreffender Nachrichten sicherstellen.\nunitState: Daten der Antworten im weiteren Sinne. Diese dienen der Auswertung und der Wiederherstellung beim Zurückblättern. Weitere Erläuterungen zu diesem Datenobjekt finden Sie hier.\nplayerState: Hier schickt der Player Informationen, die dem Host helfen können, die UI anzupassen. Beispielsweise wird so ein Wechsel der Seite berichtet, damit der Host in der Navigationsdarstellung die aktive Seite anders darstellt (s. unten).\nlog: Hierüber werden Log-Einträge geschickt. Dies sind Ereignisse, die nicht unbedingt einen Status ändern, sondern nur der Rekonstruktion der Beantwortung über die Zeit dienen können (s. unten).",
     "crumbs": [
       "Konzepte",
       "Plugins",
@@ -197,7 +197,7 @@
     "href": "concepts/plugins/player.html#unit-navigation-requested-notification",
     "title": "TBA Plugin - Player",
     "section": "6 Unit Navigation Requested Notification",
-    "text": "6 Unit Navigation Requested Notification\nDer Player kann Buttons einblenden, über die die Testperson zu einer anderen Unit navigiert. Eine Unit-Navigation kann auch über andere Bedingungen durch den Player ausgelöst werden, z. B. Ablauf einer Frist.\nÜber diese Nachricht fordert der Player eine Unit-Navigation an. Ob dann tatsächlich eine Unit-Navigation erfolgt, entscheidet der Host. Beispielsweise wird in der Voransicht einer Unit im Autorensystem IQB-Studio nur kurz eine Nachricht eingeblendet, dass eine Unit-Navigation angefordert wurde.\n\nsessionId: Die Kennung aus dem Start-Kommando, um die korrekte Zuordnung der Nachricht bzw. der darin enthaltenen Daten zur Unit zu unterstützen.\ntarget: Ziel-Unit. Dies ist allerdings keine ID einer konkreten Unit, sondern ein Symbol für eine relativ zur aktuellen Unit befindlichen Unit: next, previous, first, last, end. Die möglichen Ziele kennt der Player aus dem Start-Kommando.",
+    "text": "6 Unit Navigation Requested Notification\nDer Player kann Buttons einblenden, über die die Testperson zu einer anderen Unit navigiert. Eine Unit-Navigation kann auch über andere Bedingungen durch den Player ausgelöst werden, z. B. Ablauf einer Frist.\nÜber diese Nachricht fordert der Player eine Unit-Navigation an. Ob dann tatsächlich eine Unit-Navigation erfolgt, entscheidet der Host. Beispielsweise wird in der Voransicht einer Unit im Autorensystem IQB-Studio nur kurz eine Nachricht eingeblendet, dass eine Unit-Navigation angefordert wurde.\n\nsessionId: Die Kennung aus dem Start-Kommando, um die korrekte Zuordnung der Nachricht bzw. der darin enthaltenen Daten zur Unit zu unterstützen.\ntarget: Ziel-Unit. Dies ist allerdings keine ID einer konkreten Unit, sondern ein Symbol für eine relativ zur aktuellen Unit befindlichen Unit: NEXT, PREVIOUS, FIRST, LAST, END. Die möglichen Ziele kennt der Player aus dem Start-Kommando.",
     "crumbs": [
       "Konzepte",
       "Plugins",
@@ -277,11 +277,11 @@
     ]
   },
   {
-    "objectID": "concepts/plugins/player.html#sessionid",
-    "href": "concepts/plugins/player.html#sessionid",
+    "objectID": "concepts/plugins/player.html#ui-definition-der-unit",
+    "href": "concepts/plugins/player.html#ui-definition-der-unit",
     "title": "TBA Plugin - Player",
-    "section": "sessionId",
-    "text": "sessionId\nDem Player wird mit sessionId eine Kennung mitgeschickt, die der Player anschließend in jeder Nachricht verwenden soll. Damit wird die korrekte Zuordnung der Nachricht bzw. der darin enthaltenen Daten zur Unit unterstützt. Diese ID ist wichtiger, wenn es mehrere Player pro Seite beim Host gibt, die gleichzeitig verwaltet werden sollen.",
+    "section": "UI-Definition der Unit",
+    "text": "UI-Definition der Unit\nDie UI-Definition der Unit unitDefinition beschreibt das Erscheinungsbild der Unit und ggf. die Interaktionselemente.\n\nBeispiel: Bei einem Player für einen basalen Lesegeschwindigkeitstest besteht die Unit-Definition nur aus einem Text, der durch die Testperson gelesen werden soll, und dann soll einer von zwei Buttons geklickt werden – “JA” oder “NEIN”. So ein Text heißt z. B. “Eis ist warm”. Als Antwort wird die Kennung des Buttons – “A” oder “B” – geliefert sowie die Zeit in Millisekunden, die von der Präsentation der Unit (entspricht der Bereitschaftsmeldung des Players) bis zum Klicken eines Buttons vergangen ist. Mit dem Klick wird auch gleich eine Anforderung für eine Unit-Navigation “next” abgeschickt. Dieser spezialisierte Player benötigt aufgrund umfangreicher Konventionen nur den Text als Unit-Definition.\n\nHäufig wird es sich bei der Unit-Definition um ein Datenobjekt handeln, das z. B. über JSON.stringify() serialisiert wurde. Die Komplexität der übergebenen Daten ist nicht bestimmbar und aus Sicht der Verona-Spezifikationen auch egal. Der Player wird die Datenstruktur wieder zu einem Datenobjekt transformieren, prüfen und auswerten.",
     "crumbs": [
       "Konzepte",
       "Plugins",
@@ -289,11 +289,11 @@
     ]
   },
   {
-    "objectID": "concepts/plugins/player.html#unitdefinition",
-    "href": "concepts/plugins/player.html#unitdefinition",
+    "objectID": "concepts/plugins/player.html#typ",
+    "href": "concepts/plugins/player.html#typ",
     "title": "TBA Plugin - Player",
-    "section": "unitDefinition",
-    "text": "unitDefinition\nDie Unit-Definition beschreibt das Erscheinungsbild der Unit und ggf. die Interaktionselemente.\n\nBeispiel: Bei einem Player für einen basalen Lesegeschwindigkeitstest besteht die Unit-Definition nur aus einem Text, der durch die Testperson gelesen werden soll, und dann soll einer von zwei Buttons geklickt werden – “JA” oder “NEIN”. So ein Text heißt z. B. “Eis ist warm”. Als Antwort wird die Kennung des Buttons – “A” oder “B” – geliefert sowie die Zeit in Millisekunden, die von der Präsentation der Unit (entspricht der Bereitschaftsmeldung des Players) bis zum Klicken eines Buttons vergangen ist. Mit dem Klick wird auch gleich eine Anforderung für eine Unit-Navigation “next” abgeschickt. Dieser spezialisierte Player benötigt aufgrund umfangreicher Konventionen nur den Text als Unit-Definition.\n\nHäufig wird es sich bei der Unit-Definition um ein Datenobjekt handeln, das z. B. über JSON.stringify() serialisiert wurde. Die Komplexität der übergebenen Daten ist nicht bestimmbar und aus Sicht der Verona-Spezifikationen auch egal. Der Player wird die Datenstruktur wieder zu einem Datenobjekt transformieren, prüfen und auswerten.",
+    "section": "Typ",
+    "text": "Typ\nDer Typ der UI-Definition unitDefinitionType soll dem Player helfen, Missverständnisse bei der Interpretation der Unit-Definition zu vermeiden. Aus Sicht der Host-Anwendung ist es jedoch wichtiger, Namen und Version des erforderlichen Players zu kennen. Wenn bekannt ist, dass Player XY@3.5 für diese Unit-Definition sinnvollerweise benutzt werden sollte, dann muss der Host diesen Player besorgen. Dann spielt der Typ der Unit-Definition eine untergeordnete Rolle.",
     "crumbs": [
       "Konzepte",
       "Plugins",
@@ -301,11 +301,11 @@
     ]
   },
   {
-    "objectID": "concepts/plugins/player.html#unitdefinitiontype",
-    "href": "concepts/plugins/player.html#unitdefinitiontype",
+    "objectID": "concepts/plugins/player.html#unit-status",
+    "href": "concepts/plugins/player.html#unit-status",
     "title": "TBA Plugin - Player",
-    "section": "unitDefinitionType",
-    "text": "unitDefinitionType\nDiese Angabe soll dem Player helfen, Missverständnisse bei der Interpretation der Unit-Definition zu vermeiden. Aus Sicht der Host-Anwendung ist es jedoch wichtiger, Namen und Version des erforderlichen Players zu kennen. Wenn bekannt ist, dass Player XY@3.5 für diese Unit-Definition sinnvollerweise benutzt werden sollte, dann muss der Host diesen Player besorgen. Dann spielt der Typ der Unit-Definition eine untergeordnete Rolle.",
+    "section": "Unit-Status",
+    "text": "Unit-Status\nBeim unitState handelt es sich um dasselbe Objekt, das der Player an den Host sendet, wenn sich der Status ändert. Wenn der Player diese Datenstruktur im Startkommando bekommt, stellt er einen vorherigen Bearbeitungsstand wieder her und meldet als neuen Status nur Abweichungen zu diesem Stand.\nGrundsätzlich sind die Eigenschaften der Datenstruktur unitState optional. Es sollte nur das übergeben werden, was sich geändert hat.\n\ndataParts\nDies ist ein JSON-Objekt mit der Struktur key-value-store. Diese Datenstruktur ist auch bekannt als dictionary oder Hash-Tabelle.\n{\n    \"part1\": \"3456998\",\n    \"part3\": \"{\\\"x\\\":[10,null,null,null]}\"\n}\nBei Änderungen muss jeweils nur der Datenteil geschickt werden, der sich geändert hat. Der Host muss dafür sorgen, dass nur dieser Teil überschrieben wird, die anderen Teile müssen erhalten bleiben. Dieses Vorgehen verhindert, dass bei jeder kleinen Änderung eine große Datenmenge geschickt wird und das System ausbremst.\nWenn der Unit-Status beim Start-Kommando zum Wiederherstellen geschickt wird, müssen natürlich alle Datenteile übergeben werden.\n\n\npresentationProgress\nBei Leistungstests ist es wichtig sicherzustellen, dass die Testperson alle Teile der Unit gesehen hat. Es muss keine Beantwortung erfolgen, aber ein unabsichtliches Auslassen ist problematisch für die Datenanalyse. Daher wird vom Player erwartet, dass er bei Änderungen der Anzeige prüft, ob alles gesehen wurde und dies berichtet. Dann kann ggf. die Teststeuerung ein Weiterblättern verhindern und einen Hinweis geben.\nMögliche Werte:\n\nNONE: Nichts wurde gesehen - Ausgangszustand\nSOME: Einige Bereiche der Unit wurden präsentiert\nCOMPLETE: Alle Elemente/Bereiche wurde präsentiert\n\nDer Stand der Präsentation wird beim Start-Kommando vom Host geschickt, so dass der Player nur die Änderung zu diesem Status berichtet.\n\n\nresponseProgress\nBei Befragungen ist oft wichtig, dass die befragte Person keine Frage auslässt. Aber auch bei Leistungstests können zu Beginn Units vorgesehen werden, die Übungscharakter haben und die Testperson soll erst weiterkommen, wenn sie ein Mindestmaß an Antworten geben konnte. Daher wird vom Player erwartet, dass er während der Bearbeitung prüft, ob alle notwendigen Eingaben erfolgten und auch korrekt sind. Dann kann ggf. die Teststeuerung ein Weiterblättern verhindern und einen Hinweis geben.\nMögliche Werte:\n\nNONE: Nichts wurde beantwortet - Ausgangszustand\nSOME: Einige Antworten wurden gegeben\nCOMPLETE: Alle Antworten wurden gegeben\n\n\nHinweis Validierung: Eine Validierung kann problematisch sein, wenn Elemente eines Standard-Html-Formulars verwendet werden. Wenn als Typ eines &lt;input&gt;-Elementes beispielsweise eine Zahl gesetzt ist, dann wird eine Texteingabe nicht verfügbar. Die Validierung verhindert also den Zugriff auf fehlerhafte Eingaben.\n\n\nHinweis “required”: Ob eine Antwort als “erforderlich” – also als “required” – gewertet wird, sollte gezielt gesteuert werden. Das Player-Modul sollte “responses complete” nur für die als erforderlich markierten Elemente melden. Dann meldet der Player sofort nach Start der Unit “responses complete”, wenn die Unit keine Elemente mit der Markierung “erforderlich” hat.\n\n\n\nunitStateDataType\nHier soll dem Host mitgeteilt werden, um welchen Datentyp es sich bei den Datenteilen dataParts handelt. Beispiel: iqb-standard@1.2. Ein Player kann also eine exotische, nicht dokumentierte Unit-Definition verwenden, erzeugt aber Antworten in einem dokumentierten Format.",
     "crumbs": [
       "Konzepte",
       "Plugins",
@@ -313,95 +313,11 @@
     ]
   },
   {
-    "objectID": "concepts/plugins/player.html#unitstate",
-    "href": "concepts/plugins/player.html#unitstate",
+    "objectID": "concepts/plugins/player.html#konfiguration-des-players",
+    "href": "concepts/plugins/player.html#konfiguration-des-players",
     "title": "TBA Plugin - Player",
-    "section": "unitState",
-    "text": "unitState\nHierbei handelt es sich um dasselbe Objekt, das der Player an den Host sendet, wenn sich der Status ändert. Wenn der Player diese Datenstruktur im Startkommando bekommt, stellt er einen vorherigen Bearbeitungsstand wieder her und meldet als neuen Status nur Abweichungen zu diesem Stand.\nGrundsätzlich sind die Eigenschaften der Datenstruktur unitState optional. Es sollte nur das übergeben werden, was sich geändert hat.\n\ndataParts\nDies ist ein JSON-Objekt mit der Struktur key-value-store. Diese Datenstruktur ist auch bekannt als dictionary oder Hash-Tabelle.\n{\n    \"part1\": \"3456998\",\n    \"part3\": \"{\\\"x\\\":[10,null,null,null]}\"\n}\nBei Änderungen muss jeweils nur der Datenteil geschickt werden, der sich geändert hat. Der Host muss dafür sorgen, dass nur dieser Teil überschrieben wird, die anderen Teile müssen erhalten bleiben. Dieses Vorgehen verhindert, dass bei jeder kleinen Änderung eine große Datenmenge geschickt wird und das System ausbremst.\nWenn der Unit-Status beim Start-Kommando zum Wiederherstellen geschickt wird, müssen natürlich alle Datenteile übergeben werden.\n\n\npresentationProgress\nBei Leistungstests ist es wichtig sicherzustellen, dass die Testperson alle Teile der Unit gesehen hat. Es muss keine Beantwortung erfolgen, aber ein unabsichtliches Auslassen ist problematisch für die Datenanalyse. Daher wird vom Player erwartet, dass er bei Änderungen der Anzeige prüft, ob alles gesehen wurde und dies berichtet. Dann kann ggf. die Teststeuerung ein Weiterblättern verhindern und einen Hinweis geben.\nMögliche Werte:\n\nNONE: Nichts wurde gesehen - Ausgangszustand\nSOME: Einige Bereiche der Unit wurden präsentiert\nCOMPLETE: Alle Elemente/Bereiche wurde präsentiert\n\nDer Stand der Präsentation wird beim Start-Kommando vom Host geschickt, so dass der Player nur die Änderung zu diesem Status berichtet.\n\n\nresponseProgress\nBei Befragungen ist oft wichtig, dass die befragte Person keine Frage auslässt. Aber auch bei Leistungstests können zu Beginn Units vorgesehen werden, die Übungscharakter haben und die Testperson soll erst weiterkommen, wenn sie ein Mindestmaß an Antworten geben konnte. Daher wird vom Player erwartet, dass er während der Bearbeitung prüft, ob alle notwendigen Eingaben erfolgten und auch korrekt sind. Dann kann ggf. die Teststeuerung ein Weiterblättern verhindern und einen Hinweis geben.\nMögliche Werte:\n\nNONE: Nichts wurde beantwortet - Ausgangszustand\nSOME: Einige Antworten wurden gegeben\nCOMPLETE: Alle Antworten wurden gegeben",
-    "crumbs": [
-      "Konzepte",
-      "Plugins",
-      "Player"
-    ]
-  },
-  {
-    "objectID": "concepts/plugins/player.html#hinweis-validierung",
-    "href": "concepts/plugins/player.html#hinweis-validierung",
-    "title": "TBA Plugin - Player",
-    "section": "Hinweis Validierung",
-    "text": "Hinweis Validierung\nEine Validierung kann problematisch sein, wenn Elemente eines Standard-Html-Formulars verwendet werden. Wenn als Typ eines &lt;input&gt;-Elementes beispielsweise eine Zahl gesetzt ist, dann wird eine Texteingabe nicht verfügbar. Die Validierung verhindert also den Zugriff auf fehlerhafte Eingaben.\n\nHinweis “required”: Ob eine Antwort als “erforderlich” – also als “required” – gewertet wird, sollte gezielt gesteuert werden. Das Player-Modul sollte “responses complete” nur für die als erforderlich markierten Elemente melden. Dann meldet der Player sofort nach Start der Unit “responses complete”, wenn die Unit keine Elemente mit der Markierung “erforderlich” hat.\n\n\nunitStateDataType\nHier soll dem Host mitgeteilt werden, um welchen Datentyp es sich bei den Datenteilen dataParts handelt. Beispiel: iqb-standard@1.2. Ein Player kann also eine exotische, nicht dokumentierte Unit-Definition verwenden, erzeugt aber Antworten in einem dokumentierten Format.",
-    "crumbs": [
-      "Konzepte",
-      "Plugins",
-      "Player"
-    ]
-  },
-  {
-    "objectID": "concepts/plugins/player.html#playerconfig",
-    "href": "concepts/plugins/player.html#playerconfig",
-    "title": "TBA Plugin - Player",
-    "section": "playerConfig",
-    "text": "playerConfig\n\nunitNumber, unitTitle, unitId\nDiese Angaben werden benötigt, wenn der Player den gesamten verfügbaren Bildschirm des Browsers einnehmen soll. Dann kann der Host keine Orientierung darüber geben, an welcher Stelle des Testablaufes die Testperson gerade ist und der Player muss dies übernehmen. Für diesen Fall sind diese Informationen gedacht.\n\n\nlogPolicy\nAus einem Forschungsinteresse heraus könnte der Player angehalten sein, viele Zustandsänderungen an den Host zu melden. Das kann vom Scrollverhalten bis zum Mitschreiben Mausbewegungen gehen. Allerdings gibt es sehr viele Anwendungsfälle für das Player-Modul, wo dieses Logging abgestellt werden sollte. Beispiele: Review der Unit während der Qualitätsprüfung, Verwendung als Beispielaufgabe, Präsentation der Antworten zur manuellen Kodierung. Aus diesem Grund kann dem Player differenziert mitgeteilt werden, ob bzw. in welchem Maße Logs an den Host geschickt werden sollen: DISABLED, LEAN, RICH, DEBUG. Die Interpretation der Werte ist derzeit nicht festgelegt.\n\n\npagingMode\nWenn die Unit aus mehreren Seiten besteht, wird über diesen Parameter festgelegt, ob bzw. wie das Blättern erfolgen soll. Dieses Verhalten sollte in einem Test einheitlich sein, so dass es kein fixer Parameter der Unit-Definition ist. Verschiedene Tests können unterschiedliches Blätter-Verhalten wünschen, ohne dass die Unit-Definition geändert werden muss.\nMögliche Werte:\n\nSEPARATE: Die Seiten werden einzeln angezeigt, so wie die Seitennavigation es steuert. Die Animation des Seitenwechsels ist horizontal.\nBUTTONS: Die Seiten werden einzeln angezeigt, aber es werden Buttons eingeblendet, die auf weitere Seiten hinweisen und bei Klick eine Seitennavigation auslösen. Die Animation des Seitenwechsels ist vertikal.\nCONCAT_SCROLL: Alle Seiten werden zu einer einzigen Seite zusammengelegt (gestapelt). Die Testperson scrollt vertikal und bemerkt nicht, dass es mehrere Seiten gibt. Sollte eine Seitennavigation aktiv sein, wird entsprechend gescrollt.\nCONCAT_SCROLL_SNAP: Alle Seiten werden zu einer einzigen Seite zusammengelegt, jedoch ist stets nur eine Seite zu sehen. Die Testperson scrollt vertikal und die Seiten “schnappen” in den Sichtbereich, so dass nie zwei Seiten gleichzeitig zu sehen sind. Dieser Modus ist vorteilhaft, wenn die Zeit, die eine Testperson auf einer Seite verbringt, gemessen werden soll. Man erreicht eine intuitive Art des Seitenwechsels, verliert aber nicht die Information “time on page”.\n\n\nAchtung: Scroll-snap ist nicht verlässlich. Der Scroll-snap-Modus beim Blättern ist eine standardisierte Html-Eigenschaft. Allerdings ist dieses Verhalten unterschiedlich implementiert in den Browsern bzw. Betriebssystemen. Vor der Nutzung sollten ausgiebige Tests sicherstellen, dass sich alle verwendeten Geräte wie gewünscht verhalten.\n\n\n\nprintMode\nIm Rahmen der Qualitätssicherung müssen Testaufgaben ausgiebig überprüft werden. Normalerweise begibt sich der Prüfer bzw. die Prüferin in die Rolle der Testperson und beantwortet Schritt für Schritt die Fragen. Dies kann allerdings sehr zeitaufwändig sein, insbesondere, wenn Audio-Sequenzen abgewartet werden müssen, bevor weitere Teile der Unit sichtbar werden.\nUm diesen Review zu erleichtern, kann der Player in den sog. Printmodus geschaltet werden. Der Host begrenzt dann das &lt;iframe&gt;-Element nicht mehr auf den Bildschirm, sondern gibt so viel Höhe, wie der Player für die Unit benötigt. Es werden alle Seiten untereinander gestapelt und alle Einschränkungen der Sichtbarkeit von Seiten bzw. Seitenabschnitten aufgehoben. Weiterhin kann der Player ein separates Styling (Markierung über @media print) für das Drucken aus dem Browser heraus bereitstellen.\nMögliche Werte:\n\nOFF: Kein Printmodus.\nON: Printmodus.\nON_WITH_IDS: Printmodus, und zusätzlich werden die IDs der Elemente der Unit eingeblendet.\nSELECTED_ELEMENTS_ONLY: Wenn elementsToHighlight gesetzt sind, dann werden nur diese angezeigt und alle anderen Elemente werden ausgeblendet.\n\n\n\nelementsToHighlight\nHier kann eine Liste von (Basis-)Variablen übergeben werden, die der Player in geeigneter Weite hervorhebt (Ausgrauen des Rests, farbiger Rahmen u. ä.). Wenn zusätzlich bei printMode der Wert SELECTED_ELEMENTS_ONLY gesetzt ist, dann werden alle anderen Elemente ausgeblendet.\n\n\nenabledNavigationTargets\nDiese einfache Liste von Strings informiert den Player, welche der fünf möglichen Ziele für die Unit-Navigation zur Verfügung stehen. Dann kann der Player beispielsweise den “Weiter”-Button ausblenden, wenn es keine weiteren Units gibt. Oder es wird der “Zurück”-Button ausgeblendet, wenn der Testperson grundsätzlich ein Zurückgehen nicht gestattet ist.\nMögliche Werte: NEXT, PREVIOUS, FIRST, LAST, END.\n\n\nstartPage\nSollte der Player sofort nach dem Start auf eine bestimmte Seite navigieren, kann dies hier angegeben werden. Dies ist beispielsweise bei der Anzeige von Units mit gegebenen Antworten bei der manuellen Kodierung gewünscht.\n\n\ndirectDownloadUrl\nSollte der Player während der Laufzeit Code nachladen müssen, kann aus Gründen der Datensicherheit nicht einfach irgendein Server genutzt werden. Dem Player muss mitgeteilt werden, welche URL dafür zulässig ist. Beispiel: GeoGebra.\n\n\nsharedParameters\nDaten, die zur Laufzeit zwischen Player-Instanzen ausgetauscht werden sollen. Details siehe hier.",
-    "crumbs": [
-      "Konzepte",
-      "Plugins",
-      "Player"
-    ]
-  },
-  {
-    "objectID": "concepts/plugins/player.html#sessionid-1",
-    "href": "concepts/plugins/player.html#sessionid-1",
-    "title": "TBA Plugin - Player",
-    "section": "sessionId",
-    "text": "sessionId\nDem Player wurde im Start-Kommando eine sessionId eine Kennung mitgeschickt, die der Player anschließend in jeder Nachricht verwendet. Damit wird die korrekte Zuordnung der Nachricht bzw. der darin enthaltenen Daten zur Unit unterstützt.",
-    "crumbs": [
-      "Konzepte",
-      "Plugins",
-      "Player"
-    ]
-  },
-  {
-    "objectID": "concepts/plugins/player.html#timestamp",
-    "href": "concepts/plugins/player.html#timestamp",
-    "title": "TBA Plugin - Player",
-    "section": "timestamp",
-    "text": "timestamp\nEin String im Standard-Format date-time. Die Nutzung dieser Information ist dem Host überlassen, soll aber vor allem die korrekte Reihenfolge vieler asynchron eintreffenden Nachrichten sicherstellen.",
-    "crumbs": [
-      "Konzepte",
-      "Plugins",
-      "Player"
-    ]
-  },
-  {
-    "objectID": "concepts/plugins/player.html#unitstate-1",
-    "href": "concepts/plugins/player.html#unitstate-1",
-    "title": "TBA Plugin - Player",
-    "section": "unitState",
-    "text": "unitState\nHierbei handelt es sich um dasselbe Objekt, das dem Player im Start-Kommando übergeben wird, wenn der vorherige Zustand wiederhergestellt werden soll. Der Player meldet über diese Datenstruktur Änderungen.",
-    "crumbs": [
-      "Konzepte",
-      "Plugins",
-      "Player"
-    ]
-  },
-  {
-    "objectID": "concepts/plugins/player.html#playerstate",
-    "href": "concepts/plugins/player.html#playerstate",
-    "title": "TBA Plugin - Player",
-    "section": "playerState",
-    "text": "playerState\nHier wird der Host über die verfügbaren Seiten und die aktuelle Seite informiert. Sollte es nur eine Seite geben, kann komplett auf diese Datenbereiche verzichtet werden.\n\nvalidPages: Dies ist ein Array von Objekten mit folgenden Eigenschaften: id: Kennung der Seite, label: Text für die Navigation; die Reihenfolge der genannten Seiten ist relevant.\ncurrentPage: Der Player berichtet hierüber über eine erfolgte Seitennavigation. Es wird die ID bzw. der Key der neuen Seite übergeben.\nsharedParameters: Daten, die zur Laufzeit zwischen Player-Modulen ausgetauscht werden sollen. Details siehe hier.",
-    "crumbs": [
-      "Konzepte",
-      "Plugins",
-      "Player"
-    ]
-  },
-  {
-    "objectID": "concepts/plugins/player.html#log",
-    "href": "concepts/plugins/player.html#log",
-    "title": "TBA Plugin - Player",
-    "section": "log",
-    "text": "log\nDie Eigenschaften timeStamp, key und content liefern einen Log-Eintrag. In einer Nachricht zur Statusänderung können mehrere Log-Einträge gleichzeitig geschickt werden.\nEs gibt keine Konventionen zur Nutzung dieses Features.",
+    "section": "Konfiguration des Players",
+    "text": "Konfiguration des Players\nDie Property playerConfig beeinflusst in starkem Maße, wie der Player die Unit darstellt.\n\nunitNumber, unitTitle, unitId: Diese Angaben werden benötigt, wenn der Player den gesamten verfügbaren Bildschirm des Browsers einnehmen soll. Dann kann der Host keine Orientierung darüber geben, an welcher Stelle des Testablaufes die Testperson gerade ist und der Player muss dies übernehmen. Für diesen Fall sind diese Informationen gedacht.\nlogPolicy: Aus einem Forschungsinteresse heraus könnte der Player angehalten sein, viele Zustandsänderungen an den Host zu melden. Das kann vom Scrollverhalten bis zum Mitschreiben Mausbewegungen gehen. Allerdings gibt es sehr viele Anwendungsfälle für das Player-Modul, wo dieses Logging abgestellt werden sollte. Beispiele: Review der Unit während der Qualitätsprüfung, Verwendung als Beispielaufgabe, Präsentation der Antworten zur manuellen Kodierung. Aus diesem Grund kann dem Player differenziert mitgeteilt werden, ob bzw. in welchem Maße Logs an den Host geschickt werden sollen: DISABLED, LEAN, RICH, DEBUG. Die Interpretation der Werte ist derzeit nicht festgelegt.\npagingMode: Wenn die Unit aus mehreren Seiten besteht, wird über diesen Parameter festgelegt, ob bzw. wie das Blättern erfolgen soll. Dieses Verhalten sollte in einem Test einheitlich sein, so dass es kein fixer Parameter der Unit-Definition ist. Verschiedene Tests können unterschiedliches Blätter-Verhalten wünschen, ohne dass die Unit-Definition geändert werden muss. Mögliche Werte:\n\nSEPARATE: Die Seiten werden einzeln angezeigt, so wie die Seitennavigation es steuert. Die Animation des Seitenwechsels ist horizontal.\nBUTTONS: Die Seiten werden einzeln angezeigt, aber es werden Buttons eingeblendet, die auf weitere Seiten hinweisen und bei Klick eine Seitennavigation auslösen. Die Animation des Seitenwechsels ist vertikal.\nCONCAT_SCROLL: Alle Seiten werden zu einer einzigen Seite zusammengelegt (gestapelt). Die Testperson scrollt vertikal und bemerkt nicht, dass es mehrere Seiten gibt. Sollte eine Seitennavigation aktiv sein, wird entsprechend gescrollt.\nCONCAT_SCROLL_SNAP: Alle Seiten werden zu einer einzigen Seite zusammengelegt, jedoch ist stets nur eine Seite zu sehen. Die Testperson scrollt vertikal und die Seiten “schnappen” in den Sichtbereich, so dass nie zwei Seiten gleichzeitig zu sehen sind. Dieser Modus ist vorteilhaft, wenn die Zeit, die eine Testperson auf einer Seite verbringt, gemessen werden soll. Man erreicht eine intuitive Art des Seitenwechsels, verliert aber nicht die Information “time on page”.\n\n\n\nAchtung: Scroll-snap ist nicht verlässlich. Der Scroll-snap-Modus beim Blättern ist eine standardisierte Html-Eigenschaft. Allerdings ist dieses Verhalten unterschiedlich implementiert in den Browsern bzw. Betriebssystemen. Vor der Nutzung sollten ausgiebige Tests sicherstellen, dass sich alle verwendeten Geräte wie gewünscht verhalten.\n\n\nprintMode: Im Rahmen der Qualitätssicherung müssen Testaufgaben ausgiebig überprüft werden. Normalerweise begibt sich der Prüfer bzw. die Prüferin in die Rolle der Testperson und beantwortet Schritt für Schritt die Fragen. Dies kann allerdings sehr zeitaufwändig sein, insbesondere, wenn Audio-Sequenzen abgewartet werden müssen, bevor weitere Teile der Unit sichtbar werden.Um diesen Review zu erleichtern, kann der Player in den sog. Printmodus geschaltet werden. Der Host begrenzt dann das &lt;iframe&gt;-Element nicht mehr auf den Bildschirm, sondern gibt so viel Höhe, wie der Player für die Unit benötigt. Es werden alle Seiten untereinander gestapelt und alle Einschränkungen der Sichtbarkeit von Seiten bzw. Seitenabschnitten aufgehoben. Weiterhin kann der Player ein separates Styling (Markierung über @media print) für das Drucken aus dem Browser heraus bereitstellen. Mögliche Werte:\n\nOFF: Kein Printmodus.\nON: Printmodus.\nON_WITH_IDS: Printmodus, und zusätzlich werden die IDs der Elemente der Unit eingeblendet.\nSELECTED_ELEMENTS_ONLY: Wenn elementsToHighlight gesetzt sind, dann werden nur diese angezeigt und alle anderen Elemente werden ausgeblendet.\n\nelementsToHighlight: Hier kann eine Liste von (Basis-)Variablen übergeben werden, die der Player in geeigneter Weite hervorhebt (Ausgrauen des Rests, farbiger Rahmen u. ä.). Wenn zusätzlich bei printMode der Wert SELECTED_ELEMENTS_ONLY gesetzt ist, dann werden alle anderen Elemente ausgeblendet.\nenabledNavigationTargets: Diese einfache Liste von Strings informiert den Player, welche der fünf möglichen Ziele für die Unit-Navigation zur Verfügung stehen. Dann kann der Player beispielsweise den “Weiter”-Button ausblenden, wenn es keine weiteren Units gibt. Oder es wird der “Zurück”-Button ausgeblendet, wenn der Testperson grundsätzlich ein Zurückgehen nicht gestattet ist. Mögliche Werte: NEXT, PREVIOUS, FIRST, LAST, END.\nstartPage: Sollte der Player sofort nach dem Start auf eine bestimmte Seite navigieren, kann dies hier angegeben werden. Dies ist beispielsweise bei der Anzeige von Units mit gegebenen Antworten bei der manuellen Kodierung gewünscht.\ndirectDownloadUrl: Sollte der Player während der Laufzeit Code nachladen müssen, kann aus Gründen der Datensicherheit nicht einfach irgendein Server genutzt werden. Dem Player muss mitgeteilt werden, welche URL dafür zulässig ist. Beispiel: GeoGebra.\nsharedParameters: Daten, die zur Laufzeit zwischen Player-Instanzen ausgetauscht werden sollen. Details siehe hier.",
     "crumbs": [
       "Konzepte",
       "Plugins",
