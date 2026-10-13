@@ -10,4 +10,55 @@ mermaid:
   theme: neutral
 ---
 
+Ein Player-Plugin dient dem "Abspielen" -- also der Präsentation -- von Units. Es gibt mehrere Anwendungsfälle:
+
+* Anzeige im Testsystem während des Tests
+* Anzeige im Testsystem für den Review
+* Veröffentlichung von Beispielaufgaben
+* Veröffentlichung als permanente Referenz für einen wissenschaftlichen Artikel
+* Voransicht im Autorensystem
+* Druckbare Ansicht für den Export
+* Präsentation während der manuellen Kodierung mit den Antwortdaten einer Testperson
+* Anzeige für Eltern nach dem Test mit den Antwortdaten ihres Kindes
+
+Die Spezifikation der API finden Sie [hier](https://iqb-specifications.github.io/plugin-player/).
+
+# Kommunikationsmodell
+
+```{mermaid}
+
+sequenceDiagram
+    autonumber
+    participant HA as Host-Anwendung
+    participant VM as Player (Plugin)
+    HA->>VM:Initialisierung
+    VM->>HA:vopReadyNotification
+    HA->>VM:vopStartCommand
+    loop
+        opt
+            VM->>HA:vopStateChangedNotification
+        end
+        opt
+            HA->>VM:vopPageNavigationCommand
+        end
+        opt
+            VM->>HA:vopUnitNavigationRequestedNotification
+        end
+        opt
+            HA->>VM:vopNavigationDeniedNotification
+        end
+        opt
+            HA->>VM:vopPlayerConfigChangedNotification
+        end
+        opt
+            VM->>HA:vopRuntimeErrorNotification
+        end
+        opt
+            VM->>HA:vopWidgetCall
+            HA->>VM:vopWidgetReturn
+        end
+    end
+
+```
+
 {{< external https://raw.githubusercontent.com/iqb-specifications/plugin-player/refs/heads/master/README.md#spec >}}
