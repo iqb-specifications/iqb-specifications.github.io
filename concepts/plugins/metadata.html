@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Modul-Metadaten – IQB-Spezifikationen</title>
+<title>Plugin-Metadaten – IQB-Spezifikationen</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -290,7 +290,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../concepts/index.html">Konzepte</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/index.html">Plugins</a></li><li class="breadcrumb-item"><a href="../../concepts/plugins/metadata.html">Metadaten</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Modul-Metadaten</h1>
+<h1 class="title">Plugin-Metadaten</h1>
 </div>
 
 
@@ -307,16 +307,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Ein Verona-Modul muss Metadaten enthalten. Der wichtigste Anwendungsfall für Metadaten ist das Bereitstellen von Informationen, um die Auswahl für das passende Verona-Modul für die eigene Webapplikation zu erleichtern. Erst wenn z. B. die Beschreibung und die Version eines Moduls auf standardisierte Art bekannt gemacht wird, können potenzielle Anwender über dessen Verwendung sinnvoll entscheiden.</p>
-<p>Eine Html-Seite kann auf diverse Arten Metadaten speichern. Im Verona-Kontext benutzen wir einen <code>&lt;script&gt;</code>-Block im Header, der ein JSON-Datenobjekt enthält. Diese Vorgehensweise wird als “Linked Data” bezeichnet, d.&nbsp;h. der Script-Typ wäre mit <code>application/ld+json</code> zu bezeichnen.</p>
+<p>Ein TBA-Plugin muss Metadaten enthalten. Der wichtigste Anwendungsfall für Metadaten ist das Bereitstellen von Informationen, um die Auswahl für das passende TBA-Plugin für die eigene Webapplikation zu erleichtern. Erst wenn z. B. die Beschreibung und die Version eines Moduls auf standardisierte Art bekannt gemacht wird, können potenzielle Anwender über dessen Verwendung sinnvoll entscheiden.</p>
+<p>Eine Html-Seite kann auf diverse Arten Metadaten speichern. Im Plugin-Kontext benutzen wir einen <code>&lt;script&gt;</code>-Block im Header, der ein JSON-Datenobjekt enthält. Diese Vorgehensweise wird als “Linked Data” bezeichnet, d.&nbsp;h. der Script-Typ wäre mit <code>application/ld+json</code> zu bezeichnen.</p>
 <details>
 <summary>
 Beispiel
 </summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"UTF-8"</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Verona Editor Aspect<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> id</span><span class="op">=</span><span class="st">"verona-metadata"</span><span class="ot"> type=</span><span class="st">"application/ld+json"</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>IQB Editor Aspect<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> id</span><span class="op">=</span><span class="st">"plugin-metadata"</span><span class="ot"> type=</span><span class="st">"application/ld+json"</span><span class="dt">&gt;</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      {</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">"id"</span><span class="op">:</span> <span class="st">"iqb-editor-aspect"</span><span class="op">,</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">"version"</span><span class="op">:</span> <span class="st">"2.10.1"</span><span class="op">,</span></span>
@@ -366,7 +366,7 @@ Beispiel
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      }</span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<p>Die vollständige Spezifikation finden Sie <a href="https://verona-interfaces.github.io/verona-module-metadata/">hier</a>.</p>
+<p>Die vollständige Spezifikation finden Sie <a href="https://iqb-specifications.github.io/plugin-metadata/">hier</a>.</p>
 <section id="kopfdaten" class="level1">
 <h1>Kopfdaten</h1>
 <ul>
@@ -386,7 +386,7 @@ Beispiel
 <ul>
 <li><code>id</code>: Die ID soll helfen, das Objekt oder den Dienst zu finden. Es kann sich um einen Dateinamen oder eine Uri handeln.</li>
 <li><code>description</code>: Dieser Text hilft, die Funktion des Objektes bzw. des Dienstes zu verstehen. Er sollte in Englisch verfasst sein.</li>
-<li><code>type</code>: Der Wert <code>FILE</code> steht für eine Datei, <code>WIDGET</code> für ein Verona-Widget-Modul und <code>SERVICE</code> für einen webgestützten Dienst.</li>
+<li><code>type</code>: Der Wert <code>FILE</code> steht für eine Datei, <code>WIDGET</code> für ein Widget-Plugin und <code>SERVICE</code> für einen webgestützten Dienst.</li>
 <li><code>required</code>: Wenn dieser Wert <code>true</code> ist, dann benötigt das Modul zwingend für seine Funktion dieses Objekt bzw. Dienst. Ansonsten (<code>false</code> ist der Standardwert) kommt die Abhängigkeit nur in bestimmten Fällen zum Tragen. Beispielsweise benötigt der Aspect-Player GeoGebra – allerdings nur, wenn in der Unit-Definition hierzu ein bestimmter Eintrag enthalten ist.</li>
 </ul>
 </section>
