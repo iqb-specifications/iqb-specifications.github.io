@@ -15,3 +15,7 @@ figure.figure > div > svg{
 div.code-with-filename {
   color: white;
 }
+
+.breadcrumb li:last-of-type a {
+  color: #7ad2e9 !important;
+}

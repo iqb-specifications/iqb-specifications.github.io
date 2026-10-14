@@ -1,5 +1,5 @@
 - name: variable-info
-  description: "Info über Variablen in einer Unit-Definition"
+  description: "Info über Variablen in der UI-Definition einer Unit"
   link:
     spec: https://iqb-specifications.github.io/variable-info/
     docs: https://iqb-specifications.github.io/concepts/plugins/variable-info.html
@@ -17,7 +17,7 @@
   categories:
     - Metadaten
     - Plugin/Verona
-- name: verona-player
+- name: plugin-player
   description: "Interface-Spezifikation für einen Verona-Player"
   link:
     spec: https://iqb-specifications.github.io/plugin-player/
@@ -25,27 +25,27 @@
     repo: https://github.com/iqb-specifications/plugin-player
   categories:
     - Plugin/Verona
-- name: verona-editor
+- name: plugin-editor
   description: "Interface-Spezifikation für einen Verona-Editor"
   link:
-    spec: https://verona-interfaces.github.io/editor/
-    docs: https://verona-interfaces.github.io/editor-docs/
-    repo: https://github.com/verona-interfaces/editor/
+    spec: https://iqb-specifications.github.io/plugin-editor/
+    docs: https://iqb-specifications.github.io/concepts/plugins/editor.html
+    repo: https://github.com/iqb-specifications/plugin-editor
   categories:
     - Plugin/Verona
-- name: verona-schemer
+- name: plugin-schemer
   description: "Interface-Spezifikation für einen Verona-Schemer"
   link:
-    spec: https://verona-interfaces.github.io/schemer/
-    docs: https://verona-interfaces.github.io/schemer-docs/
-    repo: https://github.com/verona-interfaces/schemer/
+    spec: https://iqb-specifications.github.io/plugin-schemer/
+    docs: https://iqb-specifications.github.io/concepts/plugins/schemer.html
+    repo: https://github.com/iqb-specifications/plugin-schemer
   categories:
     - Plugin/Verona
-- name: verona-widget
+- name: plugin-widget
   description: "Interface-Spezifikation für ein Verona-Widget"
   link:
-    spec: https://verona-interfaces.github.io/widget/
-    docs: https://verona-interfaces.github.io/widget-docs/
-    repo: https://github.com/verona-interfaces/widget/
+    spec: https://iqb-specifications.github.io/plugin-widget/
+    docs: https://iqb-specifications.github.io/concepts/plugins/widget.html
+    repo: https://github.com/iqb-specifications/plugin-widget
   categories:
     - Plugin/Verona

@@ -3,7 +3,7 @@ lang: de
 title: Plugins - Verona
 description: |
     Im TBA-System wird für das Abspielen von Units, für das Editieren der UI-Definition und der Kodierinformationen sowie für universelle Widgets eine Plugin-Architektur benutzt (sog. Verona-Module).
-date: 2026-10-12
+date: 2026-10-14
 ---
 
 An mehreren Stellen des TBA-Systems muss zur Laufzeit einer Webanwendung UI-Code dynamisch in das Frontend nachgeladen werden. Technisch wird dies durch Html-Seiten gelöst, die Code enthalten. Sie werden in ein `iframe`-Element einer Webseite geladen, und die [Kommunikation](communication.qmd) erfolgt anschließend asynchron über die JavaScript-Methode `postMessage()`.

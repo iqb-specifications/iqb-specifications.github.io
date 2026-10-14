@@ -1,0 +1,44 @@
+---
+lang: de
+title: TBA Plugin - Widget
+format:
+    html:
+        other-links:
+            - text: Spezifikation Widget
+              href: https://iqb-specifications.github.io/plugin-widget/
+mermaid:
+  theme: neutral
+---
+
+Ein Widget ist ein Interaktionselement, das von einem Player oder durch den Testcontroller angefordert wird. Es erweitert die Interaktionsmöglichkeiten auf universelle Art. Beispiel Taschenrechner: Ein Player kann der Testperson anbieten, einen Wert über einen virtuellen Taschenrechner zu ermitteln.
+
+Die konkrete Einbindung des Widgets in eine Testumgebung ist nicht spezifiziert. Im IQB-Testcenter wird folgendes Verfahren umgesetzt: Das Widget unterbricht die Interaktion mit dem Player und dem übrigen Testsystem und legt sich als Overlay über die Applikationsseite (modaler Dialog). Erst nach Schließen/Beenden kehrt die Testperson zum Player zurück.
+
+Es können Daten zwischen dem Player und dem Widget ausgetauscht werden. Die Spezifikation der API finden Sie [hier](https://iqb-specifications.github.io/plugin-widget/).
+
+::: {.callout-tip}
+
+Es wird nie eine spezifische Widget-Implementation angefordert. Statt dessen wird ein Widget-Typ gerufen. Welches Widget dann konkret bereitgestellt wird, hängt von der Testumgebung ab. Hintergrund dieses Verfahrens ist die Möglichkeit, über den gesamten Test ein einheitliches Widget bereitzustellen. Der Widget-Typ ist in den Metadaten des Widgets im Eintrag `model` gespeichert.
+
+:::
+
+Zu Widget-Typen siehe unten.
+
+# Kommunikationsmodell
+
+```{mermaid}
+sequenceDiagram
+    autonumber
+    participant HA as Host-Anwendung
+    participant VM as Widget (TBA-Plugin)
+    HA->>VM:Initialisierung
+    VM->>HA:vowReadyNotification
+    opt
+        HA->>VM:vowStartCommand
+    end
+    opt
+        VM->>HA:vowReturnRequest
+    end
+```
+
+{{< external https://raw.githubusercontent.com/iqb-specifications/plugin-widget/refs/heads/main/README.md#spec >}}

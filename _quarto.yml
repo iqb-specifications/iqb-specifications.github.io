@@ -54,6 +54,10 @@ website:
                 text: Player
               - href: concepts/plugins/editor.qmd
                 text: Editor
+              - href: concepts/plugins/schemer.qmd
+                text: Schemer
+              - href: concepts/plugins/widget.qmd
+                text: Widget
           - href: concepts/response/index.qmd
             text: Antwort
           - href: concepts/scale/index.qmd
