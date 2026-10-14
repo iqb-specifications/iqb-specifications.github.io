@@ -311,6 +311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#konfiguration-des-players" id="toc-konfiguration-des-players" class="nav-link" data-scroll-target="#konfiguration-des-players">Konfiguration des Players</a></li>
   </ul></li>
   <li><a href="#meldung-von-änderungen" id="toc-meldung-von-änderungen" class="nav-link" data-scroll-target="#meldung-von-änderungen">Meldung von Änderungen</a></li>
+  <li><a href="#fehlercodes" id="toc-fehlercodes" class="nav-link" data-scroll-target="#fehlercodes">Fehlercodes</a></li>
   </ul>
 <div class="quarto-other-links"><h2>Weitere Links</h2><ul><li><a href="https://iqb-specifications.github.io/plugin-player/"><i class="bi bi-link-45deg"></i>Spezifikation Player</a></li></ul></div></nav>
     </div>
@@ -474,11 +475,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Diese Nachricht soll die Host-Anwendung darüber informieren, dass während der Ausführung von Code im Player ein Fehler aufgetreten ist, der die Beantwortung beeinträchtigen könnte. Die Interpretation ist dem Host überlassen. Sie reicht von Benachrichtigung des Users über die Freigabe der Navigation (presentationProgress verhindert normalerweise das Weiterblättern) bis zum Abbruch der Testung.</p>
 <ul>
 <li><code>sessionId</code>: Die Kennung aus dem Start-Kommando, um die korrekte Zuordnung der Nachricht bzw. der darin enthaltenen Daten zur Unit zu unterstützen.</li>
-<li><code>code</code>, <code>message</code>: Strings, die den Fehler beschreiben.</li>
+<li><code>code</code>, <code>message</code>: Strings, die den Fehler beschreiben. Prinzipiell ist diese Liste offen, aber im IQB-Kontext werden <a href="#fehlercodes">diese Codes</a> verwendet.</li>
 </ul>
-<blockquote class="blockquote">
-<p>Achtung: Für den Code sollte es eine Liste von möglichen Werten geben, damit die Host-Anwendungen konsistent reagieren. Aktuell liegen hierzu noch zu wenig Erfahrungen vor. Beispiele: <code>AUDIO_CORRUPT</code>, <code>GEOGEBRA_CRASH</code></p>
-</blockquote>
 </section>
 <section id="widget-call" class="level2">
 <h2 class="anchored" data-anchor-id="widget-call">10 Widget Call</h2>
@@ -650,6 +648,116 @@ Code-Beispiel
 </ul></li>
 <li><code>log</code>: Die Eigenschaften <code>timeStamp</code>, <code>key</code> und <code>content</code> liefern einen Log-Eintrag. In einer Nachricht zur Statusänderung können mehrere Log-Einträge gleichzeitig geschickt werden. Es gibt keine Konventionen zur Nutzung dieses Features.</li>
 </ul>
+</section>
+<section id="fehlercodes" class="level1">
+<h1>Fehlercodes</h1>
+<p>In <code>vopRuntimeErrorNotification</code> ist <code>code</code> ein freier String. Die folgende Liste von Codes wird als Orientierung veröffentlicht. Sie ist weitgehend im <a href="https://github.com/iqb-berlin/verona-modules-aspect">Aspect-Player</a> des IQB umgesetzt.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Code</th>
+<th>Bedeutung</th>
+<th>Herkunft</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Startkommando</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>SESSION_ID_MISSING</code></td>
+<td>Das Startkommando enthält keine <code>sessionId</code>.</td>
+<td>Entwurf</td>
+</tr>
+<tr class="odd">
+<td><code>WRONG_SESSION_ID</code></td>
+<td>Eine Nachricht trägt eine fremde <code>sessionId</code>.</td>
+<td>Entwurf</td>
+</tr>
+<tr class="even">
+<td><code>UNIT_DEFINITION_MISSING</code></td>
+<td>Das Startkommando enthält keine Unit-Definition.</td>
+<td>Entwurf</td>
+</tr>
+<tr class="odd">
+<td><code>UNIT_DEFINITION_TYPE_UNSUPPORTED</code></td>
+<td>Der Player unterstützt den <code>unitDefinitionType</code> nicht.</td>
+<td>Entwurf</td>
+</tr>
+<tr class="even">
+<td><code>UNIT_STATE_TYPE_UNSUPPORTED</code></td>
+<td>Der Player unterstützt den <code>unitStateDataType</code> nicht.</td>
+<td>Entwurf</td>
+</tr>
+<tr class="odd">
+<td><strong>Unit-Definition</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>UNIT_DEFINITION_NOT_READABLE</code></td>
+<td>Die Unit-Definition lässt sich nicht lesen.</td>
+<td>Aspect (bisher nur eigener Dialog)</td>
+</tr>
+<tr class="odd">
+<td><code>UNIT_DEFINITION_NEWER</code></td>
+<td>Die Unit-Definition ist neuer, als der Player verarbeiten kann.</td>
+<td>Aspect (bisher nur eigener Dialog)</td>
+</tr>
+<tr class="even">
+<td><code>UNIT_DEFINITION_OUTDATED</code></td>
+<td>Die Unit-Definition ist zu alt für den Player.</td>
+<td>Aspect (bisher nur eigener Dialog)</td>
+</tr>
+<tr class="odd">
+<td><strong>Ressourcen</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>IMAGE_NOT_LOADING</code></td>
+<td>Ein Bild lädt nicht.</td>
+<td>Entwurf, Aspect</td>
+</tr>
+<tr class="odd">
+<td><code>GEOGEBRA_NOT_LOADING</code></td>
+<td>Das GeoGebra-Paket lädt nicht.</td>
+<td>Entwurf, Aspect</td>
+</tr>
+<tr class="even">
+<td><code>GEOMETRY_TIMEOUT</code></td>
+<td>Ein GeoGebra-Element ist nicht innerhalb der Frist bereit.</td>
+<td>Aspect</td>
+</tr>
+<tr class="odd">
+<td><code>MEDIA_TIMEOUT</code></td>
+<td>Audio oder Video ist nicht innerhalb der Frist geladen.</td>
+<td>Aspect; ersetzt <code>audio-timeot</code> und <code>video-timeout</code> des Entwurfs</td>
+</tr>
+<tr class="even">
+<td><code>MEDIA_DURATION_ERROR</code></td>
+<td>Die Länge eines Audios oder Videos ist nicht ermittelbar.</td>
+<td>Entwurf, Aspect</td>
+</tr>
+<tr class="odd">
+<td><strong>Sonstiges</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>RUNTIME_ERROR</code></td>
+<td>Ein sonstiger Fehler.</td>
+<td>Entwurf</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
