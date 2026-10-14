@@ -37,7 +37,7 @@ Das Zeichen `_` ist ein Platzhalter für die jeweilige konkrete Bezeichnung der 
 
 # Nachrichten empfangen
 
-Die Kommunikation kann nur erfolgen, wenn die Host-Anwendung Nachrichten an das `window`-Objekt abfängt. Das Verona-Modul kann nur allgemein an seine Host-Anwendung Nachrichten schicken, nicht gezielt an eine bestimmte Komponente oder ein bestimmtes DOM-Element. Auf höchster Ebene muss also z. B. so etwas einmalig aufgerufen werden:
+Die Kommunikation kann nur erfolgen, wenn die Host-Anwendung Nachrichten an das `window`-Objekt abfängt. Das TBA-Plugin kann nur allgemein an seine Host-Anwendung Nachrichten schicken, nicht gezielt an eine bestimmte Komponente oder ein bestimmtes DOM-Element. Auf höchster Ebene muss also z. B. so etwas einmalig aufgerufen werden:
 
 ```{.typescript filename="Listener einrichten bei Start der Hostanwendung"}
  window.addEventListener('message', (event: MessageEvent) => {

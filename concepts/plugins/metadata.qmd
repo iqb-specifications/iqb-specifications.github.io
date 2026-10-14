@@ -1,6 +1,6 @@
 ---
 lang: de
-title: Modul-Metadaten
+title: Plugin-Metadaten
 format:
     html:
         other-links:
@@ -8,17 +8,17 @@ format:
               href: https://iqb-specifications.github.io/plugin-metadata/
 ---
 
-Ein Verona-Modul muss Metadaten enthalten. Der wichtigste Anwendungsfall für Metadaten ist das Bereitstellen von Informationen, um die Auswahl für das passende Verona-Modul für die eigene Webapplikation zu erleichtern. Erst wenn z. B. die Beschreibung und die Version eines Moduls auf standardisierte Art bekannt gemacht wird, können potenzielle Anwender über dessen Verwendung sinnvoll entscheiden.
+Ein TBA-Plugin muss Metadaten enthalten. Der wichtigste Anwendungsfall für Metadaten ist das Bereitstellen von Informationen, um die Auswahl für das passende TBA-Plugin für die eigene Webapplikation zu erleichtern. Erst wenn z. B. die Beschreibung und die Version eines Moduls auf standardisierte Art bekannt gemacht wird, können potenzielle Anwender über dessen Verwendung sinnvoll entscheiden.
 
-Eine Html-Seite kann auf diverse Arten Metadaten speichern. Im Verona-Kontext benutzen wir einen `<script>`-Block im Header, der ein JSON-Datenobjekt enthält. Diese Vorgehensweise wird als "Linked Data" bezeichnet, d. h. der Script-Typ wäre mit `application/ld+json` zu bezeichnen.
+Eine Html-Seite kann auf diverse Arten Metadaten speichern. Im Plugin-Kontext benutzen wir einen `<script>`-Block im Header, der ein JSON-Datenobjekt enthält. Diese Vorgehensweise wird als "Linked Data" bezeichnet, d. h. der Script-Typ wäre mit `application/ld+json` zu bezeichnen.
 
 <details><summary>Beispiel</summary>
 
 ```html
   <head>
     <meta charset="UTF-8">
-    <title>Verona Editor Aspect</title>
-    <script id="verona-metadata" type="application/ld+json">
+    <title>IQB Editor Aspect</title>
+    <script id="plugin-metadata" type="application/ld+json">
       {
         "id": "iqb-editor-aspect",
         "version": "2.10.1",
@@ -72,7 +72,7 @@ Eine Html-Seite kann auf diverse Arten Metadaten speichern. Im Verona-Kontext be
 </details>
 
 
-Die vollständige Spezifikation finden Sie [hier](https://verona-interfaces.github.io/verona-module-metadata/).
+Die vollständige Spezifikation finden Sie [hier](https://iqb-specifications.github.io/plugin-metadata/).
 
 # Kopfdaten
 
@@ -91,7 +91,7 @@ Das Datenobjekt `dependencies` soll helfen zu vermeiden, dass zur Laufzeit wicht
 
 * `id`: Die ID soll helfen, das Objekt oder den Dienst zu finden. Es kann sich um einen Dateinamen oder eine Uri handeln.
 * `description`: Dieser Text hilft, die Funktion des Objektes bzw. des Dienstes zu verstehen. Er sollte in Englisch verfasst sein.
-* `type`: Der Wert `FILE` steht für eine Datei, `WIDGET` für ein Verona-Widget-Modul und `SERVICE` für einen webgestützten Dienst.
+* `type`: Der Wert `FILE` steht für eine Datei, `WIDGET` für ein Widget-Plugin und `SERVICE` für einen webgestützten Dienst.
 * `required`: Wenn dieser Wert `true` ist, dann benötigt das Modul zwingend für seine Funktion dieses Objekt bzw. Dienst. Ansonsten (`false` ist der Standardwert) kommt die Abhängigkeit nur in bestimmten Fällen zum Tragen. Beispielsweise benötigt der Aspect-Player GeoGebra -- allerdings nur, wenn in der Unit-Definition hierzu ein bestimmter Eintrag enthalten ist.
 
 # Herkunft, Pflege

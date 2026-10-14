@@ -24,11 +24,6 @@ Für die Spezifikation `response` in der Version `1.5` würde die Perma-Id laute
 
 Sollte eine Spezifikation unter `iqb-specifications` veröffentlicht sein und als Release nach obigem Schema eine w3id haben, können über ein Script [validate-json](https://github.com/iqb-specifications/validate-json#readme-ov-file) JSON-Datendateien validiert werden. In einem Projekt müssen üblicherweise viele Beispiel- und Testdaten hinterlegt werden. Um triviale Tipp-Fehler oder Verständnisprobleme zu vermeiden, können die Datendateien gegen das Schema auf einfache Art validiert werden.
 
-# Weitere Quellen für Spezifikationen
-
-* [Verona-Interfaces](https://verona-interfaces.github.io/)
-* [IQB-Programierungen](https://iqb-berlin.github.io/releases.html)
-
 # Lizenz
 
 Sämtliche Spezifikationen unterliegen der Lizenz [CC0](https://open-educational-resources.de/was-die-cc0-freigabe-bedeutet-und-welche-moeglichkeiten-sie-eroeffnen/).

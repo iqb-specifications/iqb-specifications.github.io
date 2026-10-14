@@ -18,7 +18,7 @@
     - Metadaten
     - Plugin/Verona
 - name: plugin-player
-  description: "Interface-Spezifikation für einen Verona-Player"
+  description: "Interface-Spezifikation für ein Player-Plugin"
   link:
     spec: https://iqb-specifications.github.io/plugin-player/
     docs: https://iqb-specifications.github.io/concepts/plugins/player.html
@@ -26,7 +26,7 @@
   categories:
     - Plugin/Verona
 - name: plugin-editor
-  description: "Interface-Spezifikation für einen Verona-Editor"
+  description: "Interface-Spezifikation für ein Editor-Plugin"
   link:
     spec: https://iqb-specifications.github.io/plugin-editor/
     docs: https://iqb-specifications.github.io/concepts/plugins/editor.html
@@ -34,7 +34,7 @@
   categories:
     - Plugin/Verona
 - name: plugin-schemer
-  description: "Interface-Spezifikation für einen Verona-Schemer"
+  description: "Interface-Spezifikation für ein Schemer-Plugin"
   link:
     spec: https://iqb-specifications.github.io/plugin-schemer/
     docs: https://iqb-specifications.github.io/concepts/plugins/schemer.html
@@ -42,7 +42,7 @@
   categories:
     - Plugin/Verona
 - name: plugin-widget
-  description: "Interface-Spezifikation für ein Verona-Widget"
+  description: "Interface-Spezifikation für ein Widget-Plugin"
   link:
     spec: https://iqb-specifications.github.io/plugin-widget/
     docs: https://iqb-specifications.github.io/concepts/plugins/widget.html
