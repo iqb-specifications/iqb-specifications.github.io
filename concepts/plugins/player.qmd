@@ -62,3 +62,4 @@ sequenceDiagram
 ```
 
 {{< external https://raw.githubusercontent.com/iqb-specifications/plugin-player/refs/heads/main/README.md#spec >}}
+

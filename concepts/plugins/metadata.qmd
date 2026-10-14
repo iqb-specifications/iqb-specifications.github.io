@@ -5,7 +5,7 @@ format:
     html:
         other-links:
             - text: Spezifikation Metadaten
-              href: https://verona-interfaces.github.io/verona-module-metadata/
+              href: https://iqb-specifications.github.io/plugin-metadata/
 ---
 
 Ein Verona-Modul muss Metadaten enthalten. Der wichtigste Anwendungsfall für Metadaten ist das Bereitstellen von Informationen, um die Auswahl für das passende Verona-Modul für die eigene Webapplikation zu erleichtern. Erst wenn z. B. die Beschreibung und die Version eines Moduls auf standardisierte Art bekannt gemacht wird, können potenzielle Anwender über dessen Verwendung sinnvoll entscheiden.
