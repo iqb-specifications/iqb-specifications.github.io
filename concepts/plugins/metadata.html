@@ -307,7 +307,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Ein TBA-Plugin muss Metadaten enthalten. Der wichtigste Anwendungsfall für Metadaten ist das Bereitstellen von Informationen, um die Auswahl für das passende TBA-Plugin für die eigene Webapplikation zu erleichtern. Erst wenn z. B. die Beschreibung und die Version eines Moduls auf standardisierte Art bekannt gemacht wird, können potenzielle Anwender über dessen Verwendung sinnvoll entscheiden.</p>
+<p>Ein TBA-Plugin muss Metadaten enthalten. Der wichtigste Anwendungsfall für Metadaten ist das Bereitstellen von Informationen, um die Auswahl für das passende TBA-Plugin für die eigene Webapplikation zu erleichtern. Erst wenn z. B. die Beschreibung und die Version eines Plugins auf standardisierte Art bekannt gemacht wird, können potenzielle Anwender über dessen Verwendung sinnvoll entscheiden.</p>
 <p>Eine Html-Seite kann auf diverse Arten Metadaten speichern. Im Plugin-Kontext benutzen wir einen <code>&lt;script&gt;</code>-Block im Header, der ein JSON-Datenobjekt enthält. Diese Vorgehensweise wird als “Linked Data” bezeichnet, d.&nbsp;h. der Script-Typ wäre mit <code>application/ld+json</code> zu bezeichnen.</p>
 <details>
 <summary>
@@ -361,7 +361,7 @@ Beispiel
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>          <span class="st">"repositoryType"</span><span class="op">:</span> <span class="st">"git"</span><span class="op">,</span></span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>          <span class="st">"licenseType"</span><span class="op">:</span> <span class="st">"MIT"</span><span class="op">,</span></span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>          <span class="st">"licenseUrl"</span><span class="op">:</span> <span class="st">"https://opensource.org/licenses/MIT"</span><span class="op">,</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>          <span class="st">"repositoryUrl"</span><span class="op">:</span> <span class="st">"https://github.com/iqb-berlin/verona-modules-apect"</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>          <span class="st">"repositoryUrl"</span><span class="op">:</span> <span class="st">"https://github.com/iqb-berlin/verona-Plugines-apect"</span></span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>        }</span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      }</span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
@@ -370,13 +370,13 @@ Beispiel
 <section id="kopfdaten" class="level1">
 <h1>Kopfdaten</h1>
 <ul>
-<li><code>id</code>: Die ID kann in internen Referenzen verwendet werden. Wenn beispielsweise eine Unitdefinition mit einem bestimmten Editor erzeugt wurde, kann die ID des Editor-Moduls die spätere Weiterarbeit sichern.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li><code>id</code>: Die ID kann in internen Referenzen verwendet werden. Wenn beispielsweise eine Unitdefinition mit einem bestimmten Editor erzeugt wurde, kann die ID des Editor-Plugins die spätere Weiterarbeit sichern.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
 <li><code>version</code>: Hier wird eine übliche <a href="https://semver.org/lang/de/">SemVer</a>-Notation erwartet, also auch mit Suffixen wie <code>beta</code> oder <code>rc4</code>.</li>
 <li><code>type</code>: Die möglichen Werte dieser Aufzählung sind <code>PLAYER</code>, <code>EDITOR</code>, <code>SCHEMER</code> und <code>WIDGET</code>. Bitte lesen die entsprechenden Teile dieser Dokumentation für ein besseres Verständnis.</li>
 <li><code>model</code>: Hier kann man den Typ näher spezifizieren. Bei einem Player könnte man beispielsweise die Id und Version des Datenformates angeben, das der Player maximal verarbeiten kann. Bei einem Widget muss hier der Untertyp angegeben werden, also z. B. <code>PERIODIC_TABLE</code> oder <code>CALC</code>.</li>
 <li><code>name</code>: Diese Bezeichnung erscheint als Label z. B. in Auswahllisten, und dient als menschlich besser lesbare Version der ID. Es handelt sich um eine Datenstruktur für mehrere Sprachen.</li>
-<li><code>description</code>: Hier soll eine knappe Beschreibung helfen, die Besonderheiten dieses Moduls zu erkennen und darüber zu entscheiden, ob das Modul für die eigenen Zwecke interessant sein könnte. Es handelt sich um eine Datenstruktur für mehrere Sprachen.</li>
-<li><code>specVersion</code>: Dieser String erklärt, welche Version der Modul-Interfacedefinition unterstützt wird. Da Interfacedefinitionen einer Entwicklung unterliegen und Eigenschaften geändert und hinzugefügt werden, sollte sich eine Hostanwendung darauf einstellen, welchen Dialekt der Kommunikation das Modul versteht.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li><code>description</code>: Hier soll eine knappe Beschreibung helfen, die Besonderheiten dieses Plugins zu erkennen und darüber zu entscheiden, ob das Plugin für die eigenen Zwecke interessant sein könnte. Es handelt sich um eine Datenstruktur für mehrere Sprachen.</li>
+<li><code>specVersion</code>: Dieser String erklärt, welche Version der Plugin-Interfacedefinition unterstützt wird. Da Interfacedefinitionen einer Entwicklung unterliegen und Eigenschaften geändert und hinzugefügt werden, sollte sich eine Hostanwendung darauf einstellen, welchen Dialekt der Kommunikation das Plugin versteht.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
 <li><code>metadataVersion</code>: Diese Information kann helfen, die Metadaten gezielt zu verarbeiten.</li>
 </ul>
 </section>
@@ -387,12 +387,12 @@ Beispiel
 <li><code>id</code>: Die ID soll helfen, das Objekt oder den Dienst zu finden. Es kann sich um einen Dateinamen oder eine Uri handeln.</li>
 <li><code>description</code>: Dieser Text hilft, die Funktion des Objektes bzw. des Dienstes zu verstehen. Er sollte in Englisch verfasst sein.</li>
 <li><code>type</code>: Der Wert <code>FILE</code> steht für eine Datei, <code>WIDGET</code> für ein Widget-Plugin und <code>SERVICE</code> für einen webgestützten Dienst.</li>
-<li><code>required</code>: Wenn dieser Wert <code>true</code> ist, dann benötigt das Modul zwingend für seine Funktion dieses Objekt bzw. Dienst. Ansonsten (<code>false</code> ist der Standardwert) kommt die Abhängigkeit nur in bestimmten Fällen zum Tragen. Beispielsweise benötigt der Aspect-Player GeoGebra – allerdings nur, wenn in der Unit-Definition hierzu ein bestimmter Eintrag enthalten ist.</li>
+<li><code>required</code>: Wenn dieser Wert <code>true</code> ist, dann benötigt das Plugin zwingend für seine Funktion dieses Objekt bzw. Dienst. Ansonsten (<code>false</code> ist der Standardwert) kommt die Abhängigkeit nur in bestimmten Fällen zum Tragen. Beispielsweise benötigt der Aspect-Player GeoGebra – allerdings nur, wenn in der Unit-Definition hierzu ein bestimmter Eintrag enthalten ist.</li>
 </ul>
 </section>
 <section id="herkunft-pflege" class="level1">
 <h1>Herkunft, Pflege</h1>
-<p>Im Datenobjekt <code>maintainer</code> finden sich Angaben zur Person, Firma oder Einrichtung, die das Modul entwickelt hat.</p>
+<p>Im Datenobjekt <code>maintainer</code> finden sich Angaben zur Person, Firma oder Einrichtung, die das Plugin entwickelt hat.</p>
 <ul>
 <li><code>name</code>: Bezeichnung der Person, Firma oder Einrichtung. Es handelt sich um eine Datenstruktur für mehrere Sprachen.</li>
 <li><code>url</code>: Ort im öffentlichen Internet, an dem weitere Dokumentationen und Kontaktinformationen zu finden sind.</li>
@@ -410,7 +410,7 @@ Beispiel
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Fußnoten</h2>
 
 <ol>
-<li id="fn1"><p>Achtung: Um sicherzustellen, dass dann auch die passende Version des Moduls verwendet wird, sollte diese Version ebenfalls als Referenz abgespeichert werden, also z. B. <code>iqb-editor-aspect@2.4.9</code>, statt nur <code>iqb-editor-aspect</code>. Dies kann auch der Dateiname des Moduls sein, obwohl in unixbasierten Systemen das @-Zeichen reserviert ist. Das IQB verwendet daher als Dateinamen die ID sowie die Version auf folgende Art: <code>iqb-player-aspect-2.4.11.html</code>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Achtung: Um sicherzustellen, dass dann auch die passende Version des Plugins verwendet wird, sollte diese Version ebenfalls als Referenz abgespeichert werden, also z. B. <code>iqb-editor-aspect@2.4.9</code>, statt nur <code>iqb-editor-aspect</code>. Dies kann auch der Dateiname des Plugins sein, obwohl in unixbasierten Systemen das @-Zeichen reserviert ist. Das IQB verwendet daher als Dateinamen die ID sowie die Version auf folgende Art: <code>iqb-player-aspect-2.4.11.html</code>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Allerdings kann man diese Information auch ignorieren und als Host einfach alle Varianten unterstützen. Wenn eine bestimmte Information nicht gefunden wird in einem Datenobjekt eines Players, versucht der Host andere Bezeichnungen oder Datenformate entsprechend älterer Varianten der Spezifikation. Dieses defensive Verhalten erhöht die Robustheit der Programmierung, kann aber auch ernste Probleme verschleiern.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
