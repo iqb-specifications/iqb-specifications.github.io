@@ -311,7 +311,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#konfiguration-des-players" id="toc-konfiguration-des-players" class="nav-link" data-scroll-target="#konfiguration-des-players">Konfiguration des Players</a></li>
   </ul></li>
   <li><a href="#meldung-von-änderungen" id="toc-meldung-von-änderungen" class="nav-link" data-scroll-target="#meldung-von-änderungen">Meldung von Änderungen</a></li>
-  <li><a href="#fehlercodes" id="toc-fehlercodes" class="nav-link" data-scroll-target="#fehlercodes">Fehlercodes</a></li>
+  <li><a href="#fehlercodes" id="toc-fehlercodes" class="nav-link" data-scroll-target="#fehlercodes">Fehlercodes</a>
+  <ul class="collapse">
+  <li><a href="#startkommando" id="toc-startkommando" class="nav-link" data-scroll-target="#startkommando">Startkommando</a></li>
+  <li><a href="#unit-definition" id="toc-unit-definition" class="nav-link" data-scroll-target="#unit-definition">Unit-Definition</a></li>
+  <li><a href="#ressourcenmedia" id="toc-ressourcenmedia" class="nav-link" data-scroll-target="#ressourcenmedia">Ressourcen/Media</a></li>
+  <li><a href="#sonstiges" id="toc-sonstiges" class="nav-link" data-scroll-target="#sonstiges">Sonstiges</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-other-links"><h2>Weitere Links</h2><ul><li><a href="https://iqb-specifications.github.io/plugin-player/"><i class="bi bi-link-45deg"></i>Spezifikation Player</a></li></ul></div></nav>
     </div>
@@ -652,114 +658,42 @@ Code-Beispiel
 <section id="fehlercodes" class="level1">
 <h1>Fehlercodes</h1>
 <p>In <code>vopRuntimeErrorNotification</code> ist <code>code</code> ein freier String. Die folgende Liste von Codes wird als Orientierung veröffentlicht. Sie ist weitgehend im <a href="https://github.com/iqb-berlin/verona-modules-aspect">Aspect-Player</a> des IQB umgesetzt.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Code</th>
-<th>Bedeutung</th>
-<th>Herkunft</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Startkommando</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><code>SESSION_ID_MISSING</code></td>
-<td>Das Startkommando enthält keine <code>sessionId</code>.</td>
-<td>Entwurf</td>
-</tr>
-<tr class="odd">
-<td><code>WRONG_SESSION_ID</code></td>
-<td>Eine Nachricht trägt eine fremde <code>sessionId</code>.</td>
-<td>Entwurf</td>
-</tr>
-<tr class="even">
-<td><code>UNIT_DEFINITION_MISSING</code></td>
-<td>Das Startkommando enthält keine Unit-Definition.</td>
-<td>Entwurf</td>
-</tr>
-<tr class="odd">
-<td><code>UNIT_DEFINITION_TYPE_UNSUPPORTED</code></td>
-<td>Der Player unterstützt den <code>unitDefinitionType</code> nicht.</td>
-<td>Entwurf</td>
-</tr>
-<tr class="even">
-<td><code>UNIT_STATE_TYPE_UNSUPPORTED</code></td>
-<td>Der Player unterstützt den <code>unitStateDataType</code> nicht.</td>
-<td>Entwurf</td>
-</tr>
-<tr class="odd">
-<td><strong>Unit-Definition</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><code>UNIT_DEFINITION_NOT_READABLE</code></td>
-<td>Die Unit-Definition lässt sich nicht lesen.</td>
-<td>Aspect (bisher nur eigener Dialog)</td>
-</tr>
-<tr class="odd">
-<td><code>UNIT_DEFINITION_NEWER</code></td>
-<td>Die Unit-Definition ist neuer, als der Player verarbeiten kann.</td>
-<td>Aspect (bisher nur eigener Dialog)</td>
-</tr>
-<tr class="even">
-<td><code>UNIT_DEFINITION_OUTDATED</code></td>
-<td>Die Unit-Definition ist zu alt für den Player.</td>
-<td>Aspect (bisher nur eigener Dialog)</td>
-</tr>
-<tr class="odd">
-<td><strong>Ressourcen</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><code>IMAGE_NOT_LOADING</code></td>
-<td>Ein Bild lädt nicht.</td>
-<td>Entwurf, Aspect</td>
-</tr>
-<tr class="odd">
-<td><code>GEOGEBRA_NOT_LOADING</code></td>
-<td>Das GeoGebra-Paket lädt nicht.</td>
-<td>Entwurf, Aspect</td>
-</tr>
-<tr class="even">
-<td><code>GEOMETRY_TIMEOUT</code></td>
-<td>Ein GeoGebra-Element ist nicht innerhalb der Frist bereit.</td>
-<td>Aspect</td>
-</tr>
-<tr class="odd">
-<td><code>MEDIA_TIMEOUT</code></td>
-<td>Audio oder Video ist nicht innerhalb der Frist geladen.</td>
-<td>Aspect; ersetzt <code>audio-timeot</code> und <code>video-timeout</code> des Entwurfs</td>
-</tr>
-<tr class="even">
-<td><code>MEDIA_DURATION_ERROR</code></td>
-<td>Die Länge eines Audios oder Videos ist nicht ermittelbar.</td>
-<td>Entwurf, Aspect</td>
-</tr>
-<tr class="odd">
-<td><strong>Sonstiges</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><code>RUNTIME_ERROR</code></td>
-<td>Ein sonstiger Fehler.</td>
-<td>Entwurf</td>
-</tr>
-</tbody>
-</table>
+<section id="startkommando" class="level3">
+<h3 class="anchored" data-anchor-id="startkommando">Startkommando</h3>
+<ul>
+<li><code>SESSION_ID_MISSING</code>: Das Startkommando enthält keine <code>sessionId</code>.</li>
+<li><code>WRONG_SESSION_ID</code>: Eine Nachricht trägt eine fremde <code>sessionId</code>.</li>
+<li><code>UNIT_DEFINITION_MISSING</code>: Das Startkommando enthält keine Unit-Definition.</li>
+<li><code>UNIT_DEFINITION_TYPE_UNSUPPORTED</code>: Der Player unterstützt den <code>unitDefinitionType</code> nicht.</li>
+<li><code>UNIT_STATE_TYPE_UNSUPPORTED</code>: Der Player unterstützt den <code>unitStateDataType</code> nicht.</li>
+</ul>
+</section>
+<section id="unit-definition" class="level3">
+<h3 class="anchored" data-anchor-id="unit-definition">Unit-Definition</h3>
+<ul>
+<li><code>UNIT_DEFINITION_NOT_READABLE</code>: Die Unit-Definition lässt sich nicht lesen.</li>
+<li><code>UNIT_DEFINITION_NEWER</code>: Die Unit-Definition ist neuer, als der Player verarbeiten kann.</li>
+<li><code>UNIT_DEFINITION_OUTDATED</code>: Die Unit-Definition ist zu alt für den Player.</li>
+</ul>
+</section>
+<section id="ressourcenmedia" class="level3">
+<h3 class="anchored" data-anchor-id="ressourcenmedia">Ressourcen/Media</h3>
+<ul>
+<li><code>IMAGE_NOT_LOADING</code>: Ein Bild lädt nicht.</li>
+<li><code>GEOGEBRA_NOT_LOADING</code>: Das GeoGebra-Paket lädt nicht.</li>
+<li><code>GEOMETRY_TIMEOUT</code>: Ein GeoGebra-Element ist nicht innerhalb der Frist bereit.</li>
+<li><code>MEDIA_TIMEOUT</code>: Audio oder Video ist nicht innerhalb der Frist geladen.</li>
+<li><code>MEDIA_DURATION_ERROR</code>: Die Länge eines Audios oder Videos ist nicht ermittelbar.</li>
+</ul>
+</section>
+<section id="sonstiges" class="level3">
+<h3 class="anchored" data-anchor-id="sonstiges">Sonstiges</h3>
+<ul>
+<li><code>RUNTIME_ERROR</code>: Ein sonstiger Fehler.</li>
+</ul>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Zurück nach oben</a></main> <!-- /main -->
