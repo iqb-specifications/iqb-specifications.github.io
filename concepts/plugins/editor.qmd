@@ -1,0 +1,36 @@
+---
+lang: de
+title: TBA Plugin - Editor
+format:
+    html:
+        other-links:
+            - text: Spezifikation Editor
+              href: https://iqb-specifications.github.io/plugin-editor/
+mermaid:
+  theme: neutral
+---
+
+Ein Editor-Plugin dient dem Anlegen und Ändern der UI-Definition einer Unit. Es wird üblicherweise dynamisch in eine Webanwendung für die Aufgabenentwicklung eingebunden (z. B. IQB-Studio). Bitte beachten:
+
+* Normalerweise ergeben jeweils Editor und Player ein Paar, das auch in einer gemeinsamen Codebasis entwickelt wird.
+* Die UI-Definition einer Unit kann - aber muss nicht - separat spezifiziert werden. Es reicht, wenn Editor und Player das Definitionsformat verstehen.
+* Die Nutzung eines Editors als Teil einer Entwicklungsumgebung hat vor allem den Vorteil, dass zusätzliche Datenstrukturen wie Variablenliste und Abhängigkeiten erzeugt werden.
+
+Die Spezifikation der API finden Sie [hier](https://iqb-specifications.github.io/plugin-editor/).
+
+# Kommunikationsmodell
+
+```{mermaid}
+sequenceDiagram
+    autonumber
+participant HA as Host-Anwendung
+    participant VM as Editor (TBA-Plugin)
+    HA->>VM:Initialisierung
+    VM->>HA:voeReadyNotification
+    HA->>VM:voeStartCommand
+    loop
+        VM->>HA:voeDefinitionChangedNotification
+    end
+```
+
+{{< external https://raw.githubusercontent.com/iqb-specifications/plugin-editor/refs/heads/main/README.md#spec >}}

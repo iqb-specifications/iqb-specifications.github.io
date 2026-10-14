@@ -52,6 +52,8 @@ website:
                 text: Variablen-Info
               - href: concepts/plugins/player.qmd
                 text: Player
+              - href: concepts/plugins/editor.qmd
+                text: Editor
           - href: concepts/response/index.qmd
             text: Antwort
           - href: concepts/scale/index.qmd
